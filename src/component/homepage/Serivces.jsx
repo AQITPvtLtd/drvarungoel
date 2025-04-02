@@ -1,221 +1,40 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import Form from "@/app/contact/form/Form";
+import React from "react";
 import Image from "next/image";
 
-const Serivces = () => {
-    const router = useRouter();
-    const [loading, setLoading] = useState(false);
-    const [formData, setFormData] = useState({
-        Fname: "",
-        Email: "",
-        Phone: "",
-        Location: "",
-        Message: "",
-        MedicalReport: null,
-    });
+const services = [
+    { id: 1, src: "/services/img1.png", title: "RADIATION THERAPY" },
+    { id: 2, src: "/services/img2.png", title: "TARGETED THERAPY" },
+    { id: 3, src: "/services/img3.png", title: "IMMUNOTHERAPY" },
+    { id: 4, src: "/services/img4.png", title: "CHEMOTHERAPY" },
+    { id: 5, src: "/services/img5.png", title: "ROBOTIC THERAPY" },
+    { id: 6, src: "/services/img6.png", title: "CAR-T CELL THERAPY" },
+];
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
-    const handleFileChange = (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            if (file.size > 10 * 1024 * 1024) { // 10MB limit
-                Swal.fire({
-                    icon: "warning",
-                    title: "File Too Large",
-                    text: "Please upload a file smaller than 10MB.",
-                });
-                e.target.value = ""; // Clear the file input
-                return;
-            }
-            setFormData({ ...formData, MedicalReport: file });
-        }
-    };
-
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-
-        const formDataToSend = new FormData();
-        formDataToSend.append("Fname", formData.Fname);
-        formDataToSend.append("Email", formData.Email);
-        formDataToSend.append("Phone", formData.Phone);
-        formDataToSend.append("Location", formData.Location);
-        formDataToSend.append("Message", formData.Message);
-
-        if (formData.MedicalReport) {
-            formDataToSend.append("MedicalReport", formData.MedicalReport);
-        }
-
-        try {
-            const response = await form(formDataToSend);
-            if (response.success) {
-                Swal.fire({
-                    title: "Form Submitted Successfully!",
-                    text: "We have received your information.",
-                    icon: "success",
-                });
-                setFormData({
-                    Fname: "",
-                    Email: "",
-                    Phone: "",
-                    Location: "",
-                    Message: "",
-                    MedicalReport: null,
-                });
-                router.push("/");
-            } else {
-                Swal.fire({
-                    icon: "error",
-                    title: "Oops...",
-                    text: "Something went wrong! Please try again later.",
-                });
-            }
-        } catch (error) {
-            Swal.fire({
-                icon: "error",
-                title: "Error",
-                text: "Failed to submit the form. Please check your network and try again.",
-            });
-        } finally {
-            setLoading(false);
-        }
-    };
+const Services = () => {
     return (
-        <div>
-            <div>
-                <p className="text-4xl">Services</p>
-                <div>
-                    <Image src='' width={200} height={200} alt="" />
-                    <Image src='' width={200} height={200} alt="" />
+        <div className="bg-green-100 p-6 md:p-12 rounded-lg">
+            <h2 className="text-3xl font-bold text-center mb-6">SERVICES</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="grid grid-cols-2 gap-4">
+                    {services.map((service) => (
+                        <div
+                            key={service.id}
+                            className="flex flex-col items-center justify-center p-4 bg-white shadow-lg rounded-lg hover:scale-105 transition-transform"
+                        >
+                            <Image src={service.src} width={120} height={120} alt={service.title} />
+                            <p className="mt-3 text-center font-semibold">{service.title}</p>
+                        </div>
+                    ))}
                 </div>
-                <div>
-                    <Image src='' width={200} height={200} alt="" />
-                    <Image src='' width={200} height={200} alt="" />
+                <div className="px-20">
+                    <Form />
                 </div>
-                <div>
-                    <Image src='' width={200} height={200} alt="" />
-                    <Image src='' width={200} height={200} alt="" />
-                </div>
-            </div>
-            <div className="mt-2">
-                <form
-                    className="bg-gray-50 px-5 py-2 shadow-lg rounded-lg"
-                    onSubmit={handleSubmit}
-                >
-                    <h3 className="text-xl font-semibold text-gray-700 mb-1">Submit Your Query</h3>
-                    <div className="mb-4">
-                        <label className="block text-gray-600 mb-1" htmlFor="Fname">
-                            Full Name <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                            type="text"
-                            id="Fname"
-                            name="Fname"
-                            className="w-full border border-gray-300 rounded px-3 py-1 focus:outline-none focus:border-blue-500 dark:text-gray-900"
-                            placeholder="Enter Your Full Name"
-                            value={formData.Fname}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="mb-2">
-                        <label className="block text-gray-600 mb-1" htmlFor="Phone">
-                            Phone Number <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                            type="tel"
-                            id="Phone"
-                            name="Phone"
-                            className="w-full border border-gray-300 rounded px-3 py-1 focus:outline-none focus:border-blue-500 dark:text-gray-900"
-                            placeholder="Enter Your Phone Number"
-                            value={formData.Phone}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="mb-2">
-                        <label className="block text-gray-600 mb-1" htmlFor="Email">
-                            Email <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                            type="email"
-                            id="Email"
-                            name="Email"
-                            className="w-full border border-gray-300 rounded px-3 py-1 focus:outline-none focus:border-blue-500 dark:text-gray-900"
-                            placeholder="Enter Your Email Address"
-                            value={formData.Email}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="mb-2">
-                        <label className="block text-gray-600 mb-1" htmlFor="Location">
-                            Location <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                            type="text"
-                            id="Location"
-                            name="Location"
-                            className="w-full border border-gray-300 rounded px-3 py-1 focus:outline-none focus:border-blue-500 dark:text-gray-900"
-                            placeholder="Enter Your Location"
-                            value={formData.Location}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="mb-2">
-                        <label className="block text-gray-600 mb-1" htmlFor="Message">
-                            Write Problem English / Hindi <span className="text-red-500">*</span>
-                        </label>
-                        <textarea
-                            id="Message"
-                            name="Message"
-                            className="w-full border border-gray-300 rounded px-3 py-1 focus:outline-none focus:border-blue-500 dark:text-gray-900"
-                            placeholder="Describe Health Problem..."
-                            value={formData.Message}
-                            onChange={handleChange}
-                            required
-                        ></textarea>
-                    </div>
-                    <div className="mb-2">
-                        <label className="block text-gray-600 mb-1" htmlFor="MedicalReport">
-                            Upload Medical Report (Optional)
-                        </label>
-                        <input
-                            type="file"
-                            id="MedicalReport"
-                            name="MedicalReport"
-                            accept=".pdf, .doc, .docx, .xls, .xlsx, .txt, .jpg, .png, .jpeg, .avif"
-                            className="w-full border border-gray-300 rounded px-3 py-1 focus:outline-none focus:border-blue-500 dark:text-gray-900"
-                            onChange={handleFileChange}
-                        />
-
-                    </div>
-                    <div>
-                        {loading ? (
-                            <div className="flex justify-center items-center w-full h-full bg-gray-500 bg-opacity-50 rounded-md fixed top-0 left-0 z-50">
-                                <ClipLoader width="60" height="60" color="#eb5f30" className="animate-spin" />
-                            </div>
-                        ) : (
-                            <button
-                                type="submit"
-                                className="w-full bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600 transition duration-200"
-                            >
-                                Submit
-                            </button>
-                        )}
-                    </div>
-                </form>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Serivces
+export default Services;

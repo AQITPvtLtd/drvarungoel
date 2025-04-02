@@ -1,0 +1,18 @@
+import React from 'react';
+import Image from 'next/image';
+
+const Banner = () => {
+    return (
+        <div className="w-full flex justify-center items-center">
+            <Image
+                src="/banner/banner1.png"
+                width={1200}
+                height={400}
+                className="w-full h-auto"
+                alt="Banner"
+            />
+        </div>
+    );
+}
+
+export default Banner;
