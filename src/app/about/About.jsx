@@ -7,8 +7,8 @@ import Statistics from '@/component/homepage/Statistics';
 
 const About = () => {
     return (
-        <div>
-            <div className="px-4 md:px-8">
+        <div className=''>
+            <div className="px-4 md:px-8 lg:mt-20">
                 <div className='grid grid-cols-1 md:grid-cols-12 items-center gap-6'>
                     <div className='md:col-span-5 flex justify-center mt-5'>
                         <Image
@@ -23,14 +23,14 @@ const About = () => {
                         <div className="bg-[#0f8f43] p-4 w-full max-w-xl md:max-w-2xl lg:max-w-3xl">
                             <div className="bg-white p-4">
                                 <div className="bg-[#1ebee6] p-3 lg:p-6">
-                                    <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-3 text-black" style={{ fontFamily: "Roboto Slab, serif" }}>
+                                    <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-3 text-white" style={{ fontFamily: "Roboto Slab, serif" }}>
                                         Dr. Varun Goel
                                     </h2>
-                                    <h3 className="font-bold text-lg sm:text-xl md:text-2xl text-black" style={{ fontFamily: "Roboto Slab, serif" }}>
+                                    <h3 className="font-bold text-lg sm:text-xl md:text-2xl text-white" style={{ fontFamily: "Roboto Slab, serif" }}>
                                         Sr. Consultant & Principal Coordinator
                                     </h3>
                                     <div className='flex gap-2'>
-                                        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mt-2 text-gray-900" style={{ fontFamily: "Roboto Slab, serif" }}>
+                                        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mt-2 text-white" style={{ fontFamily: "Roboto Slab, serif" }}>
                                             Day Care Services, Medical Oncology
                                         </h2>
                                     </div>
@@ -43,7 +43,9 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <Content />
+                <div className='pt-5'>
+                    <Content />
+                </div>
                 <Statistics />
                 <VisionAndmission />
             </div>

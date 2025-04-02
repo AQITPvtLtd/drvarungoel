@@ -4,12 +4,13 @@ import { useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const videos = [
-    { id: 1, url: 'https://youtube.com/shorts/CzWOJ53cD20?si=VU2bEHMXKK2nYCoi' },
-    { id: 2, url: 'https://youtube.com/shorts/XMACUdZ36x0?si=4YIChEy1sIwyhSUh' },
-    { id: 3, url: 'https://youtube.com/shorts/Ih4HAUmw8oc?si=NWDTu0h1XKkgbpZ4' },
+    { id: 1, url: 'https://youtu.be/WQBqHfACzig?si=EzXGVUspyRknO1Gl' },
+    { id: 2, url: 'https://youtu.be/SeerULYJ2Bs?si=N1IBISjq1zv5iCEF' },
+    // { id: 3, url: 'https://youtube.com/shorts/Ih4HAUmw8oc?si=NWDTu0h1XKkgbpZ4' },
 ];
 
 export default function VideoCarousel() {
+    // Middle video se start hoga
     const [current, setCurrent] = useState(0);
 
     const prevSlide = () => {
@@ -26,8 +27,8 @@ export default function VideoCarousel() {
     };
 
     return (
-        <div className="p-5">
-            <p className="text-4xl font-semibold text-center pt-5">OUR VIDEO LIBRARY</p>
+        <div className="p-5 bg-white">
+            <p className="text-4xl font-semibold text-center pt-5 dark:text-black">OUR VIDEO LIBRARY</p>
             <div className="flex flex-col items-center space-y-6 pt-10">
                 <div className="flex items-center space-x-4 overflow-hidden w-full justify-center">
                     {videos.map((video, index) => (
@@ -50,13 +51,13 @@ export default function VideoCarousel() {
                 <div className="flex space-x-4">
                     <button
                         onClick={prevSlide}
-                        className="p-3 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 transition-all"
+                        className="p-3 bg-white cursor-pointer rounded-full dark:text-black shadow-md hover:bg-gray-300 transition-all"
                     >
                         <FaArrowLeft size={20} />
                     </button>
                     <button
                         onClick={nextSlide}
-                        className="p-3 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 transition-all"
+                        className="p-3 bg-white cursor-pointer rounded-full dark:text-black shadow-md hover:bg-gray-300 transition-all"
                     >
                         <FaArrowRight size={20} />
                     </button>

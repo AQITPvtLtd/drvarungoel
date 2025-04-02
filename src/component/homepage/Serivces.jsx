@@ -15,8 +15,8 @@ const services = [
 
 const Services = () => {
     return (
-        <div className="bg-green-100 p-6 md:p-12 rounded-lg">
-            <h2 className="text-3xl font-bold text-center mb-6">SERVICES</h2>
+        <div className="bg-[#ebfff4] p-6 md:p-12">
+            <h2 className="text-3xl font-bold text-center mb-6 dark:text-black">SERVICES</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="grid grid-cols-2 gap-4">
                     {services.map((service) => (
@@ -25,7 +25,7 @@ const Services = () => {
                             className="flex flex-col items-center justify-center p-4 bg-white shadow-lg rounded-lg hover:scale-105 transition-transform"
                         >
                             <Image src={service.src} width={120} height={120} alt={service.title} />
-                            <p className="mt-3 text-center font-semibold">{service.title}</p>
+                            <p className="mt-3 text-center font-semibold dark:text-black">{service.title}</p>
                         </div>
                     ))}
                 </div>

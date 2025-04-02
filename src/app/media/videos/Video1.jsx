@@ -10,7 +10,7 @@ const videos = [
 ];
 
 export default function VideoCarousel() {
-    const [current, setCurrent] = useState(0);
+    const [current, setCurrent] = useState(Math.floor(videos.length / 2));
 
     const prevSlide = () => {
         setCurrent((prev) => (prev === 0 ? videos.length - 1 : prev - 1));
@@ -26,8 +26,8 @@ export default function VideoCarousel() {
     };
 
     return (
-        <div className="p-5">
-            <p className="text-4xl font-semibold text-center pt-5">PATIENT TESTIMONIALS</p>
+        <div className="p-5 bg-white">
+            <p className="text-4xl font-semibold text-center pt-5 dark:text-black">PATIENT TESTIMONIALS</p>
             <div className="flex flex-col items-center space-y-6 pt-10">
                 <div className="flex items-center space-x-4 overflow-hidden w-full justify-center">
                     {videos.map((video, index) => (
@@ -50,13 +50,13 @@ export default function VideoCarousel() {
                 <div className="flex space-x-4">
                     <button
                         onClick={prevSlide}
-                        className="p-3 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 transition-all"
+                        className="p-3 bg-white cursor-pointer rounded-full dark:text-black shadow-md hover:bg-gray-300 transition-all"
                     >
                         <FaArrowLeft size={20} />
                     </button>
                     <button
                         onClick={nextSlide}
-                        className="p-3 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 transition-all"
+                        className="p-3 bg-white cursor-pointer rounded-full dark:text-black shadow-md hover:bg-gray-300 transition-all"
                     >
                         <FaArrowRight size={20} />
                     </button>
