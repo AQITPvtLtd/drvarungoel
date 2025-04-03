@@ -6,7 +6,7 @@ import Form from './form/Form';
 
 const Contact = () => {
     return (
-        <div className='pt-20 px-4 md:px-8 lg:px-16'>
+        <div className='pt-20 px-4 md:px-8 lg:px-16 bg-white'>
             <p className='text-center text-3xl md:text-4xl font-bold text-gray-800 dark:bg-white py-5' style={{ fontFamily: "Roboto Slab, serif" }}>
                 Contact Us
             </p>

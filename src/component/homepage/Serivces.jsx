@@ -29,7 +29,7 @@ const Services = () => {
                         </div>
                     ))}
                 </div>
-                <div className="px-20">
+                <div className="lg:px-20">
                     <Form />
                 </div>
             </div>
