@@ -1,7 +1,9 @@
 "use client";
 
+import { form } from "@/sevices/user";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import Swal from 'sweetalert2';
 
 const Form = () => {
     const router = useRouter();
@@ -105,7 +107,8 @@ const Form = () => {
                             name="Fname"
                             className="w-full border border-gray-300 rounded px-3 py-1 focus:outline-none focus:border-blue-500 dark:text-gray-900"
                             placeholder="Enter Your Full Name"
-
+                            value={formData.Fname}
+                            onChange={handlechange}
                             required
                         />
                     </div>
@@ -119,6 +122,8 @@ const Form = () => {
                             name="Phone"
                             className="w-full border border-gray-300 rounded px-3 py-1 focus:outline-none focus:border-blue-500 dark:text-gray-900"
                             placeholder="Enter Your Phone Number"
+                            value={formData.Phone}
+                            onChange={handlechange}
                             required
                         />
                     </div>
@@ -132,6 +137,8 @@ const Form = () => {
                             name="Email"
                             className="w-full border border-gray-300 rounded px-3 py-1 focus:outline-none focus:border-blue-500 dark:text-gray-900"
                             placeholder="Enter Your Email Address"
+                            value={formData.Email}
+                            onChange={handlechange}
                             required
                         />
                     </div>
@@ -145,6 +152,8 @@ const Form = () => {
                             name="Location"
                             className="w-full border border-gray-300 rounded px-3 py-1 focus:outline-none focus:border-blue-500 dark:text-gray-900"
                             placeholder="Enter Your Location"
+                            value={formData.Location}
+                            onChange={handlechange}
                             required
                         />
                     </div>
@@ -157,6 +166,8 @@ const Form = () => {
                             name="Message"
                             className="w-full border border-gray-300 rounded px-3 py-1 focus:outline-none focus:border-blue-500 dark:text-gray-900"
                             placeholder="Describe Health Problem..."
+                            value={formData.Message}
+                            onChange={handlechange}
                             required
                         ></textarea>
                     </div>
@@ -168,11 +179,11 @@ const Form = () => {
                             type="file"
                             id="MedicalReport"
                             name="MedicalReport"
+                            onChange={handleFileChange}
                             accept=".pdf, .doc, .docx, .xls, .xlsx, .txt, .jpg, .png, .jpeg, .avif"
                             className="w-full border border-gray-300 rounded px-3 py-1 focus:outline-none focus:border-blue-500 dark:text-gray-900"
 
                         />
-
                     </div>
                     <div>
                         <button
