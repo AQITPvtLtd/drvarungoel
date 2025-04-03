@@ -32,14 +32,13 @@ const Header = () => {
 
                     {/* Services Dropdown */}
                     <div className="relative group">
-                        <button className="flex items-center hover:text-gray-600 transition">
-                            TREATMENTS <FiChevronDown className="ml-1" />
-                        </button>
-                        <div className="absolute left-0 -mt-0 w-48 px-2 py-2 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 group-hover:flex flex-col">
+                        
+                        <Link href="/treatments" className="hover:text-gray-600 transition"> TREATMENTS </Link>
+                        {/* <div className="absolute left-0 -mt-0 w-48 px-2 py-2 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 group-hover:flex flex-col">
                             <Link href="/services/web-development" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">Web Development</Link>
                             <Link href="/services/seo" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">SEO</Link>
                             <Link href="/services/marketing" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">Marketing</Link>
-                        </div>
+                        </div> */}
                     </div>
 
                     <Link href="/blogs" className="hover:text-gray-600 transition">Blogs</Link>

@@ -42,7 +42,7 @@ const Content = () => {
     ];
 
     return (
-        <div className="max-w-5xl mx-auto p-6 bg-[#ebfff4]">
+        <div className="mx-auto p-6 bg-[#ebfff4]">
             {/* Tabs */}
             <div className="flex flex-wrap justify-center mb-4 gap-3 sm:gap-5">
                 {["Education", "PUBLICATIONS AND RESEARCH WORK", "Experience"].map((category) => (

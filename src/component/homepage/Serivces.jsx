@@ -24,7 +24,7 @@ const Services = () => {
                             key={service.id}
                             className="flex flex-col items-center justify-center p-4 bg-white shadow-lg rounded-lg hover:scale-105 transition-transform"
                         >
-                            <Image src={service.src} width={120} height={120} alt={service.title} />
+                            <Image src={`${service.src}`} width={120} height={120} alt={service.title} />
                             <p className="mt-3 text-center font-semibold dark:text-black">{service.title}</p>
                         </div>
                     ))}
