@@ -33,7 +33,7 @@ const VisionAndMission = () => {
 
                 {/* Right Content - Vision Section */}
                 <div className="border border-gray-300 rounded-lg shadow-lg p-6">
-                    <h2 className="text-center font-semibold text-xl bg-[#21bee5] py-2 rounded text-black">
+                    <h2 className="text-center font-semibold text-xl bg-[#21bee5] py-2 rounded text-white">
                         Our Vision
                     </h2>
                     <p className="mt-4 text-gray-700">

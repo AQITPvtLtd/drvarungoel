@@ -42,13 +42,13 @@ const Content = () => {
     ];
 
     return (
-        <div className="max-w-full mx-auto p-6 bg-[#ebfff4]">
+        <div className="max-w-5xl mx-auto p-6 bg-[#ebfff4]">
             {/* Tabs */}
-            <div className="flex mb-4 gap-5">
+            <div className="flex flex-wrap justify-center mb-4 gap-3 sm:gap-5">
                 {["Education", "PUBLICATIONS AND RESEARCH WORK", "Experience"].map((category) => (
                     <button
                         key={category}
-                        className={`py-3 px-5 text-lg font-semibold transition-all duration-300 cursor-pointer
+                        className={`py-2 px-4 sm:py-3 sm:px-5 text-base sm:text-lg font-semibold transition-all duration-300 cursor-pointer
                             ${activeCategory === category
                                 ? "bg-[#102c3c] text-white rounded-lg"
                                 : "text-gray-600 hover:text-gray-900"
@@ -61,10 +61,10 @@ const Content = () => {
             </div>
 
             {/* Content Box */}
-            <div className="p-6 bg-[#f6fff9] border border-gray-300 rounded-lg shadow-md">
+            <div className="p-5 sm:p-6 bg-[#f6fff9] border border-gray-300 rounded-lg shadow-md">
                 {AboutContent.filter((item) => item.category === activeCategory).map((item) => (
                     <div key={item.id}>
-                        <ul className="list-disc pl-5 space-y-3 text-gray-700 text-lg">
+                        <ul className="list-disc pl-4 sm:pl-5 space-y-2 sm:space-y-3 text-gray-700 text-base sm:text-lg">
                             {item.content.map((text, index) => (
                                 <li key={index}>{text}</li>
                             ))}
