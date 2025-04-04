@@ -1,68 +1,74 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import React from 'react'
+import Image from 'next/image';
+import { motion } from "framer-motion";
 
 const videos = [
-    { id: 1, url: 'https://youtu.be/WQBqHfACzig?si=EzXGVUspyRknO1Gl' },
-    { id: 2, url: 'https://youtu.be/SeerULYJ2Bs?si=N1IBISjq1zv5iCEF' },
-    // { id: 3, url: 'https://youtube.com/shorts/Ih4HAUmw8oc?si=NWDTu0h1XKkgbpZ4' },
+    { id: 1, url: "https://youtube.com/shorts/CzWOJ53cD20?si=VU2bEHMXKK2nYCoi" },
+    { id: 2, url: "https://youtube.com/shorts/XMACUdZ36x0?si=4YIChEy1sIwyhSUh" },
+    { id: 3, url: "https://youtube.com/shorts/Ih4HAUmw8oc?si=NWDTu0h1XKkgbpZ4" },
+    { id: 4, url: "https://youtu.be/WQBqHfACzig?si=EzXGVUspyRknO1Gl" },
+    { id: 5, url: "https://youtu.be/SeerULYJ2Bs?si=N1IBISjq1zv5iCEF" },
 ];
-
-export default function VideoCarousel() {
-    // Middle video se start hoga
-    const [current, setCurrent] = useState(0);
-
-    const prevSlide = () => {
-        setCurrent((prev) => (prev === 0 ? videos.length - 1 : prev - 1));
-    };
-
-    const nextSlide = () => {
-        setCurrent((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
-    };
-
-    const getEmbedUrl = (url) => {
-        const videoId = url.split('/').pop().split('?')[0];
-        return `https://www.youtube.com/embed/${videoId}?autoplay=0`;
-    };
+const Video = () => {
+    const shorts = videos.filter((video) => video.url.includes("shorts"));
+    const longVideos = videos.filter((video) => !video.url.includes("shorts"));
 
     return (
-        <div className="p-5 bg-white">
-            <p className="text-4xl font-semibold text-center pt-5 dark:text-black">OUR VIDEO LIBRARY</p>
-            <div className="flex flex-col items-center space-y-6 pt-10">
-                <div className="flex items-center space-x-4 overflow-hidden w-full justify-center">
-                    {videos.map((video, index) => (
-                        <div
+        <div className='pt-28 dark:bg-white'>
+            <div className="w-full max-w-8xl relative">
+                <div className="relative">
+                    <Image
+                        src="/video/bgvideo.avif"
+                        width={1000}
+                        height={1000}
+                        className="w-full h-[250px] object-cover"
+                        alt="Contact Image"
+                    />
+                    <div className="absolute inset-0 bg-[#21bee5b4] opacity-70 z-10"></div>
+                    <motion.h1
+                        initial={{ y: -50, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="text-white font-serif text-center text-6xl font-bold my-4 absolute inset-0 z-20 flex items-center justify-center"
+                    >
+                        Our Videos
+                    </motion.h1>
+                </div>
+            </div>
+            <div className="max-w-6xl mx-auto p-6">
+
+                {/* Shorts Section */}
+                <h2 className="text-2xl font-bold text-center mb-4 dark:text-black">Short Videos</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    {shorts.map((video) => (
+                        <iframe
                             key={video.id}
-                            className={`relative w-72 h-72 flex-shrink-0 rounded-xl overflow-hidden shadow-lg transition-transform duration-500 
-                            ${index === current ? 'scale-100 opacity-100' : 'scale-90 opacity-50'}`}
-                        >
-                            <iframe
-                                width="100%"
-                                height="100%"
-                                src={getEmbedUrl(video.url)}
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
-                        </div>
+                            className="w-full h-56 rounded-lg shadow-lg"
+                            src={video.url.replace("/shorts/", "/embed/")}
+                            frameBorder="0"
+                            allowFullScreen
+                        ></iframe>
                     ))}
                 </div>
-                <div className="flex space-x-4">
-                    <button
-                        onClick={prevSlide}
-                        className="p-3 bg-white cursor-pointer rounded-full dark:text-black shadow-md hover:bg-gray-300 transition-all"
-                    >
-                        <FaArrowLeft size={20} />
-                    </button>
-                    <button
-                        onClick={nextSlide}
-                        className="p-3 bg-white cursor-pointer rounded-full dark:text-black shadow-md hover:bg-gray-300 transition-all"
-                    >
-                        <FaArrowRight size={20} />
-                    </button>
+
+                {/* Long Videos Section */}
+                <h2 className="text-2xl font-bold text-center mt-8 mb-4 dark:text-black">Long Videos</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
+                    {longVideos.map((video) => (
+                        <iframe
+                            key={video.id}
+                            className="w-full h-64 rounded-lg shadow-lg"
+                            src={video.url.replace("youtu.be/", "www.youtube.com/embed/")}
+                            frameBorder="0"
+                            allowFullScreen
+                        ></iframe>
+                    ))}
                 </div>
             </div>
         </div>
     );
 }
+
+export default Video

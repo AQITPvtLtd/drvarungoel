@@ -30,10 +30,11 @@ const Header = () => {
                     <Link href="/" className="hover:text-gray-600 transition">Home</Link>
                     <Link href="/about" className="hover:text-gray-600 transition">About</Link>
 
+                    <Link href="/treatments" className="hover:text-gray-600 transition"> TREATMENTS </Link>
+
                     {/* Services Dropdown */}
                     <div className="relative group">
-                        
-                        <Link href="/treatments" className="hover:text-gray-600 transition"> TREATMENTS </Link>
+
                         {/* <div className="absolute left-0 -mt-0 w-48 px-2 py-2 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 group-hover:flex flex-col">
                             <Link href="/services/web-development" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">Web Development</Link>
                             <Link href="/services/seo" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">SEO</Link>
@@ -60,11 +61,10 @@ const Header = () => {
 
                 {/* Call Now Button */}
                 <div className="hidden lg:flex">
-                    <Link href="/login">
-                        <button className="flex items-center bg-black text-white px-6 py-2 rounded-lg font-semibold hover:bg-gray-800 transition">
-                            <RiLoginBoxLine className="mr-2" />
-                            Call Now
-                        </button>
+                    <Link href="tel:+91 95605 38081" className="flex items-center bg-green-600 text-white px-6 py-2 rounded-lg font-semibold text-center transition-all 
+                                           border-2 border-transparent hover:border-[#22c1e9] hover:text-black hover:bg-white cursor-pointer">
+                        <RiLoginBoxLine className="mr-2" />
+                        Call Now
                     </Link>
                 </div>
 
@@ -80,18 +80,8 @@ const Header = () => {
                     <Link href="/" className="text-black" onClick={() => setIsOpen(false)}>Home</Link>
                     <Link href="/about" className="text-black" onClick={() => setIsOpen(false)}>About</Link>
 
-                    <div>
-                        <button onClick={() => setServicesOpen(!servicesOpen)} className="flex items-center w-full text-left text-black">
-                            TREATMENTS <FiChevronDown className="ml-1" />
-                        </button>
-                        {servicesOpen && (
-                            <div className="flex flex-col pl-4">
-                                <Link href="/services/web-development" className="text-black" onClick={() => setIsOpen(false)}>Web Development</Link>
-                                <Link href="/services/seo" className="text-black" onClick={() => setIsOpen(false)}>SEO</Link>
-                                <Link href="/services/marketing" className="text-black" onClick={() => setIsOpen(false)}>Marketing</Link>
-                            </div>
-                        )}
-                    </div>
+                    <Link href="/treatments" className="text-black" onClick={() => setIsOpen(false)}>Treatments</Link>
+
 
                     <Link href="/blogs" className="text-black" onClick={() => setIsOpen(false)}>Blogs</Link>
 

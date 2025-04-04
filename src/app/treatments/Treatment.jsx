@@ -1,53 +1,70 @@
+"use client";
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import data from '@/data/treatment'
+import { motion } from "framer-motion";
+
 const Treatment = () => {
     return (
-        <div>
-            <h1 className='text-center font-semibold text-2xl lg:text-3xl dark:text-black pt-5'>Our Services</h1>
+        <div className='pt-28 dark:bg-white'>
+            <div className="w-full max-w-8xl relative">
+                <div className="relative">
+                    <Image
+                        src="/treatments/img4.jpg"
+                        width={1000}
+                        height={1000}
+                        className="w-full h-[250px] object-cover"
+                        alt="Contact Image"
+                    />
+                    <div className="absolute inset-0 bg-[#21bee5b4] opacity-70 z-10"></div>
+                    <motion.h1
+                        initial={{ y: -50, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="text-white font-serif text-center text-6xl font-bold my-4 absolute inset-0 z-20 flex items-center justify-center"
+                    >
+                        Our Treatments
+                    </motion.h1>
+                </div>
+            </div>
+            <div className='max-w-7xl mx-auto px-5'>
+             
 
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-5'>
-                {data.map((item) => (
-                    <div key={item.id} className="px-2">
-                        <div >
-                            <div className="bg-white my-5 h-[420px] md:h-[400px] rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform duration-300 hover:scale-105">
-                                <div className="h-[250px] md:h-[230px] overflow-hidden">
-                                    <Image
-                                        src={item.image}
-                                        alt="service icon"
-                                        width={400}
-                                        height={400}
-                                        className="w-full object-cover h-[250px]"
-                                    />
-                                </div>
-                                <div className="p-4 text-center flex-grow">
-                                    <h2 className="text-xl font-bold text-black" style={{ fontFamily: "Roboto Slab, serif" }}>{item.title}</h2>
-                                </div>
-                                <div className="px-4 text-center flex-grow">
-                                    <h2 className="text-md text-black line-clamp-2">
-                                        {item.desc ? (
-                                            <span dangerouslySetInnerHTML={{ __html: item.desc }} />
-                                        ) : (
-                                            "Loading..."
-                                        )}
-                                    </h2>
-                                </div>
-
-                                <div className="p-4">
-                                    <Link
-                                        href={`services/${item.id}`}
-                                        className="px-4 py-2 bg-[#ef1a76] text-white text-lg rounded-lg block text-center transition-all 
-                                           border-2 border-transparent hover:border-[#ef1a76] hover:text-black hover:bg-white"
-                                    >
-                                        Know More
-                                    </Link>
-                                </div>
-
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10'>
+                    {data.map((item) => (
+                        <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                            <div className="h-[250px] md:h-[230px] overflow-hidden">
+                                <Image
+                                    src={item.img}
+                                    alt="service icon"
+                                    width={400}
+                                    height={400}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="p-5 text-center flex flex-col justify-between h-[150px]">
+                                <h2 className="text-xl font-bold text-black">{item.title}</h2>
+                                <p className="text-md text-black line-clamp-2">
+                                    {item.desc ? (
+                                        <span dangerouslySetInnerHTML={{ __html: item.desc }} />
+                                    ) : (
+                                        "Loading..."
+                                    )}
+                                </p>
+                            </div>
+                            <div className="px-5 pb-5">
+                                <Link
+                                    href={`treatments/${item.id}`}
+                                    className="w-full block px-4 py-2 bg-[#0a283f] text-white text-lg rounded-lg text-center transition-all 
+                                           border-2 border-transparent hover:border-[#22c1e9] hover:text-black hover:bg-white"
+                                >
+                                    Know More
+                                </Link>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     )

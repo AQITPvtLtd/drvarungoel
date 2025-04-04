@@ -43,42 +43,58 @@ const Footer = () => {
             </div>
 
             {/* Bottom Section */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 text-sm text-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-6 text-sm text-gray-700 text-center md:text-left">
                 {/* Quick Links */}
-                <div>
-                    <p className="font-semibold text-lg mb-2">Quick Links</p>
-                    <ul className="space-y-1">
-                        <li><Link href="/about">About</Link></li>
-                        <li><Link href="/blogs">Blogs</Link></li>
-                        <li><Link href="/media">Media</Link></li>
+                <div className="flex flex-col items-center md:items-start">
+                    <p className="font-semibold text-xl mb-3 text-black">Quick Links</p>
+                    <ul className="space-y-2">
+                        <li><Link href="/about" className="hover:text-[#129246]">About</Link></li>
+                        <li><Link href="/blogs" className="hover:text-[#129246]">Blogs</Link></li>
+                        <li><Link href="/media" className="hover:text-[#129246]">Media</Link></li>
                     </ul>
                 </div>
+
                 {/* Services */}
-                <div>
-                    <p className="font-semibold text-lg mb-2">Services</p>
-                    <ul className="space-y-1">
-                        <li><Link href="/services/radiation-therapy">Radiation Therapy</Link></li>
-                        <li><Link href="/services/targeted-therapy">Targeted Therapy</Link></li>
-                        <li><Link href="/services/immunotherapy">Immunotherapy</Link></li>
-                        <li><Link href="/services/chemotherapy">Chemotherapy</Link></li>
-                        <li><Link href="/services/robotic-therapy">Robotic Therapy</Link></li>
-                        <li><Link href="/services/car-t-cell-therapy">CAR-T Cell Therapy</Link></li>
+                <div className="flex flex-col items-center md:items-start">
+                    <p className="font-semibold text-xl mb-3 text-black">Services</p>
+                    <ul className="space-y-2">
+                        <li><Link href="/services/radiation-therapy" className="hover:text-[#129246]">Radiation Therapy</Link></li>
+                        <li><Link href="/services/targeted-therapy" className="hover:text-[#129246]">Targeted Therapy</Link></li>
+                        <li><Link href="/services/immunotherapy" className="hover:text-[#129246]">Immunotherapy</Link></li>
+                        <li><Link href="/services/chemotherapy" className="hover:text-[#129246]">Chemotherapy</Link></li>
+                        <li><Link href="/services/robotic-therapy" className="hover:text-[#129246]">Robotic Therapy</Link></li>
+                        <li><Link href="/services/car-t-cell-therapy" className="hover:text-[#129246]">CAR-T Cell Therapy</Link></li>
                     </ul>
                 </div>
+
+                <div className="flex flex-col items-center md:items-start">
+                    <p className="font-semibold text-xl mb-3 text-black">Media</p>
+                    <ul className="space-y-2">
+                        <li><Link href="/services/radiation-therapy" className="hover:text-[#129246]">Photo Gallery</Link></li>
+                        <li><Link href="/services/targeted-therapy" className="hover:text-[#129246]">Certificates</Link></li>
+                        <li><Link href="/services/immunotherapy" className="hover:text-[#129246]">Videos</Link></li>
+
+                    </ul>
+                </div>
+
                 {/* Location */}
-                <div>
-                    <p className="font-semibold text-lg mb-2">Location</p>
-                    <p>Rajiv Gandhi Cancer Institute,<br /> Sector - 5, Rohini, Delhi - 110085</p>
+                <div className="flex flex-col items-center md:items-start">
+                    <p className="font-semibold text-xl mb-3 text-black">Location</p>
+                    <p className="text-base leading-relaxed">
+                        Rajiv Gandhi Cancer Institute,<br />
+                        Sector - 5, Rohini, Delhi - 110085
+                    </p>
                 </div>
             </div>
 
             {/* Social Icons */}
-            <div className="flex space-x-4 mt-6">
-                <Link href="https://instagram.com" className="text-pink-500 text-xl"><FaInstagram /></Link>
-                <Link href="https://facebook.com" className="text-blue-600 text-xl"><FaFacebookF /></Link>
-                <Link href="https://linkedin.com" className="text-blue-700 text-xl"><FaLinkedinIn /></Link>
-                <Link href="https://youtube.com" className="text-red-600 text-xl"><FaYoutube /></Link>
+            <div className="flex justify-center md:justify-start space-x-6 mt-6">
+                <Link href="https://instagram.com" className="text-pink-500 text-2xl hover:opacity-80"><FaInstagram /></Link>
+                <Link href="https://facebook.com" className="text-blue-600 text-2xl hover:opacity-80"><FaFacebookF /></Link>
+                <Link href="https://linkedin.com" className="text-blue-700 text-2xl hover:opacity-80"><FaLinkedinIn /></Link>
+                <Link href="https://youtube.com" className="text-red-600 text-2xl hover:opacity-80"><FaYoutube /></Link>
             </div>
+
         </div>
     );
 };

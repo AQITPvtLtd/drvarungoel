@@ -1,12 +1,10 @@
 import React from 'react'
-import VideoCarousel from './Video'
-import VideoCarousel1 from './Video1'
+import Video from './Video'
 
 const page = () => {
   return (
     <div>
-        <VideoCarousel />
-        <VideoCarousel1 />
+      <Video />
     </div>
   )
 }

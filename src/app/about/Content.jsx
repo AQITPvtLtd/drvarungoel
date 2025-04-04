@@ -42,10 +42,10 @@ const Content = () => {
     ];
 
     return (
-        <div className="mx-auto p-6 bg-[#ebfff4]">
+        <div className="mx-auto p-6 bg-[#ebfff4] -pt-10">
             {/* Tabs */}
             <div className="flex flex-wrap justify-center mb-4 gap-3 sm:gap-5">
-                {["Education", "PUBLICATIONS AND RESEARCH WORK", "Experience"].map((category) => (
+                {["Education", "Experience","PUBLICATIONS AND RESEARCH WORK"].map((category) => (
                     <button
                         key={category}
                         className={`py-2 px-4 sm:py-3 sm:px-5 text-base sm:text-lg font-semibold transition-all duration-300 cursor-pointer

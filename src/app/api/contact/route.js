@@ -36,7 +36,7 @@ export async function POST(request) {
         const mailOptionsAdmin = {
             from: process.env.MY_EMAIL,
             to: process.env.MY_EMAIL,
-            subject: "Dr. Devavrat Arya - Contact Form",
+            subject: "Dr. Varun Goel - Contact Form",
             html: `
             <html>
               <body>

@@ -1,6 +1,7 @@
 export const data = [
     {
         id: 1,
+        img: "/treatments/img1.jpg",
         title: "Cancer Diagnosis & Staging",
         desc: [
             "<p>Cancer diagnosis and staging are crucial steps in understanding the extent of the disease and planning the most effective treatment. Early and accurate diagnosis can significantly improve treatment outcomes, while staging helps determine how far the cancer has spread.</p>",
@@ -47,74 +48,87 @@ export const data = [
     {
         id: 2,
         title: "Systemic Anti-Cancer Therapy",
+        img: "/treatments/img2.jpeg",
         desc: [
             "<p>Cancer treatment has evolved significantly over the years, with systemic anti-cancer therapy playing a crucial role in managing and treating various types of cancer. Systemic therapy involves the use of medications that travel through the bloodstream to reach and affect cancer cells throughout the body. This article explores different types of systemic anti-cancer therapies, including chemotherapy, targeted therapy, immunotherapy, hormonal therapy, and combination therapy.</p>",
 
-            "<h1>Chemotherapy</h1>",
+            "<h1><strong>1. Chemotherapy</strong></h1>",
             "<p>Chemotherapy is one of the most well-known and widely used systemic anti-cancer treatments. It involves the use of powerful drugs to kill or slow down the growth of cancer cells. Chemotherapy can be classified into three main types based on its purpose:</p>",
 
-            "<h2>Neoadjuvant Chemotherapy</h2>",
+            "<h1><strong>2. Neoadjuvant Chemotherapy</strong></h1>",
             "<p>Administered before the main treatment, such as surgery or radiation therapy, to shrink tumors and make them easier to remove. Commonly used in breast cancer, lung cancer, and sarcomas.</p>",
 
-            "<h2>Adjuvant Chemotherapy</h2>",
+            "<h1><strong>3. Adjuvant Chemotherapy</strong></h1>",
             "<p>Given after primary treatment to destroy any remaining cancer cells and reduce the risk of recurrence. Often used in breast, colon, and ovarian cancers.</p>",
 
-            "<h2>Palliative Chemotherapy</h2>",
+            "<h1><strong>4. Palliative Chemotherapy</strong></h1>",
             "<p>Used in advanced or metastatic cancers to relieve symptoms, slow disease progression, and improve quality of life.</p>",
 
-            "<h1>Targeted Therapy</h1>",
+            "<h1><strong>5. Targeted Therapy</strong></h1>",
             "<p>Targeted therapy is a revolutionary approach that specifically attacks cancer cells while minimizing damage to normal cells. It works by targeting molecular changes that drive cancer growth.</p>",
 
-            "<h2>Small Molecule Inhibitors</h2>",
+            "<h1><strong>6. Small Molecule Inhibitors</strong></h1>",
             "<p>These drugs interfere with specific proteins and pathways that promote cancer cell survival and proliferation. Examples include tyrosine kinase inhibitors (TKIs) like imatinib and EGFR inhibitors like erlotinib.</p>",
 
-            "<h2>Monoclonal Antibodies</h2>",
+            "<h1><strong>7. Monoclonal Antibodies</strong></h1>",
             "<p>These are lab-made molecules that bind to specific cancer cell markers, blocking their growth or triggering the immune system to attack them. Examples include trastuzumab (for HER2-positive breast cancer) and rituximab (for lymphoma).</p>",
 
-            "<h1>Immunotherapy</h1>",
+
+            "<h1><strong>8. Immunotherapy</strong></h1>",
             "<p>Immunotherapy enhances the body’s immune system to recognize and attack cancer cells. It has shown remarkable success in treating various cancers.</p>",
 
-            "<h2>Checkpoint Inhibitors</h2>",
+
+            "<h1><strong>9. Checkpoint Inhibitors</strong></h1>",
             "<p>These drugs block proteins like PD-1, PD-L1, and CTLA-4, which help cancer cells evade immune detection. Examples include pembrolizumab and nivolumab.</p>",
 
-            "<h2>CAR-T Cell Therapy</h2>",
+            "<h1><strong>10. CAR-T Cell Therapy</strong></h1>",
             "<p>This therapy involves modifying a patient’s T cells to better recognize and attack cancer cells. It has been a breakthrough treatment for leukemia and lymphoma.</p>",
 
-            "<h1>Hormonal Therapy</h1>",
+
+            "<h1><strong>11. Hormonal Therapy</strong></h1>",
             "<p>Hormonal therapy is specifically used to treat hormone-sensitive cancers by blocking or lowering hormone levels that fuel cancer growth.</p>",
 
-            "<h2>Breast Cancer Hormonal Therapy</h2>",
+
+            "<h1><strong>12. Breast Cancer Hormonal Therapy</strong></h1>",
             "<p>For hormone receptor-positive breast cancer, drugs like tamoxifen and aromatase inhibitors help reduce estrogen levels and slow cancer progression.</p>",
 
-            "<h2>Prostate Cancer Hormonal Therapy</h2>",
+
+            "<h1><strong>13. Prostate Cancer Hormonal Therapy</strong></h1>",
             "<p>Prostate cancer growth is often driven by androgens. Androgen deprivation therapy (ADT) using drugs like leuprolide lowers testosterone levels to control cancer growth.</p>",
 
-            "<h1>Combination Therapy</h1>",
+
+            "<h1><strong>14. Combination Therapy</strong></h1>",
             "<p>Combination therapy involves using two or more treatment modalities to enhance effectiveness. The combinations are designed to maximize cancer cell destruction while minimizing resistance and side effects.</p>",
 
-            "<h2>Chemo-Immunotherapy</h2>",
+
+            "<h1><strong>15. Chemo-Immunotherapy</strong></h1>",
             "<p>Combining chemotherapy with immunotherapy has shown promising results in treating lung cancer, Hodgkin’s lymphoma, and other cancers.</p>",
 
-            "<h2>Targeted Therapy Combinations</h2>",
+
+            "<h1><strong>16. Targeted Therapy Combinations</strong></h1>",
             "<p>Combining different targeted therapies can block multiple pathways simultaneously, making it harder for cancer to develop resistance.</p>",
 
-            "<h2>Chemo-Targeted Therapy</h2>",
+
+            "<h1><strong>17. Chemo-Targeted Therapy</strong></h1>",
             "<p>Some cancers respond well to a combination of chemotherapy and targeted therapy.</p>",
 
-            "<h1>Conclusion</h1>",
+
+            "<h1><strong>Conclusion</strong></h1>",
             "<p>Systemic anti-cancer therapy has revolutionized the way we treat cancer, offering more effective and personalized treatment options. Advances in chemotherapy, targeted therapy, immunotherapy, hormonal therapy, and combination therapies have significantly improved survival rates and quality of life for cancer patients.</p>"
         ]
     },
     {
         id: 3,
         title: "Personalized & Precision Medicine",
+        img: "/treatments/img3.avif",
         desc: [
             "<p>In the ever-evolving landscape of healthcare, Personalized & Precision Medicine (PPM) is revolutionizing cancer treatment by tailoring therapies to individual patients. Unlike traditional approaches that apply generalized treatments, PPM integrates biomarker identification, genomic profiling, and AI-driven predictive models to design highly effective therapeutic strategies. This approach enhances treatment efficacy, minimizes adverse effects, and improves patient outcomes.</p>",
 
-            "<h1>Understanding Biomarkers in Cancer Treatment</h1>",
+            "<h1><strong>Understanding Biomarkers in Cancer Treatment</strong></h1>",
             "<p>Biomarkers are measurable indicators of <strong>biological processes, disease states, or responses to therapy</strong>. In oncology, they play a crucial role in <strong>diagnosing cancer, predicting prognosis, and guiding treatment decisions</strong>. The identification of specific biomarkers enables oncologists to customize treatments that align with a patient’s unique genetic makeup.</p>",
 
-            "<h2>Key Biomarkers in Cancer Treatment</h2>",
+
+            "<h2> <strong>Key Biomarkers in Cancer Treatment</strong></h2>",
             "<ul>",
             "<li><strong>HER2 (Human Epidermal Growth Factor Receptor 2):</strong> Found in some breast and gastric cancers. Overexpression leads to aggressive tumor growth. Targeted therapies like <em>trastuzumab (Herceptin)</em> and <em>pertuzumab (Perjeta)</em> improve survival rates.</li>",
             "<li><strong>PD-L1 (Programmed Death-Ligand 1):</strong> Plays a role in immune system evasion by tumors. High PD-L1 expression suggests responsiveness to <em>immune checkpoint inhibitors</em> like pembrolizumab (Keytruda).</li>",
@@ -122,10 +136,10 @@ export const data = [
             "<li><strong>NTRK (Neurotrophic Tropomyosin Receptor Kinase):</strong> Occurs in multiple cancer types. Patients with NTRK fusions benefit from targeted therapies like <em>larotrectinib (Vitrakvi)</em>.</li>",
             "</ul>",
 
-            "<h1>Genomic Profiling: Customizing Treatment at the Molecular Level</h1>",
+            "<h1><strong>Genomic Profiling:</strong> Customizing Treatment at the Molecular Level</h1>",
             "<p>Genomic profiling is a powerful tool that <strong>analyzes a patient’s tumor DNA to identify mutations</strong> driving cancer growth. This allows oncologists to tailor treatments based on genetic alterations rather than a one-size-fits-all approach.</p>",
 
-            "<h2>Techniques Used in Genomic Profiling</h2>",
+            "<h2><strong>Techniques Used in Genomic Profiling</strong></h2>",
             "<ul>",
             "<li><strong>Next-Generation Sequencing (NGS):</strong> Rapidly analyzes multiple genes simultaneously. Helps in identifying <em>actionable mutations</em> for targeted therapy.</li>",
             "<li><strong>Whole Exome Sequencing (WES):</strong> Focuses on protein-coding regions of DNA. Detects novel mutations that might influence treatment response.</li>",
@@ -133,10 +147,11 @@ export const data = [
             "<li><strong>Liquid Biopsy:</strong> A non-invasive test that detects circulating tumor DNA (ctDNA) in blood. Enables <em>real-time monitoring</em> of tumor evolution and treatment response.</li>",
             "</ul>",
 
-            "<h1>AI-Based Predictive Models in Therapy Selection</h1>",
+
+            "<h1> <strong>AI-Based Predictive Models in Therapy Selection</strong></h1>",
             "<p>Artificial Intelligence (AI) is transforming <strong>oncology by analyzing complex datasets</strong> to predict the best treatment options for patients.</p>",
 
-            "<h2>Benefits of AI in Precision Medicine</h2>",
+            "<h2><strong>Benefits of AI in Precision Medicine</strong></h2>",
             "<ul>",
             "<li><strong>Analyzing Large-Scale Genomic Data:</strong> AI tools identify mutation patterns and match them with existing targeted therapies.</li>",
             "<li><strong>Predicting Drug Responses:</strong> Machine learning models forecast patient responses to specific drugs.</li>",
@@ -144,20 +159,22 @@ export const data = [
             "<li><strong>Optimizing Treatment Plans:</strong> AI-powered clinical decision support systems provide recommendations based on patient history and genetic data.</li>",
             "</ul>",
 
-            "<h1>Conclusion</h1>",
+            "<h1><strong>Conclusion</strong></h1>",
             "<p><strong>Personalized & Precision Medicine</strong> is revolutionizing cancer care by leveraging <strong>biomarkers, genomic profiling, and AI-driven predictive models</strong>. These advancements are enabling oncologists to design <strong>tailored treatments</strong> that maximize efficacy while minimizing side effects.</p>"
         ]
     },
     {
         id: 4,
         title: "Prognostication & Risk Assessment",
+        img: "/treatments/img4.jpg",
         desc: [
             "<p>Prognostication and risk assessment are critical aspects of oncology, helping medical professionals determine the aggressiveness of a disease, estimate recurrence risks, predict treatment responses, and make informed decisions regarding patient care. With advancements in medical research and technology, modern tools such as nomograms and scoring systems have revolutionized how oncologists evaluate cancer progression and survival rates.</p>",
 
-            "<h1>Understanding Prognostication & Risk Assessment</h1>",
+            "<h1><strong>Understanding Prognostication & Risk Assessment</strong></h1>",
             "<p>Prognostication involves predicting the likely course and outcome of a disease based on various clinical, pathological, and molecular factors. Risk assessment, on the other hand, helps stratify patients based on their likelihood of disease progression or recurrence. These evaluations are essential for devising personalized treatment strategies, optimizing resource utilization, and improving patient outcomes.</p>",
 
-            "<h2>Assessing Disease Aggressiveness & Recurrence Risk</h2>",
+
+            "<h2> <strong>Assessing Disease Aggressiveness & Recurrence Risk</strong></h2>",
             "<ul>",
             "<li><b>Tumor Grade and Stage:</b> Tumor grade describes the appearance of cancer cells under a microscope, while staging systems like TNM classify cancer based on tumor size, lymph node involvement, and metastasis.</li>",
             "<li><b>Molecular and Genetic Markers:</b> Genetic mutations such as BRCA1/BRCA2 (breast cancer) or KRAS (colorectal cancer) influence tumor behavior and recurrence risk.</li>",
@@ -165,24 +182,25 @@ export const data = [
             "<li><b>Histopathological Factors:</b> Tumor invasion depth, lymphovascular invasion, and perineural invasion play crucial roles in disease progression.</li>",
             "</ul>",
 
-            "<h2>Predicting Treatment Responses and Survival Rates</h2>",
+
+            "<h2> <strong>Predicting Treatment Responses and Survival Rates</strong></h2>",
             "<ul>",
             "<li><b>Chemotherapy and Immunotherapy Responses:</b> Biomarkers like PD-L1 help predict responses to immune checkpoint inhibitors.</li>",
             "<li><b>Radiation Therapy Sensitivity:</b> Genetic tests such as the Radiation Sensitivity Index (RSI) assist in evaluating response to radiation.</li>",
             "<li><b>Hormonal Therapy Efficacy:</b> Hormone receptor-positive cancers respond well to hormonal therapies like tamoxifen.</li>",
             "</ul>",
 
-            "<h2>Use of Nomograms and Scoring Systems for Decision-Making</h2>",
+            "<h2><strong>Use of Nomograms and Scoring Systems for Decision-Making</strong></h2>",
             "<ul>",
             "<li><b>Nomograms:</b> Graphical tools that generate individualized survival probabilities, such as MSKCC Nomograms.</li>",
             "<li><b>Scoring Systems:</b> Tools like the Gleason Score (prostate cancer) and International Prognostic Index (lymphoma) guide treatment strategies.</li>",
             "<li><b>Artificial Intelligence:</b> AI-driven models analyze large datasets to predict cancer progression and treatment responses.</li>",
             "</ul>",
 
-            "<h2>The Future of Prognostication in Oncology</h2>",
+            "<h2><strong>The Future of Prognostication in Oncology</strong></h2>",
             "<p>With advancements in precision medicine, AI, and genomic research, prognostication is becoming more accurate. Liquid biopsies, ctDNA analysis, and AI-driven diagnostics are shaping the future of cancer care.</p>",
 
-            "<h2>Conclusion</h2>",
+            "<h2><strong>Conclusion</strong></h2>",
             "<p>Prognostication and risk assessment play a crucial role in modern oncology. The integration of nomograms, scoring systems, and AI-based models continues to enhance prognostic evaluations, ultimately leading to better patient outcomes and more effective cancer treatments.</p>"
 
         ]
@@ -190,10 +208,11 @@ export const data = [
     {
         id: 5,
         title: "Supportive & Palliative Care",
+        img: "/treatments/img5.avif",
         desc: [
             "<p>Supportive and palliative care is an essential aspect of modern medicine, focusing on improving the quality of life for individuals facing serious illnesses. It aims to provide relief from pain, manage symptoms, and offer emotional, psychological, and nutritional support. Unlike curative treatments, palliative care prioritizes comfort, dignity, and holistic well-being for patients and their families.</p>",
 
-            "<h1>Pain Management in Palliative Care</h1>",
+            "<strong><h1>Pain Management in Palliative Care</h1></strong>",
             "<p>Pain is one of the most common and distressing symptoms in patients with advanced illnesses. Effective pain management is crucial to ensuring a patient’s comfort and overall well-being. Several approaches are used to control pain, including:</p>",
 
             "<ul>",
@@ -204,7 +223,7 @@ export const data = [
             "<li><strong>NSAIDs (Non-Steroidal Anti-Inflammatory Drugs):</strong> Medications like ibuprofen and naproxen are often used for mild to moderate pain. They help reduce inflammation and swelling, making them useful for conditions like bone metastases and arthritis. Long-term use must be monitored to prevent gastrointestinal and kidney complications.</li>",
             "</ul>",
 
-            "<h1>Managing Treatment Side Effects</h1>",
+            "<h1> <strong>Managing Treatment Side Effects</strong></h1>",
             "<p>Cancer treatments, such as chemotherapy and radiation therapy, often cause severe side effects that can affect a patient’s quality of life. Palliative care includes strategies to manage these side effects effectively.</p>",
 
             "<ul>",
@@ -215,7 +234,7 @@ export const data = [
             "<li><strong>Neuropathy:</strong> Chemotherapy-induced peripheral neuropathy (CIPN) can cause tingling, numbness, and pain in the hands and feet. Medications like gabapentin and pregabalin help manage neuropathic pain. Physical therapy and acupuncture are also effective complementary therapies.</li>",
             "</ul>",
 
-            "<h1>Nutritional Support and Appetite Stimulants</h1>",
+            "<h1> <strong>Nutritional Support and Appetite Stimulants</strong></h1>",
             "<p>Nutrition plays a vital role in maintaining strength and immune function in patients with chronic illnesses. Many patients experience loss of appetite due to their medical condition or treatment, leading to malnutrition and weight loss.</p>",
 
             "<ul>",
@@ -224,7 +243,7 @@ export const data = [
             "<li><strong>Appetite Stimulants:</strong> Medications like megestrol acetate and corticosteroids can help improve appetite. Herbal remedies and dietary modifications, such as smaller, high-calorie meals, can support better food intake. Psychological counseling helps address emotional factors affecting appetite.</li>",
             "</ul>",
 
-            "<h1>Psychological Support and Counseling</h1>",
+            "<h1><strong>Psychological Support and Counseling</strong></h1>",
             "<p>A serious illness affects not just the physical health of a patient but also their mental and emotional well-being. Addressing psychological and emotional concerns is a crucial aspect of palliative care.</p>",
 
             "<ul>",
@@ -233,25 +252,27 @@ export const data = [
             "<li><strong>Support for Families:</strong> Family members often experience emotional distress while caring for a loved one with a chronic illness. Counseling helps them understand and cope with the situation effectively. Respite care services offer temporary relief to caregivers, allowing them to rest and recharge.</li>",
             "</ul>",
 
-            "<h1>Conclusion</h1>",
+            "<h1><strong>Conclusion</strong></h1>",
             "<p>Supportive and palliative care is an indispensable part of medical treatment, focusing on providing comfort, dignity, and holistic care to patients and their families. By addressing pain, managing side effects, offering nutritional support, and providing psychological care, palliative care ensures that patients experience the best possible quality of life, even in the face of serious illness. As medical advancements continue, integrating palliative care into standard treatment plans will remain crucial in offering compassionate and comprehensive healthcare.</p>"
         ]
     },
     {
         id: 6,
         title: "Bone Marrow Transplantation (BMT) & Cellular Therapy",
+        img: "/treatments/img66.jpg",
         desc: [
             "<p>Bone Marrow Transplantation (BMT) and Cellular Therapy have revolutionized the treatment of various hematological disorders and malignancies. These advanced medical procedures have given new hope to patients suffering from leukemia, lymphoma, aplastic anemia, and other life-threatening conditions. BMT involves the replacement of diseased or damaged bone marrow with healthy stem cells, which help restore normal blood cell production. Cellular therapy, including <strong>CAR-T cell therapy</strong>, offers targeted treatment for certain cancers, significantly improving survival rates and quality of life.</p>",
 
-            "<h1>Types of Bone Marrow Transplantation</h1>",
+            "<h1><strong>Types of Bone Marrow Transplantation</strong></h1>",
 
-            "<h2>1. Autologous Stem Cell Transplant</h2>",
+            "<h2><strong>1. Autologous Stem Cell Transplant</strong></h2>",
             "<p>In an autologous transplant, the patient’s own stem cells are collected before undergoing high-dose chemotherapy or radiation therapy. These stem cells are then reinfused to restore bone marrow function. This method is commonly used for conditions such as multiple myeloma and certain lymphomas. The advantage of autologous transplantation is the <strong>lower risk of immune rejection</strong> since the patient’s own cells are used.</p>",
 
-            "<h2>2. Allogeneic Stem Cell Transplant</h2>",
+            "<h2><strong>2. Allogeneic Stem Cell Transplant</strong></h2>",
             "<p>Allogeneic transplants involve using stem cells from a compatible donor, which could be a sibling, parent, or an unrelated donor. This method is commonly used for treating leukemia, aplastic anemia, and genetic disorders. The success of an allogeneic transplant depends on the compatibility between the donor and recipient, often determined by <strong>human leukocyte antigen (HLA) matching</strong>. This type of transplant provides a graft-versus-tumor effect, where the donor cells help eliminate any remaining cancer cells in the patient’s body.</p>",
 
-            "<h1>Post-Transplant Immunosuppressive Management</h1>",
+
+            "<h1>  <strong>Post-Transplant Immunosuppressive Management</strong></h1>",
             "<p>After an allogeneic transplant, the recipient's immune system needs time to adapt to the donor cells. <strong>Immunosuppressive medications</strong> are used to prevent graft-versus-host disease (GVHD), a condition where the donor immune cells attack the recipient’s tissues. Post-transplant care includes:</p>",
             "<ul>",
             "<li><strong>Regular monitoring</strong> to detect any signs of rejection or infection</li>",
@@ -260,10 +281,10 @@ export const data = [
             "<li><strong>Supportive therapies</strong> to help manage complications like anemia, infections, and fatigue</li>",
             "</ul>",
 
-            "<h1>CAR-T Cell Therapy: A Breakthrough in Hematological Malignancies</h1>",
+            "<h1><strong>CAR-T Cell Therapy: A Breakthrough in Hematological Malignancies</strong></h1>",
             "<p><strong>Chimeric Antigen Receptor T-cell (CAR-T) therapy</strong> is an innovative cellular therapy that has transformed the treatment landscape for blood cancers. It involves genetically modifying a patient’s T cells to recognize and attack cancer cells more effectively. This therapy has shown remarkable success in treating relapsed or refractory leukemia and lymphoma.</p>",
 
-            "<h2>How CAR-T Cell Therapy Works</h2>",
+            "<h2><strong>How CAR-T Cell Therapy Works</strong></h2>",
             "<ol>",
             "<li><strong>T-cell Collection</strong>: The patient’s T cells are extracted through a process called leukapheresis.</li>",
             "<li><strong>Genetic Modification</strong>: The T cells are engineered to express a receptor that specifically targets cancer cells.</li>",
@@ -271,7 +292,7 @@ export const data = [
             "<li><strong>Attack on Cancer Cells</strong>: Once inside the body, these engineered T cells seek out and destroy cancer cells.</li>",
             "</ol>",
 
-            "<h1>Who Can Benefit from BMT and Cellular Therapy?</h1>",
+            "<h1><strong>Who Can Benefit from BMT and Cellular Therapy?</strong></h1>",
             "<p>Patients diagnosed with the following conditions may be eligible for these advanced treatments:</p>",
             "<ul>",
             "<li><strong>Leukemia</strong> (acute and chronic types)</li>",
@@ -282,20 +303,21 @@ export const data = [
             "<li><strong>Myelodysplastic Syndromes (MDS)</strong></li>",
             "</ul>",
 
-            "<h1>Future of Bone Marrow Transplantation & Cellular Therapy</h1>",
+            "<h1><strong>Future of Bone Marrow Transplantation & Cellular Therapy</strong></h1>",
             "<p>Ongoing research in stem cell transplantation and cellular therapy aims to enhance the effectiveness of treatments while reducing complications. Innovations such as <strong>gene editing (CRISPR)</strong>, improved donor matching techniques, and expanded CAR-T cell applications are expected to further improve patient outcomes. The integration of <strong>artificial intelligence</strong> in predicting transplant success rates and personalized treatment plans is also a promising development in this field.</p>",
 
-            "<h1>Conclusion</h1>",
+            "<h1><strong>Conclusion</strong></h1>",
             "<p><strong>Bone Marrow Transplantation</strong> and <strong>Cellular Therapy</strong> offer a lifeline to patients with severe hematological conditions. Advances in these treatments have significantly improved survival rates and quality of life. As research continues to evolve, the future of regenerative medicine and cancer treatment looks brighter, paving the way for more accessible and effective therapies.</p>"
         ]
     },
     {
         id: 7,
         title: "Management of Oncologic Emergencies",
+        img: "/treatments/img7.jpg",
         desc: [
             "<p>Cancer patients, particularly those undergoing chemotherapy or suffering from advanced malignancies, are susceptible to life-threatening complications known as oncologic emergencies. Prompt recognition and management of these conditions are essential to improve patient outcomes. Below, we discuss some of the most critical oncologic emergencies, their causes, symptoms, and treatment approaches.</p>",
 
-            "<h3>1. Febrile Neutropenia and Sepsis</h3>",
+            "<h3><strong>1. Febrile Neutropenia and Sepsis</strong></h3>",
             "<p>Febrile neutropenia (FN) is a serious complication that arises when cancer patients, especially those receiving chemotherapy, develop an abnormally low neutrophil count, making them highly vulnerable to infections.</p>",
 
             "<strong>Causes:</strong>",
@@ -307,7 +329,7 @@ export const data = [
             "<strong>Management:</strong>",
             "<ul><li>Immediate hospitalization for intravenous (IV) antibiotics</li><li>Blood cultures and diagnostic tests to identify the infection</li><li>Growth factors (e.g., G-CSF) to accelerate neutrophil recovery</li><li>Strict infection control measures, including isolation in some cases</li></ul>",
 
-            "<h3>2. Hypercalcemia of Malignancy</h3>",
+            "<h3><strong>2. Hypercalcemia of Malignancy</strong></h3>",
             "<p>Hypercalcemia occurs when calcium levels in the blood become dangerously high, often due to certain cancers such as lung, breast, and multiple myeloma.</p>",
 
             "<strong>Causes:</strong>",
@@ -319,7 +341,7 @@ export const data = [
             "<strong>Management:</strong>",
             "<ul><li>Aggressive IV hydration with normal saline</li><li>Bisphosphonates (e.g., zoledronic acid, pamidronate) to inhibit bone resorption</li><li>Calcitonin for rapid but short-term calcium lowering</li><li>Dialysis in extreme cases of refractory hypercalcemia</li></ul>",
 
-            "<h3>3. Spinal Cord Compression</h3>",
+            "<h3><strong>3. Spinal Cord Compression</strong></h3>",
             "<p>Spinal cord compression is a devastating complication of metastatic cancer, particularly from lung, breast, and prostate malignancies, which can lead to permanent neurological damage if not treated promptly.</p>",
 
             "<strong>Causes:</strong>",
@@ -331,7 +353,7 @@ export const data = [
             "<strong>Management:</strong>",
             "<ul><li>Immediate administration of high-dose corticosteroids (e.g., dexamethasone) to reduce inflammation</li><li>Urgent MRI or CT scan to determine the extent of compression</li><li>Radiation therapy or surgical decompression depending on the severity</li></ul>",
 
-            "<h3>4. Tumor Lysis Syndrome (TLS)</h3>",
+            "<h3><strong>4. Tumor Lysis Syndrome (TLS)</strong></h3>",
             "<p>TLS is a metabolic emergency caused by the rapid destruction of tumor cells, leading to the release of intracellular contents into the bloodstream, resulting in electrolyte imbalances.</p>",
 
             "<strong>Causes:</strong>",
@@ -343,7 +365,8 @@ export const data = [
             "<strong>Management:</strong>",
             "<ul><li>Aggressive IV hydration to promote renal clearance</li><li>Allopurinol or rasburicase to lower uric acid levels</li><li>Continuous cardiac and electrolyte monitoring</li><li>Dialysis in cases of severe kidney failure</li></ul>",
 
-            "<h3>5. Superior Vena Cava (SVC) Syndrome</h3>",
+
+            "<h3><strong>5. Superior Vena Cava (SVC) Syndrome </strong></h3>",
             "<p>SVC syndrome occurs when a tumor obstructs the superior vena cava, leading to impaired venous return from the upper body to the heart.</p>",
 
             "<strong>Causes:</strong>",
@@ -355,17 +378,18 @@ export const data = [
             "<strong>Management:</strong>",
             "<ul><li>Elevation of the patient’s head to improve venous drainage</li><li>Oxygen therapy to ease respiratory distress</li><li>Radiation or chemotherapy to shrink the tumor</li><li>Stenting or anticoagulation for cases involving thrombotic obstruction</li></ul>",
 
-            "<h3>Conclusion</h3>",
+            "<h3><strong>Conclusion</strong></h3>",
             "<p>Oncologic emergencies require immediate recognition and swift intervention to prevent life-threatening complications. Healthcare providers should maintain a high index of suspicion in at-risk cancer patients and implement appropriate treatment strategies promptly. Multidisciplinary collaboration among oncologists, emergency physicians, and palliative care teams plays a vital role in optimizing patient outcomes and improving quality of life.</p>"
         ]
     },
     {
         id: 8,
         title: "Multidisciplinary Tumor Board Participation",
+        img: "/treatments/img8.jpg",
         desc: [
             "<p>Cancer treatment has evolved significantly over the years, and one of the most impactful advancements in modern oncology is the concept of a <strong>Multidisciplinary Tumor Board (MTB)</strong>. These boards bring together specialists from different fields, ensuring a collaborative approach to cancer diagnosis, treatment planning, and patient care. By fostering open communication between medical professionals, MTBs enhance decision-making processes, leading to improved patient outcomes.</p>",
 
-            "<h3>The Role of a Multidisciplinary Tumor Board</h3>",
+            "<h3><strong>The Role of a Multidisciplinary Tumor Board</strong></h3>",
 
             "<p>A Multidisciplinary Tumor Board is a panel of healthcare professionals specializing in various aspects of cancer care. The primary objective of the board is to review and discuss complex cancer cases and develop comprehensive treatment plans tailored to individual patients. By integrating expertise from multiple specialties, the board ensures that every patient receives a holistic and personalized treatment approach.</p>",
 
@@ -383,11 +407,11 @@ export const data = [
             "<li><strong>Nurses and Patient Advocates</strong> – Essential team members who provide patient education and emotional support.</li>",
             "</ul>",
 
-            "<h3>Collaboration Between Surgical and Radiation Oncologists</h3>",
+            "<h3><strong>Collaboration Between Surgical and Radiation Oncologists</strong></h3>",
 
             "<p>One of the most crucial aspects of an MTB is the collaboration between surgical and radiation oncologists. These two specialties often work together to determine the most effective course of action for cancer patients.</p>",
 
-            "<h3>Surgical Oncology Contributions</h3>",
+            "<h3><strong>Surgical Oncology Contributions</strong></h3>",
             "<ul>",
             "<li>Assessing whether surgery is the best treatment option for the patient.</li>",
             "<li>Determining the feasibility of tumor resection.</li>",
@@ -406,10 +430,10 @@ export const data = [
             "<h3>Joint Decision-Making with Radiologists, Pathologists, and Geneticists</h3>",
             "<p>Accurate diagnosis and personalized treatment planning require close collaboration between radiologists, pathologists, and geneticists.</p>",
 
-            "<h3>Discussion of Clinical Trials and Novel Treatment Options</h3>",
+            "<h3><strong>Discussion of Clinical Trials and Novel Treatment Options</strong></h3>",
             "<p>Another significant function of MTBs is their role in identifying potential clinical trials and novel treatment options for patients. Cancer research is continuously evolving, and new therapies are being tested to improve survival rates and reduce side effects.</p>",
 
-            "<h3>Benefits of Multidisciplinary Tumor Board Participation</h3>",
+            "<h3><strong>Benefits of Multidisciplinary Tumor Board Participation</strong></h3>",
             "<p>The collaborative approach of MTBs provides several benefits for both patients and healthcare providers:</p>",
 
             "<h4>For Patients:</h4>",
@@ -428,7 +452,7 @@ export const data = [
             "<li><strong>Streamlined Patient Management</strong> – Coordinated efforts prevent unnecessary delays in treatment and ensure timely interventions.</li>",
             "</ul>",
 
-            "<h3>Challenges and Future Directions</h3>",
+            "<h3><strong>Challenges and Future Directions</strong></h3>",
             "<p>While MTBs provide significant advantages, they also present certain challenges:</p>",
             "<ul>",
             "<li><strong>Time Constraints</strong> – Gathering multiple specialists for regular meetings can be challenging.</li>",
@@ -438,21 +462,22 @@ export const data = [
 
             "<p>To overcome these challenges, many institutions are adopting <strong>virtual tumor boards</strong>, allowing specialists from different locations to collaborate remotely. Additionally, <strong>AI-driven analytics</strong> are being integrated into MTBs to assist in data interpretation and treatment recommendations.</p>",
 
-            "<h3>Conclusion</h3>",
+            "<h3><strong>Conclusion</strong ></h3 > ",
             "<p>Multidisciplinary Tumor Boards represent a cornerstone of modern oncology, ensuring that cancer patients receive the best possible care through expert collaboration. By uniting surgical and radiation oncologists, radiologists, pathologists, geneticists, and other specialists, these boards facilitate informed decision-making, enhance treatment precision, and improve patient outcomes.</p>"
         ]
     },
     {
         id: 9,
         title: "Clinical Trials & Research",
+        img: "/treatments/img9.avif",
         desc: [
             "<p>Cancer remains one of the most challenging diseases in modern medicine, requiring continuous research and innovation to improve treatment outcomes. Clinical trials and research play a critical role in the development of new drugs, biomarkers, and treatment regimens, ensuring that cancer therapies are safe, effective, and tailored to individual patients. This article explores the importance of clinical trials, the process of designing and conducting <strong>Phase I–IV trials</strong>, and the role of <strong>translational research</strong> in bringing novel cancer therapies from the laboratory to the clinic.</p>",
 
-            "<h3>Understanding Clinical Trials</h3>",
+            "<h3><strong>Understanding Clinical Trials</strong></h3>",
 
             "<p>Clinical trials are research studies that evaluate new medical treatments, drugs, or procedures in human participants. They help determine the <strong>safety</strong>, <strong>effectiveness</strong>, and potential <strong>side effects</strong> of new therapies before they become widely available. These trials follow strict guidelines set by regulatory authorities such as the <strong>U.S. Food and Drug Administration (FDA)</strong> and the <strong>European Medicines Agency (EMA)</strong> to ensure ethical and scientific integrity.</p>",
 
-            "<h3>Phases of Clinical Trials</h3>",
+            "<h3><strong>Phases of Clinical Trials</strong></h3>",
 
             "<ul>",
             "<li><strong>Phase I (Safety & Dosage Evaluation):</strong> Small-scale trial (20–100 participants). Tests the safety of a new drug or treatment. Determines the appropriate dosage and identifies any side effects.</li>",
@@ -461,11 +486,11 @@ export const data = [
             "<li><strong>Phase IV (Post-Marketing Surveillance):</strong> Conducted after the drug is approved and released to the public. Monitors long-term safety, effectiveness, and rare side effects. Helps refine treatment protocols based on real-world data.</li>",
             "</ul>",
 
-            "<h3>Investigating Novel Drugs, Biomarkers, and Treatment Regimens</h3>",
+            "<h3><strong>Investigating Novel Drugs, Biomarkers, and Treatment Regimens</strong></h3>",
 
             "<p>Advancements in cancer treatment rely on the discovery and validation of <strong>new drugs</strong>, <strong>biomarkers</strong>, and <strong>treatment approaches</strong>. Research in these areas helps develop personalized treatment plans tailored to a patient’s genetic and molecular profile.</p>",
 
-            "<h3>Development of New Cancer Drugs</h3>",
+            "<h3><strong>Development of New Cancer Drugs</strong></h3>",
 
             "<p>New drug development is a rigorous process that starts in the laboratory and progresses through preclinical studies before entering clinical trials. Promising <strong>targeted therapies, immunotherapies, and chemotherapy drugs</strong> undergo extensive testing to evaluate their effectiveness in specific types of cancer.</p>",
 
@@ -476,7 +501,7 @@ export const data = [
             "<li><strong>PARP inhibitors:</strong> Used for treating ovarian and breast cancers.</li>",
             "</ul>",
 
-            "<h3>The Role of Biomarkers in Cancer Treatment</h3>",
+            "<h3><strong>The Role of Biomarkers in Cancer Treatment</strong></h3>",
 
             "<p>Biomarkers are biological molecules found in blood, tissue, or body fluids that indicate the presence of cancer or predict how a patient will respond to treatment.</p>",
 
@@ -486,7 +511,7 @@ export const data = [
             "<li><strong>Monitoring disease progression:</strong> Helps track the effectiveness of treatments.</li>",
             "</ul>",
 
-            "<h3>Innovative Treatment Regimens</h3>",
+            "<h3><strong>Innovative Treatment Regimens</strong></h3>",
 
             "<p>Traditional cancer treatments like <strong>surgery, chemotherapy, and radiation therapy</strong> are being combined with newer approaches to create more effective regimens.</p>",
 
@@ -496,7 +521,7 @@ export const data = [
             "<li><strong>Minimally invasive procedures:</strong> Such as robotic-assisted surgeries and advanced radiation techniques.</li>",
             "</ul>",
 
-            "<h3>The Role of Translational Research</h3>",
+            "<h3><strong>The Role of Translational Research</strong></h3>",
 
             "<p>Translational research is a critical field that transforms <strong>scientific discoveries</strong> into real-world medical applications. It connects basic laboratory research with clinical practice, ensuring that innovative therapies reach patients as quickly as possible.</p>",
 
@@ -509,7 +534,7 @@ export const data = [
             "<li><strong>Immunotherapy Advancements:</strong> Researching how the immune system can be enhanced to fight cancer more effectively.</li>",
             "</ul>",
 
-            "<h3>The Importance of Clinical Research in Cancer Treatment</h3>",
+            "<h3><strong>The Importance of Clinical Research in Cancer Treatment</strong></h3>",
 
             "<p>Clinical trials and research have revolutionized cancer treatment, leading to significant breakthroughs in recent years. Some of the key benefits include:</p>",
 
@@ -520,7 +545,7 @@ export const data = [
             "<li><strong>Enhanced Quality of Life:</strong> Personalized treatment regimens help patients live longer, healthier lives.</li>",
             "</ul>",
 
-            "<h3>Conclusion</h3>",
+            "<h3><strong>Conclusion</strong></h3>",
 
             "<p>Clinical trials and research are the backbone of progress in cancer treatment. From <strong>designing and conducting Phase I–IV trials</strong> to investigating <strong>novel drugs, biomarkers, and treatment regimens</strong>, scientists are continuously working to develop safer, more effective therapies. <strong>Translational research</strong> plays a crucial role in ensuring that these discoveries move from the laboratory to the clinic, offering hope to millions of cancer patients worldwide.</p>"
         ]
@@ -528,9 +553,11 @@ export const data = [
     {
         id: 10,
         title: "Survivorship & Long-Term Follow-up",
+        img: "/treatments/img10.jpg",
         desc: [
             "<p>Cancer survivorship begins at the moment of diagnosis and continues through the rest of a patient’s life. The journey from diagnosis to recovery is challenging, but survivorship care ensures that individuals maintain a high quality of life after treatment. Long-term follow-up is essential to monitor <strong>late side effects</strong>, prevent <strong>secondary malignancies</strong>, and provide support for <strong>lifestyle modifications</strong>, <strong>psychosocial well-being</strong>, and <strong>fertility concerns</strong>.</p>",
-            "<h3>Monitoring for Late Side Effects & Secondary Malignancies</h3>",
+
+            "<h3><strong>Monitoring for Late Side Effects & Secondary Malignancies</strong></h3>",
             "<p>Cancer treatments such as chemotherapy, radiation, and surgery can have long-term consequences on a survivor’s health. Late side effects may appear months or even years after treatment, making regular monitoring crucial.</p>",
             "<ul>",
             "<li><strong>Cardiac Issues:</strong> Some chemotherapies and radiation treatments can increase the risk of heart disease, high blood pressure, and heart failure.</li>",
@@ -538,14 +565,16 @@ export const data = [
             "<li><strong>Cognitive Dysfunction (\"Chemo Brain\"):</strong> Many survivors experience memory problems, difficulty concentrating, or slowed processing speed.</li>",
             "<li><strong>Osteoporosis:</strong> Hormonal therapies and certain chemotherapy drugs can cause bone density loss.</li>",
             "</ul>",
-            "<h3>Guiding Patients on Lifestyle Modifications</h3>",
+
+            "<h3><strong>Guiding Patients on Lifestyle Modifications</strong></h3>",
             "<p>A healthy lifestyle plays a crucial role in reducing the risk of recurrence, managing long-term side effects, and improving overall well-being.</p>",
             "<ul>",
             "<li><strong>Balanced Nutrition:</strong> A diet rich in fruits, vegetables, whole grains, and lean proteins.</li>",
             "<li><strong>Regular Physical Activity:</strong> Exercise reduces fatigue and improves cardiovascular health.</li>",
             "<li><strong>Avoiding Tobacco and Alcohol:</strong> Smoking and excessive alcohol consumption increase cancer risk.</li>",
             "</ul>",
-            "<h3>Psychosocial and Fertility Counseling Post-Treatment</h3>",
+
+            "<h3><strong>Psychosocial and Fertility Counseling Post-Treatment </strong></h3>",
             "<p>The emotional, social, and reproductive health of cancer survivors is as important as their physical well-being.</p>",
             "<ul>",
             "<li><strong>Emotional Well-being:</strong> Survivors often experience fear of recurrence, depression, and anxiety.</li>",
@@ -557,16 +586,16 @@ export const data = [
     {
         id: 11,
         title: "Preventive Oncology & Screening Programs",
+        img: "/treatments/img11.jpg",
         desc: [
             "<p>Cancer remains one of the leading causes of mortality worldwide, but with advancements in medical research, it is now possible to reduce cancer risks significantly through preventive oncology and screening programs. Preventive oncology focuses on identifying risk factors, implementing early detection strategies, and reducing cancer incidence through lifestyle changes, medical interventions, and awareness programs. This article explores key aspects of preventive oncology, including cancer risk assessment, genetic counseling, high-risk population screening, and chemoprevention.</p>",
 
-            "<h3>Understanding Preventive Oncology</h3>",
+            "<h3><strong>Understanding Preventive Oncology</strong></h3>",
             "<p>Preventive oncology is a specialized branch of medicine dedicated to reducing cancer risk and preventing cancer development. It involves a multidisciplinary approach that includes lifestyle modifications, medical interventions, and early detection through regular screenings. The goal is to detect cancer at its earliest stages or prevent it from occurring altogether.</p>",
 
-            "<h3>Cancer Risk Assessment and Genetic Counseling</h3>",
+            "<h3><strong>Cancer Risk Assessment and Genetic Counseling</strong></h3>",
             "<p>Cancer risk assessment involves evaluating an individual's likelihood of developing cancer based on personal and family medical history, lifestyle factors, and genetic predispositions. Genetic counseling plays a crucial role in identifying hereditary cancer syndromes and guiding individuals on preventive measures.</p>",
-
-            "<h3>Importance of Genetic Counseling</h3>",
+            "<h3><strong>Importance of Genetic Counseling</strong></h3 > ",
             "<ul>",
             "<li>Identifying inherited mutations that increase cancer risk, such as <strong>BRCA1</strong> and <strong>BRCA2</strong> for breast and ovarian cancers.</li>",
             "<li>Providing personalized recommendations for preventive measures, including lifestyle changes, enhanced surveillance, or prophylactic surgeries.</li>",
@@ -574,71 +603,72 @@ export const data = [
             "<li>Educating family members about their potential risk and the importance of regular screenings.</li>",
             "</ul>",
 
-            "<h3>Screening Programs for High-Risk Populations</h3>",
+            "<h3><strong>Screening Programs for High-Risk Populations</strong></h3>",
             "<p>Cancer screening programs aim to detect cancer at an early, more treatable stage. High-risk populations—individuals with genetic predisposition, family history, or exposure to carcinogens—benefit the most from regular screenings.</p>",
 
-            "<h3>Mammography for Breast Cancer</h3>",
+            "<h3><strong>Mammography for Breast Cancer</strong></h3>",
             "<p>Mammography is a widely used screening tool for early detection of breast cancer. Women, especially those with a family history of breast cancer or carrying <strong>BRCA mutations</strong>, are advised to undergo regular mammograms. Early detection through mammography significantly increases survival rates and allows for less aggressive treatment options.</p>",
 
-            "<h3>HPV Screening and Pap Smear for Cervical Cancer</h3>",
+            "<h3><strong>HPV Screening and Pap Smear for Cervical Cancer</strong></h3>",
             "<p>Human Papillomavirus (HPV) screening and Pap smears are essential for detecting precancerous changes in cervical cells. Regular screening helps in early intervention, reducing the risk of cervical cancer.</p>",
 
-            "<h3>Colonoscopy for Colorectal Cancer</h3>",
+            "<h3><strong>Colonoscopy for Colorectal Cancer</strong></h3>",
             "<p>A colonoscopy is an effective screening method for detecting colorectal cancer in its early stages. Individuals over 50, or those with a family history of colorectal cancer, are advised to undergo regular screenings.</p>",
 
-            "<h3>Chemoprevention: Reducing Cancer Risk Through Medication</h3>",
+            "<h3><strong>Chemoprevention: Reducing Cancer Risk Through Medication</strong></h3>",
             "<p>Chemoprevention involves using pharmaceutical agents to prevent or delay cancer development in high-risk individuals.</p>",
 
-            "<h3>Tamoxifen for Breast Cancer Prevention</h3>",
+            "<h3><strong>Tamoxifen for Breast Cancer Prevention</strong></h3>",
             "<p><strong>Tamoxifen</strong> is a selective estrogen receptor modulator (SERM) that reduces the risk of breast cancer in women with a high genetic predisposition.</p>",
 
-            "<h3>Conclusion</h3>",
+            "<h3><strong>Conclusion</strong></h3>",
             "<p>Preventive oncology and screening programs are crucial in reducing cancer incidence and mortality. Through cancer risk assessment, genetic counseling, regular screenings, and chemoprevention, individuals can take proactive steps to safeguard their health. By embracing preventive oncology, we can move toward a future with lower cancer rates and improved overall well-being.</p>"
         ]
     },
     {
         id: 12,
         title: "Integration of AI & Digital Oncology",
+        img: "/treatments/img12.jpg",
         desc: [
             "<p>Cancer treatment has undergone a paradigm shift in recent years, with technological advancements playing a significant role in improving patient outcomes. The integration of Artificial Intelligence (AI) in digital oncology is revolutionizing how cancer is diagnosed, treated, and monitored. From AI-based treatment algorithms to digital pathology and tele-oncology, these innovations are shaping the future of cancer care.</p>",
 
-            "<h3>AI-Based Treatment Algorithms & Risk Stratification</h3>",
+            "<h3><strong>AI-Based Treatment Algorithms & Risk Stratification</strong></h3>",
             "<p>AI-powered treatment algorithms are transforming oncology by enhancing decision-making processes and providing personalized treatment plans. These algorithms analyze vast amounts of patient data, including genetic information, tumor characteristics, and medical history, to predict the most effective treatment strategies.</p>",
 
-            "<h4>Personalized Treatment Plans</h4>",
+            "<h4><strong>Personalized Treatment Plans</strong></h4>",
             "<p>AI-driven platforms assess individual patient profiles and recommend targeted therapies based on predictive modeling. These algorithms help oncologists select the best course of action, reducing trial-and-error approaches and improving treatment efficacy.</p>",
 
-            "<h4>Risk Stratification</h4>",
+            "<h4><strong>Risk Stratification</strong></h4>",
             "<p>AI assists in categorizing patients based on their risk levels. By analyzing biomarkers, imaging data, and genetic mutations, AI identifies patients at higher risk for disease progression or recurrence. This enables early interventions and tailored surveillance plans to enhance patient survival rates.</p>",
 
-            "<h4>Drug Discovery & Development</h4>",
+            "<h4><strong>Drug Discovery & Development</strong></h4>",
             "<p>AI is accelerating drug discovery by analyzing molecular structures and predicting potential drug candidates. Machine learning models simulate how different drugs interact with cancer cells, expediting clinical trials and bringing new therapies to market faster.</p>",
 
-            "<h3>Tele-Oncology for Remote Patient Monitoring</h3>",
+            "<h3><strong>Tele-Oncology for Remote Patient Monitoring</strong></h3>",
             "<p>Telemedicine is bridging the gap between patients and healthcare providers, particularly in oncology. Tele-oncology leverages digital platforms to provide remote consultations, continuous monitoring, and real-time support for cancer patients, ensuring timely and efficient care.</p>",
 
-            "<h4>Virtual Consultations & Follow-Ups</h4>",
+            "<h4><strong>Virtual Consultations & Follow-Ups</strong></h4>",
             "<p>Tele-oncology enables oncologists to consult with patients remotely, reducing the need for frequent hospital visits. This is particularly beneficial for immunocompromised cancer patients who need to minimize exposure to infections.</p>",
 
-            "<h4>Remote Symptom Monitoring</h4>",
+            "<h4><strong>Remote Symptom Monitoring</strong> </h4>",
             "<p>AI-powered remote monitoring tools track patient symptoms, medication adherence, and side effects in real time. Wearable devices and mobile applications collect patient data, allowing oncologists to intervene early in case of complications.</p>",
 
-            "<h4>Access to Specialized Care</h4>",
+            "<h4><strong>Access to Specialized Care</strong></h4>",
             "<p>Patients in rural or underserved areas often lack access to specialized oncology services. Tele-oncology bridges this gap by connecting patients with leading oncologists, enabling them to receive expert opinions and treatment recommendations without geographic limitations.</p>",
 
-            "<h3>Digital Pathology & AI-Assisted Radiology Interpretation</h3>",
+            "<h3><strong>Digital Pathology & AI-Assisted Radiology Interpretation</strong></h3>",
             "<p>Advancements in digital pathology and AI-assisted radiology are significantly improving the accuracy and speed of cancer diagnosis. AI-driven tools are assisting pathologists and radiologists in analyzing medical images with greater precision.</p>",
 
-            "<h4>AI in Pathology</h4>",
+            "<h4><strong>AI in Pathology</strong></h4>",
             "<p>Digital pathology leverages AI to analyze histopathological slides and detect cancerous cells. AI algorithms identify patterns and anomalies that may be missed by human eyes, improving diagnostic accuracy and enabling early detection.</p>",
 
-            "<h4>AI in Radiology</h4>",
+            "<h4><strong>AI in Radiology</strong></h4>",
             "<p>AI-driven radiology interpretation enhances the detection of tumors in imaging scans such as X-rays, CT scans, and MRIs. Machine learning models detect abnormalities, classify tumor types, and predict disease progression with high accuracy.</p>",
 
-            "<h4>Automated Workflow & Efficiency</h4>",
+            "<h4><strong>Automated Workflow & Efficiency</strong></h4>",
             "<p>By integrating AI in digital pathology and radiology, healthcare institutions can streamline workflows, reduce diagnostic errors, and optimize resource utilization. AI-powered automation allows medical professionals to focus on complex cases while reducing workload.</p>",
 
-            "<h3>Challenges & Future Prospects</h3>",
+            "<h3><strong>Challenges & Future Prospects</strong></h3>",
             "<p>Despite the promising advancements in AI and digital oncology, several challenges remain:</p>",
             "<ul>",
             "<li><strong>Data Privacy & Security:</strong> Ensuring patient data confidentiality and compliance with regulations such as HIPAA and GDPR is crucial.</li>",
@@ -646,7 +676,7 @@ export const data = [
             "<li><strong>Ethical Concerns:</strong> The use of AI in decision-making raises ethical concerns about accountability and bias in algorithms.</li>",
             "</ul>",
 
-            "<h3>Conclusion</h3>",
+            "<h3><strong>Conclusion</strong></h3 >",
             "<p>The integration of AI and digital oncology is revolutionizing cancer treatment, enhancing accuracy, efficiency, and patient outcomes. AI-based treatment algorithms, tele-oncology, and digital pathology are reshaping the oncology landscape, providing personalized, accessible, and efficient cancer care. As technology continues to evolve, the future of digital oncology holds immense potential in making cancer treatment more precise and patient-centric."
 
         ]
