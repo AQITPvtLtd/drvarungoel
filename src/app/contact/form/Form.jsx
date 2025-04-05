@@ -4,7 +4,7 @@ import { form } from "@/sevices/user";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import Swal from 'sweetalert2';
-
+import { ClipLoader } from "react-spinners";
 const Form = () => {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
@@ -185,13 +185,20 @@ const Form = () => {
 
                         />
                     </div>
-                    <div>
-                        <button
-                            type="submit"
-                            className="w-full bg-[#0f8f41] border-2 border-[#0f8f41] text-white py-2 px-4 cursor-pointer rounded hover:bg-white hover:text-black transition duration-200"
-                        >
-                            Submit
-                        </button>
+
+                    <div className="text-center mt-4">
+                        {
+                            loading ? (<div className="flex justify-center items-center w-full h-full fixed top-0 left-0 z-50 rounded-md" style={{ backgroundColor: "rgba(75, 0, 130, 0.5)" }}>
+                                <ClipLoader width="60" height="60" color="#0f8f41" className="animate-spin" />
+                            </div>) : (
+                                <button
+                                    type="submit"
+                                    className="w-full bg-[#0f8f41] border-2 border-[#0f8f41] text-white py-2 px-4 cursor-pointer rounded hover:bg-white hover:text-black transition duration-200"
+                                >
+                                    Submit
+                                </button>
+                            )
+                        }
                     </div>
                 </form>
             </div>
