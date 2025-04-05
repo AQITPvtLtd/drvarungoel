@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 import Image from "next/image";
-import { RiLoginBoxLine } from "react-icons/ri";
+import { IoMdCall } from "react-icons/io";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,28 +26,18 @@ const Header = () => {
                 </Link>
 
                 {/* Desktop Menu */}
-                <nav className="hidden lg:flex items-center space-x-6 text-black text-base font-medium uppercase">
-                    <Link href="/" className="hover:text-gray-600 transition">Home</Link>
+                <nav className="hidden lg:flex items-center space-x-10 text-black text-base font-medium" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                    <Link href="/" className="hover:text-gray-600 transition" >Home</Link>
                     <Link href="/about" className="hover:text-gray-600 transition">About</Link>
 
-                    <Link href="/treatments" className="hover:text-gray-600 transition"> TREATMENTS </Link>
-
-                    {/* Services Dropdown */}
-                    <div className="relative group">
-
-                        {/* <div className="absolute left-0 -mt-0 w-48 px-2 py-2 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 group-hover:flex flex-col">
-                            <Link href="/services/web-development" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">Web Development</Link>
-                            <Link href="/services/seo" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">SEO</Link>
-                            <Link href="/services/marketing" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">Marketing</Link>
-                        </div> */}
-                    </div>
+                    <Link href="/treatments" className="hover:text-gray-600 transition"> Treatments </Link>
 
                     <Link href="/blogs" className="hover:text-gray-600 transition">Blogs</Link>
 
                     {/* Media Dropdown */}
                     <div className="relative group">
                         <button className="flex items-center hover:text-gray-600 transition">
-                            MEDIA <FiChevronDown className="ml-1" />
+                            Media <FiChevronDown className="ml-1" />
                         </button>
                         <div className="absolute left-0 -mt-0 w-48 px-2 py-2 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 group-hover:flex flex-col">
                             <Link href="/media/photo-gallery" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">Photo Gallery</Link>
@@ -61,9 +51,10 @@ const Header = () => {
 
                 {/* Call Now Button */}
                 <div className="hidden lg:flex">
-                    <Link href="tel:+91 95605 38081" className="flex items-center bg-green-600 text-white px-6 py-2 rounded-lg font-semibold text-center transition-all 
+                    <Link href="tel:+91 95605 38081" className="flex items-center gap-2 bg-green-600 text-white px-3 py-2 rounded-lg font-semibold text-center transition-all 
                                            border-2 border-transparent hover:border-[#22c1e9] hover:text-black hover:bg-white cursor-pointer">
-                        <RiLoginBoxLine className="mr-2" />
+             
+                        <IoMdCall className="text-xl" />
                         Call Now
                     </Link>
                 </div>

@@ -55,9 +55,17 @@ const Faq = () => {
     };
 
     return (
-        <div className="bg-[#e8fcec]">
-            <div className="max-w-6xl mx-auto px-5 py-10">
-                <h1 className="text-3xl font-bold text-center mb-8 dark:text-black" style={{ fontFamily: "Roboto Slab, serif" }}>Frequently Asked Questions</h1>
+        <div className="bg-[#e8fcec] pt-10">
+            <div className="max-w-6xl mx-auto px-5">
+
+                <h2
+                    className="text-center font-semibold text-4xl mb-6"
+                    style={{ fontFamily: 'Oswald, sans-serif' }}
+                >
+                    Frequently Asked Questions
+                </h2>
+
+
                 <div>
                     {faqData.map((item, index) => (
                         <div key={index} className="shadow-slate-400 shadow-md mb-4 rounded-lg overflow-hidden">

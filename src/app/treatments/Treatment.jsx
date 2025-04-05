@@ -23,13 +23,14 @@ const Treatment = () => {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="text-white font-serif text-center text-6xl font-bold my-4 absolute inset-0 z-20 flex items-center justify-center"
+                        style={{ fontFamily: 'Oswald, sans-serif' }}
                     >
                         Our Treatments
                     </motion.h1>
                 </div>
             </div>
             <div className='max-w-7xl mx-auto px-5'>
-             
+
 
                 <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10'>
                     {data.map((item) => (

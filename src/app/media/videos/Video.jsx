@@ -32,6 +32,7 @@ const Video = () => {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="text-white font-serif text-center text-6xl font-bold my-4 absolute inset-0 z-20 flex items-center justify-center"
+                        style={{ fontFamily: 'Oswald, sans-serif' }}
                     >
                         Our Videos
                     </motion.h1>
@@ -40,7 +41,7 @@ const Video = () => {
             <div className="max-w-6xl mx-auto p-6">
 
                 {/* Shorts Section */}
-                <h2 className="text-2xl font-bold text-center mb-4 dark:text-black">Short Videos</h2>
+                <h2 className="text-2xl font-bold text-center mb-4 dark:text-black" style={{ fontFamily: 'Oswald, sans-serif' }}>Short Videos</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {shorts.map((video) => (
                         <iframe
@@ -54,7 +55,7 @@ const Video = () => {
                 </div>
 
                 {/* Long Videos Section */}
-                <h2 className="text-2xl font-bold text-center mt-8 mb-4 dark:text-black">Long Videos</h2>
+                <h2 className="text-2xl font-bold text-center mt-8 mb-4 dark:text-black" style={{ fontFamily: 'Oswald, sans-serif' }}>Long Videos</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
                     {longVideos.map((video) => (
                         <iframe

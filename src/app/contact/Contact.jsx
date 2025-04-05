@@ -7,7 +7,9 @@ import Form from './form/Form';
 const Contact = () => {
     return (
         <div className='pt-20 px-4 md:px-8 lg:px-16 bg-white'>
-            <p className='text-center text-3xl md:text-4xl font-bold text-gray-800 dark:bg-white py-5' style={{ fontFamily: "Roboto Slab, serif" }}>
+            <p className='text-center text-3xl md:text-4xl font-bold text-gray-800 dark:bg-white py-5'
+                style={{ fontFamily: 'Oswald, sans-serif' }}
+            >
                 Contact Us
             </p>
 
@@ -19,7 +21,7 @@ const Contact = () => {
                         <div className="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center justify-center text-center w-full max-w-md">
                             <Link href="tel:+919711400908" aria-label="Call Now" className="flex flex-col items-center">
                                 <IoCall className="text-4xl text-white bg-[#0f8f41] p-2 rounded-full" />
-                                <h3 className="text-lg font-semibold text-black mt-2">Phone Number</h3>
+                                <h3 className="text-lg font-semibold text-black mt-2"   style={{ fontFamily: 'Oswald, sans-serif' }}>Phone Number</h3>
                                 <p className="text-gray-700">+91 97114 00908</p>
                             </Link>
                         </div>
@@ -28,7 +30,7 @@ const Contact = () => {
                         <div className="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center justify-center text-center w-full max-w-md">
                             <Link href="mailto:drdevavratarya@gmail.com" className="flex flex-col items-center">
                                 <MdEmail className="text-4xl text-white bg-[#0f8f41] p-2 rounded-full cursor-pointer" />
-                                <h3 className="text-lg font-semibold text-black mt-2">Email Address</h3>
+                                <h3 className="text-lg font-semibold text-black mt-2" style={{ fontFamily: 'Oswald, sans-serif' }}>Email Address</h3>
                                 <p className="text-gray-700">drdevavratarya@gmail.com</p>
                             </Link>
                         </div>
@@ -39,7 +41,7 @@ const Contact = () => {
                     <div className='bg-white p-4 rounded-lg shadow-lg flex flex-col items-center justify-center text-center w-full max-w-md'>
                         <Link href="https://maps.app.goo.gl/PqUsp3QC2rFygoEHA" className="flex flex-col items-center">
                             <IoLocationSharp className="text-white text-4xl p-2 bg-[#0f8f41] rounded-full cursor-pointer" />
-                            <h3 className="text-lg font-semibold text-black mt-2">Our Address</h3>
+                            <h3 className="text-lg font-semibold text-black mt-2" style={{ fontFamily: 'Oswald, sans-serif' }}>Our Address</h3>
                             <p className="text-gray-700 text-sm md:text-base">
                                 Sir Chotu Ram Marg, Rohini Institutional Area, Sector 5, Rohini, New Delhi, Delhi, 110085
                             </p>

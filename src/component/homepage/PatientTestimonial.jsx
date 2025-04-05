@@ -1,69 +1,90 @@
 "use client";
-import React from 'react'
-import { useState } from 'react';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import React from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { GrPrevious, GrNext } from "react-icons/gr";
 
 const videos = [
-    { id: 1, url: 'https://youtube.com/shorts/CzWOJ53cD20?si=VU2bEHMXKK2nYCoi' },
-    { id: 2, url: 'https://youtube.com/shorts/XMACUdZ36x0?si=4YIChEy1sIwyhSUh' },
-    { id: 3, url: 'https://youtube.com/shorts/Ih4HAUmw8oc?si=NWDTu0h1XKkgbpZ4' },
+    'CzWOJ53cD20',
+    'XMACUdZ36x0',
+    'Ih4HAUmw8oc',
 ];
+
+// Bottom center arrows
+const CustomPrevArrow = ({ onClick }) => (
+    <div
+        className="absolute bottom-0 left-1/2 transform -translate-x-12 translate-y-10 z-10 cursor-pointer p-3 bg-white rounded-full shadow hover:bg-gray-100 transition"
+        onClick={onClick}
+    >
+        <GrPrevious size={20} />
+    </div>
+);
+
+const CustomNextArrow = ({ onClick }) => (
+    <div
+        className="absolute bottom-0 left-1/2 transform translate-x-12 translate-y-10 z-10 cursor-pointer p-3 bg-white rounded-full shadow hover:bg-gray-100 transition"
+        onClick={onClick}
+    >
+        <GrNext size={20} />
+    </div>
+);
+
 const PatientTestimonial = () => {
-    const [current, setCurrent] = useState(Math.floor(videos.length / 2));
-
-    const prevSlide = () => {
-        setCurrent((prev) => (prev === 0 ? videos.length - 1 : prev - 1));
+    const settings = {
+        dots: false,
+        infinite: true,
+        centerMode: true,
+        centerPadding: "0px",
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        nextArrow: <CustomNextArrow />,
+        prevArrow: <CustomPrevArrow />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                },
+            },
+        ],
     };
 
-    const nextSlide = () => {
-        setCurrent((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
-    };
-
-    const getEmbedUrl = (url) => {
-        const videoId = url.split('/').pop().split('?')[0];
-        return `https://www.youtube.com/embed/${videoId}?autoplay=0`;
-    };
     return (
-        <div>
-            <div className="p-5 bg-white">
-                <p className="text-4xl font-semibold text-center pt-5 dark:text-black">PATIENT TESTIMONIALS</p>
-                <div className="flex flex-col items-center space-y-6 pt-10">
-                    <div className="flex items-center space-x-4 overflow-hidden w-full justify-center">
-                        {videos.map((video, index) => (
-                            <div
-                                key={video.id}
-                                className={`relative w-72 h-72 flex-shrink-0 rounded-xl overflow-hidden shadow-lg transition-transform duration-500 
-                            ${index === current ? 'scale-100 opacity-100' : 'scale-90 opacity-50'}`}
-                            >
+        <div className="bg-white py-10">
+          
+
+            <h2 className="text-center font-semibold text-4xl mb-6"
+                style={{ fontFamily: 'Oswald, sans-serif' }}
+            >
+                 Patient Testimonial
+            </h2>
+
+            <div className="relative px-4 max-w-7xl mx-auto">
+                <Slider {...settings}>
+                    {videos.map((id, index) => (
+                        <div key={index} className="px-3">
+                            <div className="transition-transform duration-500 ease-in-out transform scale-90 slick-center:scale-105 rounded-xl overflow-hidden shadow-md bg-white">
                                 <iframe
                                     width="100%"
-                                    height="100%"
-                                    src={getEmbedUrl(video.url)}
+                                    height="300"
+                                    src={`https://www.youtube.com/embed/${id}`}
+                                    title={`YouTube video ${index + 1}`}
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen
+                                    className="w-full"
                                 ></iframe>
                             </div>
-                        ))}
-                    </div>
-                    <div className="flex space-x-4">
-                        <button
-                            onClick={prevSlide}
-                            className="p-3 bg-white cursor-pointer rounded-full dark:text-black shadow-md hover:bg-gray-300 transition-all"
-                        >
-                            <FaArrowLeft size={20} />
-                        </button>
-                        <button
-                            onClick={nextSlide}
-                            className="p-3 bg-white cursor-pointer rounded-full dark:text-black shadow-md hover:bg-gray-300 transition-all"
-                        >
-                            <FaArrowRight size={20} />
-                        </button>
-                    </div>
-                </div>
+                        </div>
+                    ))}
+                </Slider>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default PatientTestimonial
+export default PatientTestimonial;

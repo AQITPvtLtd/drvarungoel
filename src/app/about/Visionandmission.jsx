@@ -7,7 +7,7 @@ const VisionAndMission = () => {
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                 {/* Left Content - Mission Section */}
                 <div className="border border-gray-300 rounded-lg shadow-lg p-6">
-                    <h2 className="text-center font-semibold text-xl bg-[#21bee5] py-2 rounded">
+                    <h2 className="text-center font-semibold text-xl bg-[#21bee5] py-2 rounded" style={{ fontFamily: 'Oswald, sans-serif' }}>
                         Our Mission
                     </h2>
                     <p className="mt-4 text-gray-700">
@@ -17,7 +17,7 @@ const VisionAndMission = () => {
 
                 {/* Center Image and Title Section */}
                 <div className="bg-[#1e994c] text-white font-bold text-center flex flex-col justify-center items-center rounded-lg shadow-lg py-8">
-                    <h1 className="text-2xl lg:text-3xl px-6">
+                    <h1 className="text-2xl lg:text-3xl px-6" style={{ fontFamily: 'Oswald, sans-serif' }}>
                         Our Mission and Vision
                     </h1>
                     <div className="mt-6">
@@ -33,7 +33,7 @@ const VisionAndMission = () => {
 
                 {/* Right Content - Vision Section */}
                 <div className="border border-gray-300 rounded-lg shadow-lg p-6">
-                    <h2 className="text-center font-semibold text-xl bg-[#21bee5] py-2 rounded text-white">
+                    <h2 className="text-center font-semibold text-xl bg-[#21bee5] py-2 rounded text-white" style={{ fontFamily: 'Oswald, sans-serif' }}>
                         Our Vision
                     </h2>
                     <p className="mt-4 text-gray-700">

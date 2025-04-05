@@ -16,7 +16,7 @@ const services = [
 const Services = () => {
     return (
         <div className="bg-[#ebfff4] p-6 md:p-12">
-            <h2 className="text-3xl font-bold text-center mb-6 dark:text-black">SERVICES</h2>
+            <h2 className="text-3xl font-bold text-center mb-3 dark:text-black" style={{ fontFamily: 'Oswald, sans-serif' }}>Services</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="grid grid-cols-2 gap-4">
                     {services.map((service) => (

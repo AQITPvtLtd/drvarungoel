@@ -96,7 +96,7 @@ const Form = () => {
                 <form
                     className="bg-gray-50 px-5 py-2 shadow-lg rounded-lg" onSubmit={handleSubmit}
                 >
-                    <h3 className="text-xl font-semibold text-gray-700 mb-1" style={{ fontFamily: "Roboto Slab, serif" }}>Submit Your Query</h3>
+                    <h3 className="text-xl font-semibold text-gray-700 mb-1"   style={{ fontFamily: 'Oswald, sans-serif' }}>Submit Your Query</h3>
                     <div className="mb-4">
                         <label className="block text-gray-600 mb-1" htmlFor="Fname">
                             Full Name <span className="text-red-500">*</span>
