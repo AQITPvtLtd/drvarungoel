@@ -32,7 +32,7 @@ const Header = () => {
 
                     <Link href="/treatments" className="hover:text-gray-600 transition"> Treatments </Link>
 
-                    <Link href="/blogs" className="hover:text-gray-600 transition">Blogs</Link>
+                    <Link href="/blog" className="hover:text-gray-600 transition">Blogs</Link>
 
                     {/* Media Dropdown */}
                     <div className="relative group">
@@ -52,7 +52,7 @@ const Header = () => {
                 {/* Call Now Button */}
                 <div className="hidden lg:flex">
                     <Link href="tel:+91 95605 38081" className="flex items-center gap-2 bg-green-600 text-white px-3 py-2 rounded-lg font-semibold text-center transition-all 
-                                           border-2 border-transparent hover:border-[#22c1e9] hover:text-black hover:bg-white cursor-pointer">
+                                           border-2 border-transparent hover:border-green-600 hover:text-black hover:bg-white cursor-pointer">
              
                         <IoMdCall className="text-xl" />
                         Call Now
