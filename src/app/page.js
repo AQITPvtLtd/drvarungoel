@@ -1,9 +1,10 @@
-import Faq from "@/component/homepage/Faq";
+// import Faq from "@/component/homepage/Faq";
 import Serivces from "@/component/homepage/Serivces";
 import Banner from "@/component/homepage/Banner";
 import Content from "./about/Content";
 import VideoLibrary from "@/component/homepage/VideoLibrary";
 import PatientTestimonial from "@/component/homepage/PatientTestimonial";
+import Faq from "./about/Faq";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <Serivces />
       <VideoLibrary />
       <PatientTestimonial />
-      <Faq />
+      {/* <Faq /> */}
+     <Faq />
     </div>
   );
 }

@@ -11,6 +11,28 @@ const videos = [
     { id: 4, url: "https://youtu.be/WQBqHfACzig?si=EzXGVUspyRknO1Gl" },
     { id: 5, url: "https://youtu.be/SeerULYJ2Bs?si=N1IBISjq1zv5iCEF" },
 ];
+
+const headingVariant = {
+    hidden: { opacity: 0, y: -30 },
+    visible: { opacity: 1, y: 0 }
+};
+
+const containerVariant = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.8,
+        }
+    }
+};
+
+const videoVariant = {
+    hidden: { opacity: 0, y: 80 },
+    visible: { opacity: 1, y: 0 }
+};
+
+
+
 const Video = () => {
     const shorts = videos.filter((video) => video.url.includes("shorts"));
     const longVideos = videos.filter((video) => !video.url.includes("shorts"));
@@ -38,36 +60,76 @@ const Video = () => {
                     </motion.h1>
                 </div>
             </div>
-            <div className="max-w-6xl mx-auto p-6">
 
+
+            <div className="max-w-6xl mx-auto p-6">
                 {/* Shorts Section */}
-                <h2 className="text-2xl font-bold text-center mb-4 dark:text-black" style={{ fontFamily: 'Oswald, sans-serif' }}>Short Videos</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <motion.h2
+                    className="text-2xl font-bold text-center mb-4 dark:text-black"
+                    style={{ fontFamily: 'Oswald, sans-serif' }}
+                    variants={headingVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.3 }}
+                    transition={{ duration: 0.6 }}
+                >
+                    Short Videos
+                </motion.h2>
+
+                <motion.div
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+                    variants={containerVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.3 }}
+                >
                     {shorts.map((video) => (
-                        <iframe
+                        <motion.iframe
                             key={video.id}
                             className="w-full h-56 rounded-lg shadow-lg"
                             src={video.url.replace("/shorts/", "/embed/")}
                             frameBorder="0"
                             allowFullScreen
-                        ></iframe>
+                            variants={videoVariant}
+                        />
                     ))}
-                </div>
+                </motion.div>
+
 
                 {/* Long Videos Section */}
-                <h2 className="text-2xl font-bold text-center mt-8 mb-4 dark:text-black" style={{ fontFamily: 'Oswald, sans-serif' }}>Long Videos</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
+                <motion.h2
+                    className="text-2xl font-bold text-center mt-8 mb-4 dark:text-black"
+                    style={{ fontFamily: 'Oswald, sans-serif' }}
+                    variants={headingVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.3 }}
+                    transition={{ duration: 0.6 }}
+                >
+                    Long Videos
+                </motion.h2>
+
+                <motion.div
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6"
+                    variants={containerVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.3 }}
+                >
                     {longVideos.map((video) => (
-                        <iframe
+                        <motion.iframe
                             key={video.id}
                             className="w-full h-64 rounded-lg shadow-lg"
                             src={video.url.replace("youtu.be/", "www.youtube.com/embed/")}
                             frameBorder="0"
                             allowFullScreen
-                        ></iframe>
+                            variants={videoVariant}
+                        />
                     ))}
-                </div>
+                </motion.div>
+
             </div>
+
         </div>
     );
 }

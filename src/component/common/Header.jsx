@@ -41,7 +41,7 @@ const Header = () => {
                         </button>
                         <div className="absolute left-0 -mt-0 w-48 px-2 py-2 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 group-hover:flex flex-col">
                             <Link href="/media/photo-gallery" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">Photo Gallery</Link>
-                            <Link href="/media/certificates" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">Certificates</Link>
+                            <Link href="/media/certificate" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">Certificates</Link>
                             <Link href="/media/videos" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">Videos</Link>
                         </div>
                     </div>
@@ -53,7 +53,7 @@ const Header = () => {
                 <div className="hidden lg:flex">
                     <Link href="tel:+91 95605 38081" className="flex items-center gap-2 bg-green-600 text-white px-3 py-2 rounded-lg font-semibold text-center transition-all 
                                            border-2 border-transparent hover:border-green-600 hover:text-black hover:bg-white cursor-pointer">
-             
+
                         <IoMdCall className="text-xl" />
                         Call Now
                     </Link>

@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Content = () => {
     const [activeCategory, setActiveCategory] = useState("Education");
@@ -32,46 +33,104 @@ const Content = () => {
             id: 3,
             content: [
                 "Hepatic osteodystrophy. Trop Gastroenterol.",
-                "Chemokine receptor 5 (CCR5) polymorphism in chronic hepatitis B patients treated with three different nucleos(side) analogues.",
+                "CCR5 polymorphism in hepatitis B patients treated with nucleoside analogues.",
                 "Small cell carcinoma of the ovary of hypercalcemic type: a rare tumor.",
-                "Primary renal primitive neuroectodermal tumor: A rare presentation. J Postgrad Med.",
-                "Case report: Non-small-cell lung carcinoma presenting as foot swelling. Lung India: Official Organ of Indian Chest Society"
+                "Primary renal primitive neuroectodermal tumor: A rare presentation.",
+                "Lung carcinoma presenting as foot swelling. Lung India"
             ],
             category: "Publication and Research Work",
         },
     ];
 
+    // Animation variants for button list
+    // Updated animation variants for button list (up to down)
+    const buttonContainer = {
+        hidden: {},
+        visible: {
+            transition: {
+                staggerChildren: 0.25,
+            },
+        },
+    };
+
+    const buttonItem = {
+        hidden: { opacity: 0, y: -20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                type: "spring",
+                stiffness: 100,
+                damping: 15,
+            },
+        },
+    };
+
+
+    // Animation for list items
+    const listContainer = {
+        hidden: {},
+        visible: {
+            transition: {
+                staggerChildren: 0.15,
+            },
+        },
+    };
+
+    const listItem = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+    };
+
     return (
         <div className="mx-auto p-6 bg-[#ebfff4] -pt-10">
-            {/* Tabs */}
-            <div className="flex flex-wrap justify-center mb-4 gap-3 sm:gap-5">
-                {["Education", "Experience","Publication and Research Work"].map((category) => (
-                    <button
-                        key={category}
+            {/* Animate Buttons One by One */}
+            <motion.div
+                className="flex flex-wrap justify-center mb-4 gap-3 sm:gap-5"
+                variants={buttonContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.4 }} // 'once' ensures it only triggers once
+            >
+                {["Education", "Experience", "Publication and Research Work"].map((category, index) => (
+                    <motion.button
+                        key={index}
+                        variants={buttonItem}
+                        onClick={() => setActiveCategory(category)}
                         className={`py-2 px-4 sm:py-3 sm:px-5 text-base sm:text-lg font-semibold transition-all duration-300 cursor-pointer
-                            ${activeCategory === category
+                ${activeCategory === category
                                 ? "bg-[#102c3c] text-white rounded-lg"
                                 : "text-gray-600 hover:text-gray-900"
                             }`}
-                        onClick={() => setActiveCategory(category)}
                         style={{ fontFamily: 'Oswald, sans-serif' }}
                     >
                         {category}
-                    </button>
+                    </motion.button>
                 ))}
-            </div>
+            </motion.div>
 
-            {/* Content Box */}
+
+
+            {/* Content Animation */}
             <div className="p-5 sm:p-6 bg-[#f6fff9] border border-gray-300 rounded-lg shadow-md">
-                {AboutContent.filter((item) => item.category === activeCategory).map((item) => (
-                    <div key={item.id}>
-                        <ul className="list-disc pl-4 sm:pl-5 space-y-2 sm:space-y-3 text-gray-700 text-base sm:text-lg">
+                <AnimatePresence mode="wait">
+                    {AboutContent.filter((item) => item.category === activeCategory).map((item) => (
+                        <motion.ul
+                            key={item.id}
+                            className="list-disc pl-4 sm:pl-5 space-y-2 sm:space-y-3 text-gray-700 text-base sm:text-lg"
+                            variants={listContainer}
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
+                        >
                             {item.content.map((text, index) => (
-                                <li key={index}>{text}</li>
+                                <motion.li key={index} variants={listItem}>
+                                    {text}
+                                </motion.li>
                             ))}
-                        </ul>
-                    </div>
-                ))}
+                        </motion.ul>
+                    ))}
+                </AnimatePresence>
             </div>
         </div>
     );

@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import { IoMdAdd } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const faqData = [
     {
         question: "Who gets cancer?",
         answer: "Cancer can affect anyone, but risk factors include:",
         list: [
-
             "<strong>Age:</strong> Risk increases with age.",
             "<strong>Genetics:</strong> Family history of cancer.",
             "<strong>Lifestyle:</strong> Smoking, alcohol, poor diet, lack of exercise.",
@@ -17,7 +17,7 @@ const faqData = [
         ]
     },
     {
-        question: "My family has a history of genetic cancer. My grandmother, grandfather, and my father s sister died of it. What can I do?",
+        question: "My family has a history of genetic cancer. My grandmother, grandfather, and my father’s sister died of it. What can I do?",
         answer: "If your family has a history of genetic cancer, there are several steps you can take to be proactive about your health:",
         list: [
             "<strong>Genetic Testing:</strong> Consider speaking with a genetic counselor to determine if you carry any inherited cancer-related genes.",
@@ -55,27 +55,39 @@ const Faq = () => {
     };
 
     return (
-        <div className="bg-[#e8fcec] pt-10">
+        <div className="bg-[#e8fcec] py-4">
             <div className="max-w-6xl mx-auto px-5">
-
-                <h2
-                    className="text-center font-semibold text-4xl mb-6"
+               
+                <motion.h2
+                    className="text-center font-semibold text-4xl mb-6 dark:text-black"
                     style={{ fontFamily: 'Oswald, sans-serif' }}
+                    initial={{ opacity: 0, y: -40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    viewport={{ once: false, amount: 0.3 }} // amount: how much of the element must be in view
                 >
                     Frequently Asked Questions
-                </h2>
-
+                </motion.h2>
 
                 <div>
                     {faqData.map((item, index) => (
-                        <div key={index} className="shadow-slate-400 shadow-md mb-4 rounded-lg overflow-hidden">
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.2 }}
+                            viewport={{ once: false, amount: 0.3 }}
+                            className="shadow-slate-400 shadow-md mb-4 rounded-lg overflow-hidden"
+                        >
                             <button
                                 className="flex justify-between items-center w-full px-5 py-3 font-medium dark:text-black border-black bg-white hover:bg-gray-200"
                                 onClick={() => toggleAccordion(index)}
                                 aria-expanded={activeIndex === index}
                             >
                                 <span className="font-semibold text-lg text-left w-full">{item.question}</span>
-                                <IoMdAdd className={`w-8 bg-black text-white rounded-full h-8 transition-transform ${activeIndex === index ? 'rotate-45' : ''}`} />
+                                <IoMdAdd
+                                    className={`w-8 bg-black text-white rounded-full h-8 transition-transform ${activeIndex === index ? "rotate-45" : ""}`}
+                                />
                             </button>
                             {activeIndex === index && (
                                 <div className="p-5 border-t border-black bg-white dark:text-black">
@@ -83,13 +95,13 @@ const Faq = () => {
                                     {item.list && (
                                         <ul className="list-disc list-outside text-left px-2">
                                             {item.list.map((point, i) => (
-                                                <li key={i} dangerouslySetInnerHTML={{ __html: point }} ></li>
+                                                <li key={i} dangerouslySetInnerHTML={{ __html: point }}></li>
                                             ))}
                                         </ul>
                                     )}
                                 </div>
                             )}
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

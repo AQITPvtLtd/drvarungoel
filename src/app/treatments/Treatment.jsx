@@ -5,6 +5,11 @@ import Link from 'next/link'
 import data from '@/data/treatment'
 import { motion } from "framer-motion";
 
+const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 }
+};
+
 const Treatment = () => {
     return (
         <div className='pt-28 dark:bg-white'>
@@ -29,12 +34,19 @@ const Treatment = () => {
                     </motion.h1>
                 </div>
             </div>
+
             <div className='max-w-7xl mx-auto px-5'>
-
-
                 <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10'>
-                    {data.map((item) => (
-                        <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    {data.map((item, index) => (
+                        <motion.div
+                            key={item.id}
+                            variants={cardVariants}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: false, amount: 0.2 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className="bg-white rounded-lg shadow-lg overflow-hidden"
+                        >
                             <div className="h-[250px] md:h-[230px] overflow-hidden">
                                 <Image
                                     src={item.img}
@@ -63,7 +75,7 @@ const Treatment = () => {
                                     Know More
                                 </Link>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

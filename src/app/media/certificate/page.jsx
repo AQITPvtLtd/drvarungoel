@@ -1,10 +1,10 @@
 import React from 'react'
-import Blog from './Blog'
+import Certificate from './Certificate'
 
 const page = () => {
   return (
     <div className='dark:bg-white'>
-      <Blog />
+        <Certificate />
     </div>
   )
 }

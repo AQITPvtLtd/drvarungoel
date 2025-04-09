@@ -3,7 +3,7 @@ import Gallery from './Gallery'
 
 const page = () => {
     return (
-        <div>
+        <div className='dark:bg-white'>
             <Gallery />
         </div>
     )

@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import Swal from 'sweetalert2';
 import { ClipLoader } from "react-spinners";
+import { motion } from "framer-motion";
 const Form = () => {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
@@ -88,7 +89,14 @@ const Form = () => {
             setLoading(false)
         }
     };
-
+    const fadeUp = {
+        hidden: { opacity: 0, y: 20 },
+        visible: (i) => ({
+            opacity: 1,
+            y: 0,
+            transition: { delay: i * 0.2, duration: 0.5 },
+        }),
+    };
 
     return (
         <div>
@@ -96,8 +104,15 @@ const Form = () => {
                 <form
                     className="bg-gray-50 px-5 py-2 shadow-lg rounded-lg" onSubmit={handleSubmit}
                 >
-                    <h3 className="text-xl font-semibold text-gray-700 mb-1"   style={{ fontFamily: 'Oswald, sans-serif' }}>Submit Your Query</h3>
-                    <div className="mb-4">
+                    <h3 className="text-xl font-semibold text-gray-700 mb-1" style={{ fontFamily: 'Oswald, sans-serif' }}>Submit Your Query</h3>
+                    <motion.div
+                        className="mb-4"
+                        custom={0}
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false }}
+                    >
                         <label className="block text-gray-600 mb-1" htmlFor="Fname">
                             Full Name <span className="text-red-500">*</span>
                         </label>
@@ -111,8 +126,15 @@ const Form = () => {
                             onChange={handlechange}
                             required
                         />
-                    </div>
-                    <div className="mb-2">
+                    </motion.div>
+                    <motion.div
+                        className="mb-4"
+                        custom={0}
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false }}
+                    >
                         <label className="block text-gray-600 mb-1" htmlFor="Phone">
                             Phone Number <span className="text-red-500">*</span>
                         </label>
@@ -126,8 +148,15 @@ const Form = () => {
                             onChange={handlechange}
                             required
                         />
-                    </div>
-                    <div className="mb-2">
+                    </motion.div>
+                    <motion.div
+                        className="mb-4"
+                        custom={0}
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false }}
+                    >
                         <label className="block text-gray-600 mb-1" htmlFor="Email">
                             Email <span className="text-red-500">*</span>
                         </label>
@@ -141,8 +170,15 @@ const Form = () => {
                             onChange={handlechange}
                             required
                         />
-                    </div>
-                    <div className="mb-2">
+                    </motion.div>
+                    <motion.div
+                        className="mb-4"
+                        custom={0}
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false }}
+                    >
                         <label className="block text-gray-600 mb-1" htmlFor="Location">
                             Location <span className="text-red-500">*</span>
                         </label>
@@ -156,8 +192,15 @@ const Form = () => {
                             onChange={handlechange}
                             required
                         />
-                    </div>
-                    <div className="mb-2">
+                    </motion.div>
+                    <motion.div
+                        className="mb-4"
+                        custom={0}
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false }}
+                    >
                         <label className="block text-gray-600 mb-1" htmlFor="Message">
                             Write Problem English / Hindi <span className="text-red-500">*</span>
                         </label>
@@ -170,8 +213,15 @@ const Form = () => {
                             onChange={handlechange}
                             required
                         ></textarea>
-                    </div>
-                    <div className="mb-2">
+                    </motion.div>
+                    <motion.div
+                        className="mb-4"
+                        custom={0}
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false }}
+                    >
                         <label className="block text-gray-600 mb-1" htmlFor="MedicalReport">
                             Upload Medical Report (Optional)
                         </label>
@@ -184,9 +234,16 @@ const Form = () => {
                             className="w-full border border-gray-300 rounded px-3 py-1 focus:outline-none focus:border-blue-500 dark:text-gray-900"
 
                         />
-                    </div>
+                    </motion.div>
 
-                    <div className="text-center mt-4">
+                    <motion.div
+                        className="mb-4"
+                        custom={0}
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false }}
+                    >
                         {
                             loading ? (<div className="flex justify-center items-center w-full h-full fixed top-0 left-0 z-50 rounded-md" style={{ backgroundColor: "rgba(75, 0, 130, 0.5)" }}>
                                 <ClipLoader width="60" height="60" color="#0f8f41" className="animate-spin" />
@@ -199,7 +256,7 @@ const Form = () => {
                                 </button>
                             )
                         }
-                    </div>
+                    </motion.div>
                 </form>
             </div>
         </div>
