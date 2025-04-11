@@ -83,7 +83,7 @@ const Content = () => {
     };
 
     return (
-        <div className="mx-auto p-6 bg-[#ebfff4] -pt-10">
+        <div className="mx-auto p-6 bg-[#ebfff4] lg:-pt-10">
             {/* Animate Buttons One by One */}
             <motion.div
                 className="flex flex-wrap justify-center mb-4 gap-3 sm:gap-5"

@@ -5,33 +5,17 @@ import { motion } from "framer-motion";
 
 const faqData = [
     {
-        question: "Who gets cancer?",
-        answer: "Cancer can affect anyone, but risk factors include:",
-        list: [
-            "<strong>Age:</strong> Risk increases with age.",
-            "<strong>Genetics:</strong> Family history of cancer.",
-            "<strong>Lifestyle:</strong> Smoking, alcohol, poor diet, lack of exercise.",
-            "<strong>Environment:</strong> Exposure to radiation, chemicals, and pollution.",
-            "<strong>Infections:</strong> HPV, hepatitis B/C, and other viruses.",
-            "<strong>Chronic Conditions:</strong> Obesity, diabetes, and certain inflammatory diseases."
-        ]
+        question: "What types of cancer does Dr. Varun Goel treat?",
+        answer: "Dr. Goel treats a wide range of cancers including solid tumors such as breast cancer, lung cancer, colon cancer, and prostate cancer, as well as blood-related cancers like leukemia, lymphoma, and multiple myeloma.",
     },
     {
-        question: "My family has a history of genetic cancer. My grandmother, grandfather, and my father’s sister died of it. What can I do?",
-        answer: "If your family has a history of genetic cancer, there are several steps you can take to be proactive about your health:",
-        list: [
-            "<strong>Genetic Testing:</strong> Consider speaking with a genetic counselor to determine if you carry any inherited cancer-related genes.",
-            "<strong>Regular Screenings:</strong> Get routine check-ups and cancer screenings based on your risk factors and doctor’s recommendations. Early detection can make a big difference.",
-            "<strong>Healthy Lifestyle:</strong> Maintain a balanced diet, exercise regularly, avoid smoking, and limit alcohol intake to reduce your overall cancer risk.",
-            "<strong>Know the Warning Signs:</strong> Stay informed about symptoms of cancers common in your family and report any concerns to your doctor immediately.",
-            "<strong>Preventive Measures:</strong> In some cases, doctors may recommend preventive treatments, medications, or surgeries for those at high risk.",
-            "<strong>Family Awareness:</strong> Encourage relatives to also get tested and screened so they can take preventive steps if necessary."
-        ]
+        question: "How can I book an appointment?",
+        answer: "You can book an appointment online through the website or call the clinic directly. Once the form is submitted, our team will confirm your appointment shortly.",
     },
     {
-        question: "How can I contact Dr. Varun Goel?",
-        answer: "Yes, cancer can often be treated, especially if detected early. Treatment options include:",
-        list: ["Surgery", "Chemotherapy", "Radiation therapy", "Immunotherapy", "Targeted therapy"]
+        question: "How long does cancer treatment take?",
+        answer: "The duration of treatment depends on the type and stage of cancer. Some treatments are short-term, while others may require ongoing follow-up over months or even years.",
+        // list: ["Surgery", "Chemotherapy", "Radiation therapy", "Immunotherapy", "Targeted therapy"]
     },
     {
         question: "How can I know if I have cancer?",
@@ -57,7 +41,7 @@ const Faq = () => {
     return (
         <div className="bg-[#e8fcec] py-4">
             <div className="max-w-6xl mx-auto px-5">
-               
+
                 <motion.h2
                     className="text-center font-semibold text-4xl mb-6 dark:text-black"
                     style={{ fontFamily: 'Oswald, sans-serif' }}

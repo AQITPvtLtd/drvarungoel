@@ -1,4 +1,3 @@
-// import Faq from "@/component/homepage/Faq";
 import Serivces from "@/component/homepage/Serivces";
 import Banner from "@/component/homepage/Banner";
 import Content from "./about/Content";
@@ -14,8 +13,7 @@ export default function Home() {
       <Serivces />
       <VideoLibrary />
       <PatientTestimonial />
-      {/* <Faq /> */}
-     <Faq />
+      <Faq />
     </div>
   );
 }

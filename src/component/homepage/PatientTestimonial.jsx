@@ -55,7 +55,7 @@ const PatientTestimonial = () => {
     };
 
     return (
-        <div className="bg-white py-10">
+        <div className="bg-white py-14">
             <motion.h2
                 className="text-center font-semibold text-4xl mb-6 dark:text-black"
                 style={{ fontFamily: 'Oswald, sans-serif' }}

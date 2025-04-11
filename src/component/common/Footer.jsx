@@ -9,8 +9,8 @@ const Footer = () => {
     return (
         <div className="bg-white shadow-md py-6 px-6">
             {/* Top Section */}
-            <div className="flex flex-col md:flex-row items-center justify-between border-b pb-4">
-                <Link href="/">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-b pb-4 gap-4">
+                <Link href="/" className="w-fit">
                     <Image
                         src="/logo/logo.png"
                         priority
@@ -20,9 +20,9 @@ const Footer = () => {
                         height={80}
                     />
                 </Link>
-                <div className="flex items-center space-x-6 mt-4 md:mt-0">
-                    <div className="flex items-center space-x-2">
-                        <FaPhoneAlt className="text-gray-600 text-lg" />
+                <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <div className="flex items-start space-x-2">
+                        <FaPhoneAlt className="text-gray-600 text-lg mt-1" />
                         <div>
                             <p className="text-gray-500 text-sm">Give us a call</p>
                             <Link href="tel:+919560538081" className="text-black font-medium">
@@ -30,8 +30,8 @@ const Footer = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="flex items-center space-x-2">
-                        <MdEmail className="text-gray-600 text-xl" />
+                    <div className="flex items-start space-x-2">
+                        <MdEmail className="text-gray-600 text-xl mt-1" />
                         <div>
                             <p className="text-gray-500 text-sm">Send Message</p>
                             <Link href="mailto:docvarungoel@gmail.com" className="text-black font-medium">
@@ -43,21 +43,20 @@ const Footer = () => {
             </div>
 
             {/* Bottom Section */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-6 text-sm text-gray-700 text-center md:text-left">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-6 text-sm text-gray-700">
                 {/* Quick Links */}
-                <div className="flex flex-col items-center md:items-start">
+                <div className="flex flex-col items-start">
                     <p className="font-semibold text-xl mb-3 text-black">Quick Links</p>
                     <ul className="space-y-2">
                         <li><Link href="/about" className="hover:text-[#129246]">About</Link></li>
                         <li><Link href="/treatments" className="hover:text-[#129246]">Treatments</Link></li>
                         <li><Link href="/blogs" className="hover:text-[#129246]">Blogs</Link></li>
-                      
                         <li><Link href="/contact" className="hover:text-[#129246]">Contact Us</Link></li>
                     </ul>
                 </div>
 
                 {/* Services */}
-                <div className="flex flex-col items-center md:items-start">
+                <div className="flex flex-col items-start">
                     <p className="font-semibold text-xl mb-3 text-black">Services</p>
                     <ul className="space-y-2">
                         <li><Link href="/services/radiation-therapy" className="hover:text-[#129246]">Radiation Therapy</Link></li>
@@ -69,18 +68,18 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <div className="flex flex-col items-center md:items-start">
+                {/* Media */}
+                <div className="flex flex-col items-start">
                     <p className="font-semibold text-xl mb-3 text-black">Media</p>
                     <ul className="space-y-2">
-                        <li><Link href="/services/radiation-therapy" className="hover:text-[#129246]">Photo Gallery</Link></li>
-                        <li><Link href="/services/targeted-therapy" className="hover:text-[#129246]">Certificates</Link></li>
-                        <li><Link href="/services/immunotherapy" className="hover:text-[#129246]">Videos</Link></li>
-
+                        <li><Link href="/gallery" className="hover:text-[#129246]">Photo Gallery</Link></li>
+                        <li><Link href="/certificates" className="hover:text-[#129246]">Certificates</Link></li>
+                        <li><Link href="/videos" className="hover:text-[#129246]">Videos</Link></li>
                     </ul>
                 </div>
 
                 {/* Location */}
-                <div className="flex flex-col items-center md:items-start">
+                <div className="flex flex-col items-start">
                     <p className="font-semibold text-xl mb-3 text-black">Location</p>
                     <p className="text-base leading-relaxed">
                         Rajiv Gandhi Cancer Institute,<br />
@@ -90,13 +89,12 @@ const Footer = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="flex justify-center md:justify-start space-x-6 mt-6">
+            <div className="flex justify-start space-x-6 mt-6">
                 <Link href="https://instagram.com" className="text-pink-500 text-2xl hover:opacity-80"><FaInstagram /></Link>
                 <Link href="https://facebook.com" className="text-blue-600 text-2xl hover:opacity-80"><FaFacebookF /></Link>
                 <Link href="https://linkedin.com" className="text-blue-700 text-2xl hover:opacity-80"><FaLinkedinIn /></Link>
                 <Link href="https://youtube.com" className="text-red-600 text-2xl hover:opacity-80"><FaYoutube /></Link>
             </div>
-
         </div>
     );
 };

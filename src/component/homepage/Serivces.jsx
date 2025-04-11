@@ -6,12 +6,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const services = [
-    { id: 1, src: "/services/img1.png", title: "RADIATION THERAPY" },
-    { id: 2, src: "/services/img2.png", title: "TARGETED THERAPY" },
-    { id: 3, src: "/services/img3.png", title: "IMMUNOTHERAPY" },
-    { id: 4, src: "/services/img4.png", title: "CHEMOTHERAPY" },
-    { id: 5, src: "/services/img5.png", title: "ROBOTIC THERAPY" },
-    { id: 6, src: "/services/img6.png", title: "CAR-T CELL THERAPY" },
+    { id: 1, src: "/services/img1.png", title: "Cancer Diagnosis & Staging" },
+    { id: 2, src: "/services/img2.png", title: "Systemic Anti-Cancer Therapy" },
+    { id: 3, src: "/services/img3.png", title: "Personalized & Precision Medicine" },
+    { id: 4, src: "/services/img4.png", title: "Prognostication & Risk Assessment" },
+    { id: 5, src: "/services/img5.png", title: "Supportive & Palliative Care" },
+    { id: 6, src: "/services/img6.png", title: "Clinical Trials & Research" },
 ];
 
 const cardVariant = {
