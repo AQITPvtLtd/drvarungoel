@@ -37,7 +37,7 @@ const TreatmentData = ({ id }) => {
                                 initial={{ y: -50, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }}
-                                className="text-white font-serif text-center text-6xl font-bold my-4 absolute inset-0 z-20 flex items-center justify-center"
+                                className="text-white font-serif text-center lg:text-6xl text-3xl font-bold my-4 absolute inset-0 z-20 flex items-center justify-center"
                             >
                                 Treatments
                             </motion.h1>
