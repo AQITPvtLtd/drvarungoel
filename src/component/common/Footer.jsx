@@ -50,7 +50,7 @@ const Footer = () => {
                     <ul className="space-y-2">
                         <li><Link href="/about" className="hover:text-[#129246]">About</Link></li>
                         <li><Link href="/treatments" className="hover:text-[#129246]">Treatments</Link></li>
-                        <li><Link href="/blogs" className="hover:text-[#129246]">Blogs</Link></li>
+                        <li><Link href="/blog" className="hover:text-[#129246]">Blogs</Link></li>
                         <li><Link href="/contact" className="hover:text-[#129246]">Contact Us</Link></li>
                     </ul>
                 </div>
@@ -59,12 +59,12 @@ const Footer = () => {
                 <div className="flex flex-col items-start">
                     <p className="font-semibold text-xl mb-3 text-black">Services</p>
                     <ul className="space-y-2">
-                        <li><Link href="/services/radiation-therapy" className="hover:text-[#129246]">Radiation Therapy</Link></li>
-                        <li><Link href="/services/targeted-therapy" className="hover:text-[#129246]">Targeted Therapy</Link></li>
-                        <li><Link href="/services/immunotherapy" className="hover:text-[#129246]">Immunotherapy</Link></li>
-                        <li><Link href="/services/chemotherapy" className="hover:text-[#129246]">Chemotherapy</Link></li>
-                        <li><Link href="/services/robotic-therapy" className="hover:text-[#129246]">Robotic Therapy</Link></li>
-                        <li><Link href="/services/car-t-cell-therapy" className="hover:text-[#129246]">CAR-T Cell Therapy</Link></li>
+                        <li><Link href="https://drgoelcancercare.com/treatments/1" className="hover:text-[#129246]">Cancer Diagnosis & Staging</Link></li>
+                        <li><Link href="https://drgoelcancercare.com/treatments/2" className="hover:text-[#129246]">Systemic Anti-Cancer Therapy</Link></li>
+                        <li><Link href="https://drgoelcancercare.com/treatments/3" className="hover:text-[#129246]">Personalized & Precision Medicine</Link></li>
+                        <li><Link href="https://drgoelcancercare.com/treatments/4" className="hover:text-[#129246]">Prognostication & Risk Assessment</Link></li>
+                        <li><Link href="https://drgoelcancercare.com/treatments/5" className="hover:text-[#129246]">Supportive & Palliative Care</Link></li>
+                        <li><Link href="https://drgoelcancercare.com/treatments/9" className="hover:text-[#129246]">Clinical Trials & Research</Link></li>
                     </ul>
                 </div>
 
@@ -72,9 +72,9 @@ const Footer = () => {
                 <div className="flex flex-col items-start">
                     <p className="font-semibold text-xl mb-3 text-black">Media</p>
                     <ul className="space-y-2">
-                        <li><Link href="/gallery" className="hover:text-[#129246]">Photo Gallery</Link></li>
-                        <li><Link href="/certificates" className="hover:text-[#129246]">Certificates</Link></li>
-                        <li><Link href="/videos" className="hover:text-[#129246]">Videos</Link></li>
+                        <li><Link href="/media/photo-gallery" className="hover:text-[#129246]">Photo Gallery</Link></li>
+                        <li><Link href="/media/certificate" className="hover:text-[#129246]">Certificates</Link></li>
+                        <li><Link href="/media/videos" className="hover:text-[#129246]">Videos</Link></li>
                     </ul>
                 </div>
 
@@ -82,8 +82,10 @@ const Footer = () => {
                 <div className="flex flex-col items-start">
                     <p className="font-semibold text-xl mb-3 text-black">Location</p>
                     <p className="text-base leading-relaxed">
-                        Rajiv Gandhi Cancer Institute,<br />
-                        Sector - 5, Rohini, Delhi - 110085
+                        <Link href={`https://g.co/kgs/bQRmREn`}>
+                            Rajiv Gandhi Cancer Institute,<br />
+                            Sector - 5, Rohini, Delhi - 110085
+                        </Link>
                     </p>
                 </div>
             </div>
