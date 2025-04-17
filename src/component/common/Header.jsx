@@ -74,16 +74,16 @@ const Header = () => {
                     <Link href="/treatments" className="text-black" onClick={() => setIsOpen(false)}>Treatments</Link>
 
 
-                    <Link href="/blogs" className="text-black" onClick={() => setIsOpen(false)}>Blogs</Link>
+                    <Link href="/blog" className="text-black" onClick={() => setIsOpen(false)}>Blogs</Link>
 
                     <div>
                         <button onClick={() => setMediaOpen(!mediaOpen)} className="flex items-center w-full text-left text-black">
-                            MEDIA <FiChevronDown className="ml-1" />
+                            Media <FiChevronDown className="ml-1" />
                         </button>
                         {mediaOpen && (
                             <div className="flex flex-col pl-4">
                                 <Link href="/media/photo-gallery" className="text-black" onClick={() => setIsOpen(false)}>Photo Gallery</Link>
-                                <Link href="/media/certificates" className="text-black" onClick={() => setIsOpen(false)}>Certificates</Link>
+                                <Link href="/media/certificate" className="text-black" onClick={() => setIsOpen(false)}>Certificates</Link>
                                 <Link href="/media/videos" className="text-black" onClick={() => setIsOpen(false)}>Videos</Link>
                             </div>
                         )}
