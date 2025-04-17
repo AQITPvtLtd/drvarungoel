@@ -11,28 +11,26 @@ export async function POST(request) {
         const Email = formData.get("Email");
         const Location = formData.get("Location");
         const Message = formData.get("Message");
-        const MedicalReport = formData.get("MedicalReport");
 
         const unique_id = uuid();
 
-        // ✅ Use promise-based pool.query()
+        const MedicalReport = formData.get("MedicalReport");
+        const fileBuffer = MedicalReport ? Buffer.from(await MedicalReport.arrayBuffer()) : null;
+
         await pool.execute(
             "INSERT INTO contact (date, id, fullname, phone, email, location, message, medicalreport) VALUES(NOW(), ?,?,?,?,?,?,?)",
-            [unique_id, Fname, Phone, Email, Location, Message, MedicalReport]
+            [
+                unique_id,
+                Fname,
+                Phone,
+                Email,
+                Location,
+                Message,
+                MedicalReport ? MedicalReport.name : null
+            ]
         );
 
-        // ✅ Nodemailer Transporter
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
-            host: "smtp.gmail.com",
-            secure: true,
-            auth: {
-                user: process.env.MY_EMAIL,
-                pass: process.env.MY_PASSWORD,
-            },
-        });
-
-        // ✅ Admin Email with Attachment
+        // Email with attachment
         const mailOptionsAdmin = {
             from: process.env.MY_EMAIL,
             to: process.env.MY_EMAIL,
@@ -48,8 +46,8 @@ export async function POST(request) {
             attachments: MedicalReport
                 ? [
                     {
-                        filename: MedicalReport,
-                        content: Buffer.from(await MedicalReport.arrayBuffer()),
+                        filename: MedicalReport.name,
+                        content: fileBuffer,
                     },
                 ]
                 : [],
