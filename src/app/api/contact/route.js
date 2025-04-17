@@ -11,7 +11,6 @@ export async function POST(request) {
         const Email = formData.get("Email");
         const Location = formData.get("Location");
         const Message = formData.get("Message");
-
         const unique_id = uuid();
 
         const MedicalReport = formData.get("MedicalReport");
@@ -30,6 +29,17 @@ export async function POST(request) {
             ]
         );
 
+        // ✅ Nodemailer Transporter
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            host: "smtp.gmail.com",
+            secure: true,
+            auth: {
+                user: process.env.MY_EMAIL,
+                pass: process.env.MY_PASSWORD,
+            },
+        });
+
         // Email with attachment
         const mailOptionsAdmin = {
             from: process.env.MY_EMAIL,
@@ -37,11 +47,11 @@ export async function POST(request) {
             subject: "Dr. Varun Goel - Contact Form",
             html: `
             <html>
-              <body>
-                <h3>You've got a new mail from ${Fname}, their email is: ✉️${Email}, phone number is ${Phone}, and location is ${Location}</h3>
-                <p>Message:</p>
-                <p>${Message}</p>
-              </body>
+                <body>
+                    <h3>You've got a new mail from ${Fname}, their email is: ✉️${Email}, phone number is ${Phone}, and location is ${Location}</h3>
+                    <p>Message:</p>
+                    <p>${Message}</p>
+                 </body>
             </html>`,
             attachments: MedicalReport
                 ? [
