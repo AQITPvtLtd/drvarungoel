@@ -72,10 +72,10 @@ const Contact = () => {
                                 transition={{ duration: 0.5 }}
                                 className="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center justify-center text-center w-full max-w-md"
                             >
-                                <Link href="tel:+919711400908" aria-label="Call Now" className="flex flex-col items-center">
+                                <Link href="tel:+91 95605 38081" aria-label="Call Now" className="flex flex-col items-center">
                                     <IoCall className="text-4xl text-white bg-[#0f8f41] p-2 rounded-full" />
                                     <h3 className="text-lg font-semibold text-black mt-2" style={{ fontFamily: 'Oswald, sans-serif' }}>Phone Number</h3>
-                                    <p className="text-gray-700">+91 97114 00908</p>
+                                    <p className="text-gray-700">+91 95605 38081</p>
                                 </Link>
                             </motion.div>
 
@@ -85,10 +85,10 @@ const Contact = () => {
                                 transition={{ duration: 0.5 }}
                                 className="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center justify-center text-center w-full max-w-md"
                             >
-                                <Link href="mailto:drdevavratarya@gmail.com" className="flex flex-col items-center">
+                                <Link href="mailto:docvarungoel@gmail.com" className="flex flex-col items-center">
                                     <MdEmail className="text-4xl text-white bg-[#0f8f41] p-2 rounded-full cursor-pointer" />
                                     <h3 className="text-lg font-semibold text-black mt-2" style={{ fontFamily: 'Oswald, sans-serif' }}>Email Address</h3>
-                                    <p className="text-gray-700">drdevavratarya@gmail.com</p>
+                                    <p className="text-gray-700">docvarungoel@gmail.com</p>
                                 </Link>
                             </motion.div>
                         </motion.div>
