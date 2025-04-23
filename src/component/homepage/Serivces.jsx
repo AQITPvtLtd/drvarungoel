@@ -4,9 +4,11 @@ import Form from "@/app/contact/form/Form";
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const services = [
-    { id: 1, src: "/services/img1.png", title: "Cancer Diagnosis & Staging" },
+    { id: 1, src: "/services/img1.png", title: "Cancer Diagnosis & Staging", },
     { id: 2, src: "/services/img2.png", title: "Systemic Anti-Cancer Therapy" },
     { id: 3, src: "/services/img3.png", title: "Personalized & Precision Medicine" },
     { id: 4, src: "/services/img4.png", title: "Prognostication & Risk Assessment" },
@@ -30,7 +32,9 @@ const cardVariant = {
 const Services = () => {
     return (
         <div className="bg-[#ebfff4] p-6 md:p-12">
-            <h2 className="text-3xl font-bold text-center mb-3 dark:text-black" style={{ fontFamily: 'Oswald, sans-serif' }}>Services</h2>
+            <h2 className="text-3xl font-bold text-center mb-3 dark:text-black" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                Treatments
+            </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="grid grid-cols-2 gap-4">
                     {services.map((service, index) => (
@@ -47,12 +51,24 @@ const Services = () => {
                             <p className="mt-3 text-center font-semibold dark:text-black">{service.title}</p>
                         </motion.div>
                     ))}
+                    <div className="col-span-2 flex justify-center">
+                        <Link
+                            href="/treatments"
+                            className="flex items-center gap-2 bg-green-600 text-white px-5 py-2 rounded-lg font-semibold text-center transition-all 
+                        border-2 border-transparent hover:border-green-600 hover:text-black hover:bg-white cursor-pointer"
+                        >
+                            <MdKeyboardDoubleArrowRight className="text-xl" />
+                            Know More
+                        </Link>
+                    </div>
                 </div>
+
                 <div className="lg:px-20">
                     <Form />
                 </div>
             </div>
         </div>
+
     );
 };
 
