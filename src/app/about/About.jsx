@@ -12,7 +12,7 @@ const About = () => {
                 <div className='grid grid-cols-1 md:grid-cols-12 items-center gap-6'>
                     <div className='md:col-span-5 flex justify-center mt-5'>
                         <Image
-                            src="/about/Dr-Varun-Goel.png"
+                            src="/about/new.png"
                             width={500}
                             height={500}
                             className="w-full max-w-[350px] lg:max-w-[400px] xl:max-w-[500px] rounded-lg shadow-lg"
