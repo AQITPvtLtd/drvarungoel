@@ -57,7 +57,7 @@ const VisionAndMission = () => {
                    transition={{ duration: 0.5 }}
                    viewport={{ once: false, amount: 0.3 }}
                 >
-                    <h2 className="text-center font-semibold text-xl bg-[#21bee5] py-2 rounded text-white" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                    <h2 className="text-center font-semibold text-xl bg-[#21bee5] py-2 rounded text-black" style={{ fontFamily: 'Oswald, sans-serif' }}>
                         Our Vision
                     </h2>
                     <p className="mt-4 text-gray-700">
