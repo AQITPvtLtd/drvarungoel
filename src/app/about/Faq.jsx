@@ -60,7 +60,7 @@ const Faq = () => {
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
-                            viewport={{ once: false, amount: 0.3 }}
+                            viewport={{ once: false, amount: 0 }} // 
                             className="shadow-slate-400 shadow-md mb-4 rounded-lg overflow-hidden"
                         >
                             <button
@@ -88,6 +88,7 @@ const Faq = () => {
                         </motion.div>
                     ))}
                 </div>
+
             </div>
         </div>
     );

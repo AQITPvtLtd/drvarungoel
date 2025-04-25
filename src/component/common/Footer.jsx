@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
     return (
@@ -81,7 +82,8 @@ const Footer = () => {
                 {/* Location */}
                 <div className="flex flex-col items-start">
                     <p className="font-semibold text-xl mb-3 text-black">Location</p>
-                    <p className="text-base leading-relaxed">
+                    <p className="text-base leading-relaxed flex gap-1">
+                        <FaLocationDot className='mt-1.5' />
                         <Link href={`https://g.co/kgs/bQRmREn`}>
                             Rajiv Gandhi Cancer Institute,<br />
                             Sector - 5, Rohini, Delhi - 110085

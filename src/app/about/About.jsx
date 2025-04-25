@@ -8,7 +8,7 @@ import Statistics from '@/component/homepage/Statistics';
 const About = () => {
     return (
         <div className='dark:bg-white'>
-            <div className="px-4 md:px-8 lg:mt-20 mt-15">
+            <div className="px-4 md:px-8 lg:mt-28 mt-15">
                 <div className='grid grid-cols-1 md:grid-cols-12 items-center gap-6'>
                     <div className='md:col-span-5 flex justify-center mt-5'>
                         <Image
