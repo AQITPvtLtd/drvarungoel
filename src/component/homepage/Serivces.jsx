@@ -1,7 +1,7 @@
 'use client';
 
 import Form from "@/app/contact/form/Form";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -30,6 +30,19 @@ const cardVariant = {
 };
 
 const Services = () => {
+    const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsLargeScreen(window.innerWidth >= 768); // md size (768px) se bada to large
+        };
+
+        checkScreenSize(); // initial check
+        window.addEventListener('resize', checkScreenSize); // resize par check
+
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
+
     return (
         <div className="bg-[#ebfff4] p-6 md:p-12">
             <h2 className="text-3xl font-bold text-center mb-3 dark:text-black" style={{ fontFamily: 'Oswald, sans-serif' }}>
@@ -37,20 +50,31 @@ const Services = () => {
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="grid grid-cols-2 gap-4">
-                    {services.map((service, index) => (
-                        <motion.div
-                            key={service.id}
-                            className="flex flex-col items-center justify-center p-4 bg-white shadow-lg rounded-lg"
-                            variants={cardVariant}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: false }}
-                            custom={index}
-                        >
-                            <Image src={service.src} width={120} height={120} alt={service.title} />
-                            <p className="mt-3 text-center font-semibold dark:text-black">{service.title}</p>
-                        </motion.div>
-                    ))}
+                    {services.map((service, index) => {
+                        const CardContent = (
+                            <div className="flex flex-col items-center justify-center p-4 bg-white shadow-lg rounded-lg">
+                                <Image src={service.src} width={120} height={120} alt={service.title} />
+                                <p className="mt-3 text-center font-semibold dark:text-black">{service.title}</p>
+                            </div>
+                        );
+
+                        return isLargeScreen ? (
+                            <motion.div
+                                key={service.id}
+                                variants={cardVariant}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: false }}
+                                custom={index}
+                            >
+                                {CardContent}
+                            </motion.div>
+                        ) : (
+                            <div key={service.id}>
+                                {CardContent}
+                            </div>
+                        );
+                    })}
                     <div className="col-span-2 flex justify-center">
                         <Link
                             href="/treatments"
@@ -68,7 +92,6 @@ const Services = () => {
                 </div>
             </div>
         </div>
-
     );
 };
 
