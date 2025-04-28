@@ -8,7 +8,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <div className="bg-white shadow-md py-6 px-6">
+        <div className="bg-[#ebfff4] shadow-md py-6 px-6">
             {/* Top Section */}
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-b pb-4 gap-4">
                 <Link href="/" className="w-fit">

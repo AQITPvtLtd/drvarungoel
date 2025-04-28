@@ -24,7 +24,7 @@ const Blog = () => {
     }, []);
 
     return (
-        <div className="lg:p-10 overflow-x-clip px-4 lg:mt-[60px]">
+        <div className="lg:p-10 overflow-x-clip px-4 mt-[60px]">
 
             <div className="pt-5 text-center">
                 <h1 className="text-3xl font-bold dark:text-black">Latest Blog</h1>

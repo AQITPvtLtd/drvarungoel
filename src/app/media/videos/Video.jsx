@@ -38,7 +38,7 @@ const Video = () => {
     const longVideos = videos.filter((video) => !video.url.includes("shorts"));
 
     return (
-        <div className='pt-28 dark:bg-white'>
+        <div className='lg:pt-32 pt-24 bg-[#ebfff4]'>
             <div className="w-full max-w-8xl relative">
                 <div className="relative">
                     <Image
@@ -81,7 +81,7 @@ const Video = () => {
                     variants={containerVariant}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: false, amount: 0.3 }}
+                    viewport={{ once: false, amount: 0.8 }}
                 >
                     {shorts.map((video) => (
                         <motion.iframe
