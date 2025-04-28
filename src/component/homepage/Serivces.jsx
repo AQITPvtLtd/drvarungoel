@@ -52,7 +52,7 @@ const Services = () => {
                 <div className="grid grid-cols-2 gap-4">
                     {services.map((service, index) => {
                         const CardContent = (
-                            <div className="flex flex-col items-center justify-center p-4 bg-white shadow-lg rounded-lg">
+                            <div className="flex flex-col h-40 items-center justify-center p-4 bg-white shadow-lg rounded-lg">
                                 <Image src={service.src} width={120} height={120} alt={service.title} />
                                 <p className="mt-3 text-center font-semibold dark:text-black">{service.title}</p>
                             </div>
