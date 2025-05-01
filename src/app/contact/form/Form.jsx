@@ -2,12 +2,14 @@
 
 import { form } from "@/sevices/user";
 import { useRouter } from "next/navigation";
+import useIsLargeScreen from "@/hooks/useIsLargeScreen";
 import React, { useState } from "react";
 import Swal from 'sweetalert2';
 import { ClipLoader } from "react-spinners";
 import { motion } from "framer-motion";
 const Form = () => {
     const router = useRouter();
+    const isLargeScreen = useIsLargeScreen();
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
         Fname: "",
@@ -106,12 +108,15 @@ const Form = () => {
                 >
                     <h3 className="text-xl font-semibold text-gray-700 mb-1" style={{ fontFamily: 'Oswald, sans-serif' }}>Submit Your Query</h3>
                     <motion.div
-                        className="mb-4"
-                        custom={0}
-                        variants={fadeUp}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: false }}
+                        {...(isLargeScreen
+                            ? {
+                                custom: 0,
+                                variants: fadeUp,
+                                initial: "hidden",
+                                whileInView: "visible",
+                                viewport: { once: false },
+                            }
+                            : {})}
                     >
                         <label className="block text-gray-600 mb-1" htmlFor="Fname">
                             Full Name <span className="text-red-500">*</span>
