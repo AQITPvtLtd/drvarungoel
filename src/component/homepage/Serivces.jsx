@@ -49,12 +49,20 @@ const Services = () => {
                 Treatments
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {services.map((service, index) => {
                         const CardContent = (
-                            <div className="flex flex-col h-40 items-center justify-center p-4 bg-white shadow-lg rounded-lg">
-                                <Image src={service.src} width={120} height={120} alt={service.title} />
-                                <p className="mt-3 text-center font-semibold dark:text-black">{service.title}</p>
+                            <div className="flex flex-col items-center justify-center p-4 bg-white shadow-lg rounded-lg h-full w-full">
+                                <Image
+                                    src={service.src}
+                                    width={120}
+                                    height={120}
+                                    alt={service.title}
+                                    className="w-24 h-24 object-contain"
+                                />
+                                <p className="mt-3 text-center font-semibold text-sm md:text-base dark:text-black">
+                                    {service.title}
+                                </p>
                             </div>
                         );
 
@@ -70,22 +78,23 @@ const Services = () => {
                                 {CardContent}
                             </motion.div>
                         ) : (
-                            <div key={service.id}>
-                                {CardContent}
-                            </div>
+                            <div key={service.id}>{CardContent}</div>
                         );
                     })}
-                    <div className="col-span-2 flex justify-center">
+
+                    {/* Know More Button */}
+                    <div className="col-span-1 sm:col-span-2 flex justify-center">
                         <Link
                             href="/treatments"
                             className="flex items-center gap-2 bg-green-600 text-white px-5 py-2 rounded-lg font-semibold text-center transition-all 
-                        border-2 border-transparent hover:border-green-600 hover:text-black hover:bg-white cursor-pointer"
+            border-2 border-transparent hover:border-green-600 hover:text-black hover:bg-white cursor-pointer"
                         >
                             <MdKeyboardDoubleArrowRight className="text-xl" />
                             Know More
                         </Link>
                     </div>
                 </div>
+
 
                 <div className="lg:px-20">
                     <Form />

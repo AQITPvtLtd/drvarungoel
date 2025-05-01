@@ -14,22 +14,37 @@ const videos = [
 
 const headingVariant = {
     hidden: { opacity: 0, y: -30 },
-    visible: { opacity: 1, y: 0 }
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1.2,
+            ease: "easeInOut"
+        }
+    }
 };
 
 const containerVariant = {
     hidden: {},
     visible: {
         transition: {
-            staggerChildren: 0.8,
+            staggerChildren: 0.4, // smoother stagger
         }
     }
 };
 
 const videoVariant = {
     hidden: { opacity: 0, y: 80 },
-    visible: { opacity: 1, y: 0 }
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1.0,
+            ease: "easeInOut"
+        }
+    }
 };
+
 
 const Video = () => {
     const [isLargeScreen, setIsLargeScreen] = useState(false);
