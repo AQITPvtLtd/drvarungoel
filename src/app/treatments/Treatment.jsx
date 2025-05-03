@@ -43,7 +43,7 @@ const Treatment = () => {
                             variants={cardVariants}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: false, amount: 0 }} // changed from 0.2 to 0
+                            viewport={{ once: true, amount: 0 }} // changed from 0.2 to 0
                             transition={{ duration: 0.6, delay: index * 0.2 }} // increased duration for smoother feel
                             className="bg-white rounded-lg shadow-lg overflow-hidden"
                         >
