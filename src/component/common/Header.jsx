@@ -27,33 +27,32 @@ const Header = () => {
 
                 {/* Desktop Menu */}
                 <nav className="hidden lg:flex items-center space-x-10 text-black text-base font-medium" style={{ fontFamily: 'Oswald, sans-serif' }}>
-                    <Link href="/" className="hover:text-gray-600 transition" >Home</Link>
-                    <Link href="/about" className="hover:text-gray-600 transition">About</Link>
+                    <Link href="/" className="hover:text-gray-600 transition cursor-pointer" >Home</Link>
+                    <Link href="/about" className="hover:text-gray-600 transition cursor-pointer">About</Link>
 
-                    <Link href="/treatments" className="hover:text-gray-600 transition"> Treatments </Link>
+                    <Link href="/treatments" className="hover:text-gray-600 transition cursor-pointer"> Treatments </Link>
 
-                    <Link href="/blog" className="hover:text-gray-600 transition">Blogs</Link>
+                    <Link href="/blog" className="hover:text-gray-600 transition cursor-pointer">Blogs</Link>
 
                     {/* Media Dropdown */}
                     <div className="relative group">
-                        <button className="flex items-center hover:text-gray-600 transition">
+                        <button className="flex items-center hover:text-gray-600 transition cursor-pointer">
                             Media <FiChevronDown className="ml-1" />
                         </button>
                         <div className="absolute left-0 -mt-0 w-48 px-2 py-2 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 group-hover:flex flex-col">
-                            <Link href="/media/photo-gallery" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">Photo Gallery</Link>
-                            <Link href="/media/certificate" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">Certificates</Link>
-                            <Link href="/media/videos" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm">Videos</Link>
+                            <Link href="/media/photo-gallery" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm cursor-pointer">Photo Gallery</Link>
+                            <Link href="/media/certificate" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm cursor-pointer">Certificates</Link>
+                            <Link href="/media/videos" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm cursor-pointer">Videos</Link>
                         </div>
                     </div>
 
-                    <Link href="/contact" className="hover:text-gray-600 transition">Contact Us</Link>
+                    <Link href="/contact" className="hover:text-gray-600 transition cursor-pointer">Contact Us</Link>
                 </nav>
 
                 {/* Call Now Button */}
                 <div className="hidden lg:flex">
                     <Link href="tel:+91 95605 38081" className="flex items-center gap-2 bg-green-600 text-white px-3 py-2 rounded-lg font-semibold text-center transition-all 
                                            border-2 border-transparent hover:border-green-600 hover:text-black hover:bg-white cursor-pointer">
-
                         <IoMdCall className="text-xl" />
                         Call Now
                     </Link>
@@ -68,28 +67,28 @@ const Header = () => {
             {/* Mobile Menu */}
             {isOpen && (
                 <div className="lg:hidden bg-white shadow-md p-4 absolute top-[70px] left-0 w-full z-50 flex flex-col space-y-4">
-                    <Link href="/" className="text-black" onClick={() => setIsOpen(false)}>Home</Link>
-                    <Link href="/about" className="text-black" onClick={() => setIsOpen(false)}>About</Link>
+                    <Link href="/" className="text-black cursor-pointer" onClick={() => setIsOpen(false)}>Home</Link>
+                    <Link href="/about" className="text-black cursor-pointer" onClick={() => setIsOpen(false)}>About</Link>
 
-                    <Link href="/treatments" className="text-black" onClick={() => setIsOpen(false)}>Treatments</Link>
+                    <Link href="/treatments" className="text-black cursor-pointer" onClick={() => setIsOpen(false)}>Treatments</Link>
 
 
-                    <Link href="/blog" className="text-black" onClick={() => setIsOpen(false)}>Blogs</Link>
+                    <Link href="/blog" className="text-black cursor-pointer" onClick={() => setIsOpen(false)}>Blogs</Link>
 
                     <div>
-                        <button onClick={() => setMediaOpen(!mediaOpen)} className="flex items-center w-full text-left text-black">
+                        <button onClick={() => setMediaOpen(!mediaOpen)} className="flex items-center w-full text-left text-black cursor-pointer">
                             Media <FiChevronDown className="ml-1" />
                         </button>
                         {mediaOpen && (
                             <div className="flex flex-col pl-4">
-                                <Link href="/media/photo-gallery" className="text-black" onClick={() => setIsOpen(false)}>Photo Gallery</Link>
-                                <Link href="/media/certificate" className="text-black" onClick={() => setIsOpen(false)}>Certificates</Link>
-                                <Link href="/media/videos" className="text-black" onClick={() => setIsOpen(false)}>Videos</Link>
+                                <Link href="/media/photo-gallery" className="text-black cursor-pointer" onClick={() => setIsOpen(false)}>Photo Gallery</Link>
+                                <Link href="/media/certificate" className="text-black cursor-pointer" onClick={() => setIsOpen(false)}>Certificates</Link>
+                                <Link href="/media/videos" className="text-black cursor-pointer" onClick={() => setIsOpen(false)}>Videos</Link>
                             </div>
                         )}
                     </div>
 
-                    <Link href="/contact" className="text-black" onClick={() => setIsOpen(false)}>Contact Us</Link>
+                    <Link href="/contact" className="text-black cursor-pointer" onClick={() => setIsOpen(false)}>Contact Us</Link>
                 </div>
             )}
         </header>

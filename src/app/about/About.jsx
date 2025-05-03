@@ -20,7 +20,7 @@ const About = () => {
                         />
                     </div>
                     <div className='md:col-span-7 flex justify-center'>
-                        <div className="bg-[#0f8f43] p-4 w-full max-w-xl md:max-w-2xl lg:max-w-3xl">
+                        <div className="bg-[#119246] p-4 w-full max-w-xl md:max-w-2xl lg:max-w-3xl">
                             <div className="bg-white p-4">
                                 <div className="bg-[#1ebee6] p-3 lg:p-6">
                                     <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-3 text-white" style={{ fontFamily: 'Oswald, sans-serif' }}>

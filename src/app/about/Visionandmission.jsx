@@ -15,7 +15,7 @@ const VisionAndMission = () => {
                     transition={{ duration: 0.5 }}
                     viewport={{ once: false, amount: 0.3 }}
                 >
-                    <h2 className="text-center font-semibold text-xl bg-[#21bee5] py-2 rounded" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                    <h2 className="text-center font-semibold text-xl bg-[#21bee5] py-2 rounded text-white" style={{ fontFamily: 'Oswald, sans-serif' }}>
                         Our Mission
                     </h2>
                     <p className="mt-4 text-gray-700">
@@ -25,7 +25,7 @@ const VisionAndMission = () => {
 
                 {/* Mission Section for small devices (without animation) */}
                 <div className="border border-gray-300 rounded-lg shadow-lg p-6 block lg:hidden">
-                    <h2 className="text-center font-semibold text-xl bg-[#21bee5] py-2 rounded" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                    <h2 className="text-center font-semibold text-xl bg-[#21bee5] py-2 rounded text-white" style={{ fontFamily: 'Oswald, sans-serif' }}>
                         Our Mission
                     </h2>
                     <p className="mt-4 text-gray-700">
@@ -34,7 +34,7 @@ const VisionAndMission = () => {
                 </div>
 
                 {/* Center Image and Title Section */}
-                <div className="bg-[#1e994c] text-white font-bold text-center flex flex-col justify-center items-center rounded-lg shadow-lg py-8">
+                <div className="bg-[#119246] text-white font-bold text-center flex flex-col justify-center items-center rounded-lg shadow-lg py-8">
                     <h1 className="text-2xl lg:text-3xl px-6" style={{ fontFamily: 'Oswald, sans-serif' }}>
                         Our Mission and Vision
                     </h1>
