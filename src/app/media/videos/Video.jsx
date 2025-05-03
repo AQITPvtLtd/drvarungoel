@@ -1,48 +1,38 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const videos = [
-    { id: 1, url: "https://youtube.com/shorts/CzWOJ53cD20?si=VU2bEHMXKK2nYCoi" },
-    { id: 2, url: "https://youtube.com/shorts/XMACUdZ36x0?si=4YIChEy1sIwyhSUh" },
-    { id: 3, url: "https://youtube.com/shorts/Ih4HAUmw8oc?si=NWDTu0h1XKkgbpZ4" },
-    { id: 4, url: "https://youtu.be/WQBqHfACzig?si=EzXGVUspyRknO1Gl" },
-    { id: 5, url: "https://youtu.be/SeerULYJ2Bs?si=N1IBISjq1zv5iCEF" },
+    { id: 1, url: "https://www.youtube.com/shorts/oWniJzN6goU" },
+    { id: 2, url: "https://www.youtube.com/shorts/hK8poavNI4U" },
+    { id: 3, url: "https://www.youtube.com/shorts/-iM3pqofufI" },
+    { id: 4, url: "https://www.youtube.com/shorts/_I5_ZZvRUhc" },
+    { id: 5, url: "https://youtube.com/shorts/CzWOJ53cD20?si=VU2bEHMXKK2nYCoi" },
+    { id: 6, url: "https://youtube.com/shorts/XMACUdZ36x0?si=4YIChEy1sIwyhSUh" },
+    // { id: 7, url: "https://youtube.com/shorts/Ih4HAUmw8oc?si=NWDTu0h1XKkgbpZ4" },
+    { id: 8, url: "https://youtu.be/WQBqHfACzig?si=EzXGVUspyRknO1Gl" },
+    { id: 9, url: "https://youtu.be/SeerULYJ2Bs?si=N1IBISjq1zv5iCEF" },
 ];
 
-const headingVariant = {
-    hidden: { opacity: 0, y: -30 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 1.2,
-            ease: "easeInOut"
-        }
-    }
-};
+// Animation wrapper for individual video
+const AnimatedVideo = ({ src, height }) => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: '0px 0px -50px 0px' });
 
-const containerVariant = {
-    hidden: {},
-    visible: {
-        transition: {
-            staggerChildren: 0.4, // smoother stagger
-        }
-    }
-};
-
-const videoVariant = {
-    hidden: { opacity: 0, y: 80 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 1.0,
-            ease: "easeInOut"
-        }
-    }
+    return (
+        <motion.iframe
+            ref={ref}
+            className={`w-full ${height || 'h-56'} rounded-lg shadow-lg`}
+            src={src}
+            frameBorder="0"
+            allowFullScreen
+            initial={{ opacity: 0, y: 80 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+        />
+    );
 };
 
 
@@ -51,12 +41,11 @@ const Video = () => {
 
     useEffect(() => {
         const checkScreenSize = () => {
-            setIsLargeScreen(window.innerWidth >= 768); // md size ke upar
+            setIsLargeScreen(window.innerWidth >= 768);
         };
 
-        checkScreenSize(); // Initial check
+        checkScreenSize();
         window.addEventListener('resize', checkScreenSize);
-
         return () => window.removeEventListener('resize', checkScreenSize);
     }, []);
 
@@ -88,113 +77,37 @@ const Video = () => {
             </div>
 
             <div className="max-w-6xl mx-auto p-6">
-                {/* Shorts Section */}
-                {isLargeScreen ? (
-                    <motion.h2
-                        className="text-2xl font-bold text-center mb-4 dark:text-black"
-                        style={{ fontFamily: 'Oswald, sans-serif' }}
-                        variants={headingVariant}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: false, amount: 0.3 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        Short Videos
-                    </motion.h2>
-                ) : (
-                    <h2 className="text-2xl font-bold text-center mb-4 dark:text-black" style={{ fontFamily: 'Oswald, sans-serif' }}>
-                        Short Videos
-                    </h2>
-                )}
+                {/* Short Videos Heading */}
+                <h2 className="text-2xl font-bold text-center mb-4 dark:text-black" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                    Short Videos
+                </h2>
 
-                {isLargeScreen ? (
-                    <motion.div
-                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
-                        variants={containerVariant}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: false, amount: 0.8 }}
-                    >
-                        {shorts.map((video) => (
-                            <motion.iframe
-                                key={video.id}
-                                className="w-full h-56 rounded-lg shadow-lg"
-                                src={video.url.replace("/shorts/", "/embed/")}
-                                frameBorder="0"
-                                allowFullScreen
-                                variants={videoVariant}
-                            />
-                        ))}
-                    </motion.div>
-                ) : (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        {shorts.map((video) => (
-                            <iframe
-                                key={video.id}
-                                className="w-full h-56 rounded-lg shadow-lg"
-                                src={video.url.replace("/shorts/", "/embed/")}
-                                frameBorder="0"
-                                allowFullScreen
-                            />
-                        ))}
-                    </div>
-                )}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    {shorts.map((video) => (
+                        <AnimatedVideo
+                            key={video.id}
+                            src={video.url.replace("/shorts/", "/embed/")}
+                        />
+                    ))}
+                </div>
 
-                {/* Long Videos Section */}
-                {isLargeScreen ? (
-                    <motion.h2
-                        className="text-2xl font-bold text-center mt-8 mb-4 dark:text-black"
-                        style={{ fontFamily: 'Oswald, sans-serif' }}
-                        variants={headingVariant}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: false, amount: 0.3 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        Long Videos
-                    </motion.h2>
-                ) : (
-                    <h2 className="text-2xl font-bold text-center mt-8 mb-4 dark:text-black" style={{ fontFamily: 'Oswald, sans-serif' }}>
-                        Long Videos
-                    </h2>
-                )}
+                {/* Long Videos Heading */}
+                <h2 className="text-2xl font-bold text-center mt-8 mb-4 dark:text-black" style={{ fontFamily: 'Oswald, sans-serif' }}>
+                    Long Videos
+                </h2>
 
-                {isLargeScreen ? (
-                    <motion.div
-                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6"
-                        variants={containerVariant}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: false, amount: 0.3 }}
-                    >
-                        {longVideos.map((video) => (
-                            <motion.iframe
-                                key={video.id}
-                                className="w-full h-64 rounded-lg shadow-lg"
-                                src={video.url.replace("youtu.be/", "www.youtube.com/embed/")}
-                                frameBorder="0"
-                                allowFullScreen
-                                variants={videoVariant}
-                            />
-                        ))}
-                    </motion.div>
-                ) : (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
-                        {longVideos.map((video) => (
-                            <iframe
-                                key={video.id}
-                                className="w-full h-64 rounded-lg shadow-lg"
-                                src={video.url.replace("youtu.be/", "www.youtube.com/embed/")}
-                                frameBorder="0"
-                                allowFullScreen
-                            />
-                        ))}
-                    </div>
-                )}
-
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
+                    {longVideos.map((video) => (
+                        <AnimatedVideo
+                            key={video.id}
+                            src={video.url.replace("youtu.be/", "www.youtube.com/embed/")}
+                            height="h-64"
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );
-}
+};
 
 export default Video;

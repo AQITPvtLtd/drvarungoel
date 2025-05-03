@@ -111,6 +111,7 @@ const Form = () => {
                         {...(isLargeScreen
                             ? {
                                 custom: 0,
+                                className:"mb-4",
                                 variants: fadeUp,
                                 initial: "hidden",
                                 whileInView: "visible",

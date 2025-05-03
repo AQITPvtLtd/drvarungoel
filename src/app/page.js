@@ -2,7 +2,7 @@ import Serivces from "@/component/homepage/Serivces";
 import Banner from "@/component/homepage/Banner";
 import Content from "./about/Content";
 import VideoLibrary from "@/component/homepage/VideoLibrary";
-import PatientTestimonial from "@/component/homepage/PatientTestimonial";
+// import PatientTestimonial from "@/component/homepage/PatientTestimonial";
 import Faq from "./about/Faq";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       <Content />
       <Serivces />
       <VideoLibrary />
-      <PatientTestimonial />
+      {/* <PatientTestimonial /> */}
       <Faq />
     </div>
   );

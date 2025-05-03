@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         <div className="bg-[#ebfff4] shadow-md py-6 px-6">
             {/* Top Section */}
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-b pb-4 gap-4">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-b dark:border-b-black pb-4 gap-4">
                 <Link href="/" className="w-fit">
                     <Image
                         src="/logo/logo.png"
