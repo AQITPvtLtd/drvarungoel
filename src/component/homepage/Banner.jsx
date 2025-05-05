@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div className="w-full flex justify-center items-center mt-12 ">
             <Image
-                src="/banner/newbanner.jpeg"
+                src="/banner/newbanner.png"
                 width={1200}
                 height={400}
                 className="w-full h-auto"
