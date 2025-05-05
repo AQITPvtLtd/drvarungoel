@@ -95,10 +95,10 @@ const Footer = () => {
 
                 {/* Social Icons */}
                 <div className="flex justify-start space-x-6 mt-6">
-                    <Link href="https://instagram.com" className="text-pink-500 text-2xl hover:opacity-80"><FaInstagram /></Link>
-                    <Link href="https://facebook.com" className="text-blue-600 text-2xl hover:opacity-80"><FaFacebookF /></Link>
-                    <Link href="https://linkedin.com" className="text-blue-700 text-2xl hover:opacity-80"><FaLinkedinIn /></Link>
-                    <Link href="https://youtube.com" className="text-red-600 text-2xl hover:opacity-80"><FaYoutube /></Link>
+                    <Link href="https://www.instagram.com/goelvarundoc/" target='__blank' className="text-pink-500 text-2xl hover:opacity-80"><FaInstagram /></Link>
+                    <Link href="https://www.facebook.com/goelvarundoc/" target='__blank' className="text-blue-600 text-2xl hover:opacity-80"><FaFacebookF /></Link>
+                    <Link href="https://www.linkedin.com/in/varun-goel-829a0b46/" target='__blank' className="text-blue-700 text-2xl hover:opacity-80"><FaLinkedinIn /></Link>
+                    <Link href="https://www.youtube.com/@drvarungoel" target='__blank' className="text-red-600 text-2xl hover:opacity-80"><FaYoutube /></Link>
                 </div>
             </div>
             <p className='text-center py-2 font-semibold'>Design & Developed By <Link href='https://tekbooster.com/' target='__blank'> Tek Booster (Digital Marketing Company) </Link></p>
