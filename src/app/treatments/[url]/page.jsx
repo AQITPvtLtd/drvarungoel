@@ -2,10 +2,10 @@ import React from 'react'
 import TreatmentData from './TreatmentData'
 
 const page = ({ params }) => {
-    const id = params.id;
+    const url = params.url;
     return (
         <div>
-            <TreatmentData id={id} />
+            <TreatmentData url={url} />
         </div>
     )
 }

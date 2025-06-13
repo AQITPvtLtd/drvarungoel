@@ -5,6 +5,7 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { FaLocationDot } from "react-icons/fa6";
+// import { IoIosCall } from "react-icons/io";
 
 const Footer = () => {
     return (
@@ -61,12 +62,12 @@ const Footer = () => {
                     <div className="flex flex-col items-start">
                         <p className="font-semibold text-xl mb-3 text-black">Services</p>
                         <ul className="space-y-2">
-                            <li><Link href="https://drgoelcancercare.com/treatments/1" className="hover:text-[#129246]">Cancer Diagnosis & Staging</Link></li>
-                            <li><Link href="https://drgoelcancercare.com/treatments/2" className="hover:text-[#129246]">Systemic Anti-Cancer Therapy</Link></li>
-                            <li><Link href="https://drgoelcancercare.com/treatments/3" className="hover:text-[#129246]">Personalized & Precision Medicine</Link></li>
-                            <li><Link href="https://drgoelcancercare.com/treatments/4" className="hover:text-[#129246]">Prognostication & Risk Assessment</Link></li>
-                            <li><Link href="https://drgoelcancercare.com/treatments/5" className="hover:text-[#129246]">Supportive & Palliative Care</Link></li>
-                            <li><Link href="https://drgoelcancercare.com/treatments/9" className="hover:text-[#129246]">Clinical Trials & Research</Link></li>
+                            <li><Link href="/" className="hover:text-[#129246]">Cancer Diagnosis & Staging</Link></li>
+                            <li><Link href="/" className="hover:text-[#129246]">Systemic Anti-Cancer Therapy</Link></li>
+                            <li><Link href="/" className="hover:text-[#129246]">Personalized & Precision Medicine</Link></li>
+                            <li><Link href="/" className="hover:text-[#129246]">Prognostication & Risk Assessment</Link></li>
+                            <li><Link href="/" className="hover:text-[#129246]">Supportive & Palliative Care</Link></li>
+                            <li><Link href="/" className="hover:text-[#129246]">Clinical Trials & Research</Link></li>
                         </ul>
                     </div>
 
@@ -81,8 +82,24 @@ const Footer = () => {
                     </div>
 
                     {/* Location */}
-                    <div className="flex flex-col items-start">
+                    <div className="flex flex-col items-start space-y-2">
                         <p className="font-semibold text-xl mb-3 text-black">Location</p>
+
+                        {/* <p className="text-base leading-relaxed flex gap-1">
+                            <IoIosCall className='mt-1' />
+                            <Link href="tel:+91 95605 38081">
+                                +91 95605 38081
+                            </Link>
+                        </p>
+
+
+                        <p className="text-base leading-relaxed flex gap-1">
+                            <MdEmail className='mt-1.5' />
+                            <Link href="mailto:docvarungoel@gmail.com">
+                                docvarungoel@gmail.com
+                            </Link>
+                        </p> */}
+
                         <p className="text-base leading-relaxed flex gap-1">
                             <FaLocationDot className='mt-1.5' />
                             <Link href={`https://g.co/kgs/bQRmREn`}>

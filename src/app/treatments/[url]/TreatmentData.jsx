@@ -11,7 +11,7 @@ const listItemVariant = {
     visible: { opacity: 1, x: 0 }
 };
 
-const TreatmentData = ({ id }) => {
+const TreatmentData = ({ url }) => {
     const [isLargeScreen, setIsLargeScreen] = useState(false);
 
     useEffect(() => {
@@ -25,10 +25,10 @@ const TreatmentData = ({ id }) => {
         return () => window.removeEventListener("resize", checkScreenSize);
     }, []);
 
-    const content = data.find((a) => a.id == id);
+    const content = data.find((a) => a.url == url);
 
     if (!content) {
-        return <div className="text-center py-10 text-red-600">No treatment data found.</div>;
+        return <div className="text-center py-10 text-red-600 dark:text-white">No treatment data found.</div>;
     }
 
     return (
@@ -94,7 +94,7 @@ const TreatmentData = ({ id }) => {
                                             transition={{ duration: 0.4, delay: index * 0.1 }}
                                             className="list-none"
                                         >
-                                            <Link href={`/treatments/${a.id}`}>
+                                            <Link href={`/treatments/${a.url}`}>
                                                 <span className="cursor-pointer text-blue-500 hover:underline flex gap-2">
                                                     <FaArrowRightFromBracket className="mt-1" />
                                                     {a.title}
@@ -103,7 +103,7 @@ const TreatmentData = ({ id }) => {
                                         </motion.li>
                                     ) : (
                                         <li key={a.id}>
-                                            <Link href={`/treatments/${a.id}`}>
+                                            <Link href={`/treatments/${a.url}`}>
                                                 <span className="cursor-pointer text-blue-500 hover:underline flex gap-2">
                                                     <FaArrowRightFromBracket className="mt-1" />
                                                     {a.title}

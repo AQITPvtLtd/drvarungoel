@@ -3,6 +3,7 @@ export const data = [
         id: 1,
         img: "/treatments/img1.jpg",
         title: "Cancer Diagnosis & Staging",
+        url: "cancer-diagnosis-staging",
         desc: [
             "<p>Cancer diagnosis and staging are crucial steps in understanding the extent of the disease and planning the most effective treatment. Early and accurate diagnosis can significantly improve treatment outcomes, while staging helps determine how far the cancer has spread.</p>",
             "<h2>1. <strong>Detailed History-Taking and Clinical Examination</strong></h2>",
@@ -49,6 +50,7 @@ export const data = [
         id: 2,
         title: "Systemic Anti-Cancer Therapy",
         img: "/treatments/img2.jpeg",
+        url: "systemic-anti-cancer-therapy",
         desc: [
             "<p>Cancer treatment has evolved significantly over the years, with systemic anti-cancer therapy playing a crucial role in managing and treating various types of cancer. Systemic therapy involves the use of medications that travel through the bloodstream to reach and affect cancer cells throughout the body. This article explores different types of systemic anti-cancer therapies, including chemotherapy, targeted therapy, immunotherapy, hormonal therapy, and combination therapy.</p>",
 
@@ -121,6 +123,7 @@ export const data = [
         id: 3,
         title: "Personalized & Precision Medicine",
         img: "/treatments/img3.avif",
+        url: "personalized-precision-medicine",
         desc: [
             "<p>In the ever-evolving landscape of healthcare, Personalized & Precision Medicine (PPM) is revolutionizing cancer treatment by tailoring therapies to individual patients. Unlike traditional approaches that apply generalized treatments, PPM integrates biomarker identification, genomic profiling, and AI-driven predictive models to design highly effective therapeutic strategies. This approach enhances treatment efficacy, minimizes adverse effects, and improves patient outcomes.</p>",
 
@@ -167,6 +170,7 @@ export const data = [
         id: 4,
         title: "Prognostication & Risk Assessment",
         img: "/treatments/img4.jpg",
+        url: "prognostication-risk-assessment",
         desc: [
             "<p>Prognostication and risk assessment are critical aspects of oncology, helping medical professionals determine the aggressiveness of a disease, estimate recurrence risks, predict treatment responses, and make informed decisions regarding patient care. With advancements in medical research and technology, modern tools such as nomograms and scoring systems have revolutionized how oncologists evaluate cancer progression and survival rates.</p>",
 
@@ -209,6 +213,7 @@ export const data = [
         id: 5,
         title: "Supportive & Palliative Care",
         img: "/treatments/img5.avif",
+        url: "supportive-palliative-care",
         desc: [
             "<p>Supportive and palliative care is an essential aspect of modern medicine, focusing on improving the quality of life for individuals facing serious illnesses. It aims to provide relief from pain, manage symptoms, and offer emotional, psychological, and nutritional support. Unlike curative treatments, palliative care prioritizes comfort, dignity, and holistic well-being for patients and their families.</p>",
 
@@ -260,6 +265,7 @@ export const data = [
         id: 6,
         title: "Bone Marrow Transplantation (BMT) & Cellular Therapy",
         img: "/treatments/img66.jpg",
+        url: "bone-marrow-transplantation-cellular-therapy",
         desc: [
             "<p>Bone Marrow Transplantation (BMT) and Cellular Therapy have revolutionized the treatment of various hematological disorders and malignancies. These advanced medical procedures have given new hope to patients suffering from leukemia, lymphoma, aplastic anemia, and other life-threatening conditions. BMT involves the replacement of diseased or damaged bone marrow with healthy stem cells, which help restore normal blood cell production. Cellular therapy, including <strong>CAR-T cell therapy</strong>, offers targeted treatment for certain cancers, significantly improving survival rates and quality of life.</p>",
 
@@ -314,6 +320,7 @@ export const data = [
         id: 7,
         title: "Management of Oncologic Emergencies",
         img: "/treatments/img7.jpg",
+        url: "management-of-oncologic-emergencies",
         desc: [
             "<p>Cancer patients, particularly those undergoing chemotherapy or suffering from advanced malignancies, are susceptible to life-threatening complications known as oncologic emergencies. Prompt recognition and management of these conditions are essential to improve patient outcomes. Below, we discuss some of the most critical oncologic emergencies, their causes, symptoms, and treatment approaches.</p>",
 
@@ -386,6 +393,7 @@ export const data = [
         id: 8,
         title: "Multidisciplinary Tumor Board Participation",
         img: "/treatments/img8.jpg",
+        url: "multidisciplinary-tumor-board-participation",
         desc: [
             "<p>Cancer treatment has evolved significantly over the years, and one of the most impactful advancements in modern oncology is the concept of a <strong>Multidisciplinary Tumor Board (MTB)</strong>. These boards bring together specialists from different fields, ensuring a collaborative approach to cancer diagnosis, treatment planning, and patient care. By fostering open communication between medical professionals, MTBs enhance decision-making processes, leading to improved patient outcomes.</p>",
 
@@ -470,6 +478,7 @@ export const data = [
         id: 9,
         title: "Clinical Trials & Research",
         img: "/treatments/img9.avif",
+        url: "clinical-trials-research",
         desc: [
             "<p>Cancer remains one of the most challenging diseases in modern medicine, requiring continuous research and innovation to improve treatment outcomes. Clinical trials and research play a critical role in the development of new drugs, biomarkers, and treatment regimens, ensuring that cancer therapies are safe, effective, and tailored to individual patients. This article explores the importance of clinical trials, the process of designing and conducting <strong>Phase I–IV trials</strong>, and the role of <strong>translational research</strong> in bringing novel cancer therapies from the laboratory to the clinic.</p>",
 
@@ -553,6 +562,7 @@ export const data = [
     {
         id: 10,
         title: "Survivorship & Long-Term Follow-up",
+        url: "survivorship-long-term-follow-up",
         img: "/treatments/img10.jpg",
         desc: [
             "<p>Cancer survivorship begins at the moment of diagnosis and continues through the rest of a patient’s life. The journey from diagnosis to recovery is challenging, but survivorship care ensures that individuals maintain a high quality of life after treatment. Long-term follow-up is essential to monitor <strong>late side effects</strong>, prevent <strong>secondary malignancies</strong>, and provide support for <strong>lifestyle modifications</strong>, <strong>psychosocial well-being</strong>, and <strong>fertility concerns</strong>.</p>",
@@ -586,6 +596,7 @@ export const data = [
     {
         id: 11,
         title: "Preventive Oncology & Screening Programs",
+        url: "preventive-oncology-screening-programs",
         img: "/treatments/img11.jpg",
         desc: [
             "<p>Cancer remains one of the leading causes of mortality worldwide, but with advancements in medical research, it is now possible to reduce cancer risks significantly through preventive oncology and screening programs. Preventive oncology focuses on identifying risk factors, implementing early detection strategies, and reducing cancer incidence through lifestyle changes, medical interventions, and awareness programs. This article explores key aspects of preventive oncology, including cancer risk assessment, genetic counseling, high-risk population screening, and chemoprevention.</p>",
@@ -629,6 +640,7 @@ export const data = [
         id: 12,
         title: "Integration of AI & Digital Oncology",
         img: "/treatments/img12.jpg",
+        url: "integration-of-ai-digital-oncology",
         desc: [
             "<p>Cancer treatment has undergone a paradigm shift in recent years, with technological advancements playing a significant role in improving patient outcomes. The integration of Artificial Intelligence (AI) in digital oncology is revolutionizing how cancer is diagnosed, treated, and monitored. From AI-based treatment algorithms to digital pathology and tele-oncology, these innovations are shaping the future of cancer care.</p>",
 

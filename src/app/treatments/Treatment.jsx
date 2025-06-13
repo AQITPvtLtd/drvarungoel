@@ -69,7 +69,7 @@ const Treatment = () => {
                             </div>
                             <div className="px-5 pb-5">
                                 <Link
-                                    href={`treatments/${item.id}`}
+                                    href={`treatments/${item.url}`}
                                     className="w-full block px-4 py-2 bg-[#0a283f] text-white text-lg rounded-lg text-center transition-all 
                                            border-2 border-transparent hover:border-[#22c1e9] hover:text-black hover:bg-white"
                                 >
