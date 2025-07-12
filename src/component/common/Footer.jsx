@@ -92,7 +92,6 @@ const Footer = () => {
                             </Link>
                         </p>
 
-
                         <p className="text-base leading-relaxed flex gap-1">
                             <MdEmail className='mt-1.5' />
                             <Link href="mailto:docvarungoel@gmail.com">

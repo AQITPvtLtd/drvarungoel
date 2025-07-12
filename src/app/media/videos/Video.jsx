@@ -11,6 +11,7 @@ const videos = [
     { id: 4, url: "https://www.youtube.com/shorts/_I5_ZZvRUhc" },
     { id: 5, url: "https://youtube.com/shorts/CzWOJ53cD20?si=VU2bEHMXKK2nYCoi" },
     { id: 6, url: "https://youtube.com/shorts/XMACUdZ36x0?si=4YIChEy1sIwyhSUh" },
+    { id: 7, url: "https://www.youtube.com/shorts/YtrNwkO0_jI" },
     // { id: 7, url: "https://youtube.com/shorts/Ih4HAUmw8oc?si=NWDTu0h1XKkgbpZ4" },
     { id: 8, url: "https://youtu.be/WQBqHfACzig?si=EzXGVUspyRknO1Gl" },
     { id: 9, url: "https://youtu.be/SeerULYJ2Bs?si=N1IBISjq1zv5iCEF" },
