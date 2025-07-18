@@ -71,7 +71,7 @@ const BlogDetailed = ({ url }) => {
                                         alt="image"
                                         height={1000}
                                         width={1000}
-                                        className="object-contain object-center"
+                                        className="w-full h-full object-cover object-center"
                                     />
                                 </div>
                                 <p
