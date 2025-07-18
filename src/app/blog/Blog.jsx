@@ -54,7 +54,7 @@ const Blog = () => {
                                     <span>{b.date ? moment(b.date).format("MMMM DD, YYYY") : "Unknown Date"}</span>
                                 </div>
                                 <p className="text-gray-700 line-clamp-3 text-base">{b.short_desc}</p>
-                                <Link href={`/blog/${b.id}/${b.url}`}>
+                                <Link href={`/blog/${b.url}`}>
                                     <button className="flex items-center mt-4 gap-2 bg-green-600 text-white px-3 py-2 rounded-lg font-semibold text-center transition-all 
                                            border-2 border-transparent hover:border-green-600 hover:text-black hover:bg-white cursor-pointer">
                                         Read More
