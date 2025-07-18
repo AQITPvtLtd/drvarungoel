@@ -65,13 +65,13 @@ const BlogDetailed = ({ url }) => {
                             </div>
 
                             <div>
-                                <div className="w-full overflow-hidden rounded">
+                                <div className="overflow-hidden rounded">
                                     <Image
                                         src={`/blogs/${BlogDetailed?.image}`}
                                         alt="image"
-                                        height={500}
-                                        width={500}
-                                        className="h-full w-full object-cover object-center"
+                                        height={1000}
+                                        width={1000}
+                                        className="object-contain object-center"
                                     />
                                 </div>
                                 <p

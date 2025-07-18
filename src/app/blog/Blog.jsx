@@ -37,7 +37,7 @@ const Blog = () => {
                     {blog.map((b) => (
                         <Link
                             key={b.id}
-                            href={`/blog/${b.id}/${b.url}`}
+                            href={`/blog/${b.url}`}
                             className="bg-white shadow-xl rounded-2xl overflow-hidden hover:shadow-2xl transition-transform transform hover:scale-105 duration-300"
                         >
                             <Image
