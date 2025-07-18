@@ -27,8 +27,7 @@ const Blog = () => {
         <div className="lg:p-10 overflow-x-clip px-4 mt-[60px]">
 
             <div className="pt-5 text-center">
-                <h1 className="text-3xl font-bold dark:text-black">Latest Blog</h1>
-                <p className="text-lg dark:text-black">Read our latest blog.</p>
+                <h1 className="text-3xl font-bold dark:text-black">Read our latest blogs</h1>
             </div>
 
             {blog.length === 0 ? (
@@ -45,16 +44,16 @@ const Blog = () => {
                                 src={`/blogs/${b.image}`}
                                 width={500}
                                 height={300}
-                                className="w-full h-[200px] object-cover"
+                                className="w-full h-[230px] object-fill"
                                 alt={b.title || "blog image"}
                             />
                             <div className="p-4">
-                                <h1 className="text-xl font-bold dark:text-black">{b.title}</h1>
+                                <h1 className="text-lg font-bold dark:text-black">{b.title}</h1>
                                 <div className="flex items-center gap-2 text-sm text-gray-600 my-2">
                                     <SlCalender />
                                     <span>{b.date ? moment(b.date).format("MMMM DD, YYYY") : "Unknown Date"}</span>
                                 </div>
-                                <p className="text-gray-700 line-clamp-3">{b.short_desc}</p>
+                                <p className="text-gray-700 line-clamp-3 text-base">{b.short_desc}</p>
                                 <Link href={`/blog/${b.id}/${b.url}`}>
                                     <button className="flex items-center mt-4 gap-2 bg-green-600 text-white px-3 py-2 rounded-lg font-semibold text-center transition-all 
                                            border-2 border-transparent hover:border-green-600 hover:text-black hover:bg-white cursor-pointer">

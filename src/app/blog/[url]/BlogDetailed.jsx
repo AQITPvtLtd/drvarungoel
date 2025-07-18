@@ -5,7 +5,7 @@ import moment from "moment";
 import Image from 'next/image';
 import { FaUser } from "react-icons/fa";
 
-const BlogDetailed = ({ id, url }) => {
+const BlogDetailed = ({ url }) => {
     const [blog, setBlog] = useState(null);
     useEffect(() => {
         async function getData() {
@@ -16,7 +16,7 @@ const BlogDetailed = ({ id, url }) => {
     }, []
     );
 
-    const BlogDetailed = blog?.find((b) => b.id == id && b.url == url);
+    const BlogDetailed = blog?.find((b) => b.url == url);
 
     return (
         <section className="overflow-hidden pt-10 lg:px-14 px-3 dark:bg-white mt-[60px]">
@@ -59,7 +59,6 @@ const BlogDetailed = ({ id, url }) => {
                                             </span>
 
                                             {BlogDetailed?.date ? moment(BlogDetailed.date).format("MMMM DD, YYYY") : "Unknown Date"}
-
                                         </p>
                                     </div>
                                 </div>
@@ -82,7 +81,6 @@ const BlogDetailed = ({ id, url }) => {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
