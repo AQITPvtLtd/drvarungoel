@@ -43,6 +43,7 @@ const Header = () => {
                             <Link href="/media/photo-gallery" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm cursor-pointer">Photo Gallery</Link>
                             <Link href="/media/certificate" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm cursor-pointer">Certificates</Link>
                             <Link href="/media/videos" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm cursor-pointer">Videos</Link>
+                            <Link href="/media/testimonials" className="block px-4 py-2 hover:bg-gray-200 hover:rounded-xl text-sm cursor-pointer">Testimonials</Link>
                         </div>
                     </div>
 
