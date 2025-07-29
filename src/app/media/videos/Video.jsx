@@ -55,7 +55,7 @@ const Video = () => {
 
     return (
         <div className='lg:pt-32 pt-24 bg-[#ebfff4]'>
-            <div className="w-full max-w-8xl relative">
+            {/* <div className="w-full max-w-8xl relative">
                 <div className="relative">
                     <Image
                         src="/video/bgvideo.avif"
@@ -75,7 +75,11 @@ const Video = () => {
                         Our Videos
                     </motion.h1>
                 </div>
-            </div>
+            </div> */}
+
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 text-center">
+                Our Videos
+            </h2>
 
             <div className="max-w-6xl mx-auto p-6">
                 {/* Short Videos Heading */}

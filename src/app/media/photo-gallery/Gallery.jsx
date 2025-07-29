@@ -33,7 +33,7 @@ const Gallery = () => {
 
     return (
         <div className='lg:pt-32 pt-24 bg-[#ebfff4]'>
-            <div className="w-full max-w-8xl relative">
+            {/* <div className="w-full max-w-8xl relative">
                 <div className="relative">
                     <Image
                         src="/images/bg.jpg"
@@ -50,11 +50,15 @@ const Gallery = () => {
                         className="text-white font-serif text-center text-6xl font-bold my-4 absolute inset-0 z-20 flex items-center justify-center"
                         style={{ fontFamily: 'Oswald, sans-serif' }}
                     >
-                        Photo Gallery
+
                     </motion.h1>
                 </div>
-            </div>
-          
+            </div> */}
+
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-10 text-center">
+                Photo Gallery
+            </h2>
+
             <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:px-0 px-5'>
                 {galleryData.map((photo, index) => (
                     <motion.div

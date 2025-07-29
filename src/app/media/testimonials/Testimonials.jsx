@@ -50,8 +50,8 @@ const Testimonials = () => {
                             <Image
                                 src={src}
                                 alt={`testimonial-${index + 1}`}
-                                height={250}
-                                width={250}
+                                height={450}
+                                width={450}
                                 className="rounded-xl object-cover mx-auto"
                             />
                             <div className="absolute rounded-xl inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-lg font-semibold">
