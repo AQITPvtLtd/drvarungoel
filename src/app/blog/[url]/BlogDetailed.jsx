@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import moment from "moment";
 import Image from 'next/image';
 import { FaUser } from "react-icons/fa";
-import Head from 'next/head';
+import Head from "next/head";
 
 const BlogDetailed = ({ url }) => {
     const [blog, setBlog] = useState(null);
@@ -19,16 +19,38 @@ const BlogDetailed = ({ url }) => {
 
     const BlogDetailed = blog?.find((b) => b.url == url);
 
-    return (
+    // ✅ Update browser tab title dynamically
+    useEffect(() => {
+        if (BlogDetailed) {
+            document.title = BlogDetailed.meta_title || BlogDetailed.title;
+        }
+    }, [BlogDetailed]);
 
+    if (!BlogDetailed) {
+        return <p className="text-center text-red-500">Blog not found!</p>;
+    }
+
+    return (
         <>
+
             {/* SEO Meta Tags */}
             <Head>
-                <title>{blog.meta_title || blog.title}</title>
-                <meta name="description" content={blog.meta_desc || blog.short_desc || ""} />
-                <meta name="keywords" content={blog.meta_keyword || ""} />
+                <title>{BlogDetailed.meta_title || BlogDetailed.title}</title>
+                <meta
+                    name="description"
+                    content={
+                        BlogDetailed.meta_disc ||
+                        BlogDetailed.small_desc ||
+                        ""
+                    }
+                />
+                <meta
+                    name="keywords"
+                    content={BlogDetailed.meta_keyword || ""}
+                />
             </Head>
-            <section className="overflow-hidden pt-10 lg:px-14 px-3 dark:bg-white mt-[60px]">
+
+            <section className="overflow-hidden pt-10 lg:px-14 px-3 dark:bg-white mt-[80px]">
                 <div className="container dark:text-black">
                     <div className="-mx-4 flex flex-wrap">
                         <div className="max-w-6xl px-4">
@@ -36,7 +58,7 @@ const BlogDetailed = ({ url }) => {
                                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black sm:text-4xl sm:leading-tight">
                                     {BlogDetailed?.title}
                                 </h1>
-                                <div className="mb-5 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
+                                <div className="flex flex-wrap items-center justify-between border-body-color border-opacity-10 dark:border-white dark:border-opacity-10">
                                     <div className="flex flex-wrap items-center">
                                         <div className="mb-5 mr-10 flex items-center">
                                             <FaUser className="mr-2 text-green-600" />
@@ -85,7 +107,7 @@ const BlogDetailed = ({ url }) => {
                                     </div>
                                     <p
                                         dangerouslySetInnerHTML={{ __html: BlogDetailed?.description }}
-                                        className="p-5"
+                                        className="p-5 lg:text-justify"
                                     ></p>
                                 </div>
                             </div>
