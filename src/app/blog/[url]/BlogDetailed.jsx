@@ -50,7 +50,7 @@ const BlogDetailed = ({ url }) => {
                 />
             </Head>
 
-            <section className="overflow-hidden pt-10 lg:px-14 px-3 dark:bg-white mt-[80px]">
+            <section className="overflow-hidden pt-10 lg:px-14 px-3 dark:bg-white lg:mt-[80px] mt-[50px]">
                 <div className="container dark:text-black">
                     <div className="-mx-4 flex flex-wrap">
                         <div className="max-w-6xl px-4">

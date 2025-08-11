@@ -117,7 +117,7 @@ const Footer = () => {
                     <Link href="https://www.youtube.com/@drvarungoel" target='__blank' className="text-red-600 text-2xl hover:opacity-80"><FaYoutube /></Link>
                 </div>
             </div>
-            <p className='text-center py-2 font-semibold'>Design & Developed By <Link href='https://tekbooster.com/' target='__blank'> Tek Booster (Digital Marketing Company) </Link></p>
+            <p className='text-center py-2 font-semibold'>Design & Developed By <Link href='https://tekbooster.com/' target='__blank'> Tek Booster <br className='lg:hidden block' /> (Digital Marketing Company) </Link></p>
         </div>
     );
 };
