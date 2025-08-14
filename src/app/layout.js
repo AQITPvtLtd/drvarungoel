@@ -4,6 +4,7 @@ import Header from "@/component/common/Header";
 import Footer from "@/component/common/Footer";
 import Head from "next/head";
 import Link from "next/link";
+import SocialLinks from "@/component/SocialLinks";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
 
         <Header />
         {children}
+        <SocialLinks />
         <Footer />
       </body>
     </html>

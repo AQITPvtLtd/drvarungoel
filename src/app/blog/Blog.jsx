@@ -33,7 +33,7 @@ const Blog = () => {
             {blog.length === 0 ? (
                 <p className="text-center text-gray-500">No blogs available.</p>
             ) : (
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 pr-0 md:pr-[55px]">
                     {blog.map((b) => (
                         <Link
                             key={b.id}

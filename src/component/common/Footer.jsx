@@ -33,7 +33,7 @@ const Footer = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="flex items-start space-x-2">
+                        <div className="flex items-start space-x-2 pr-15">
                             <MdEmail className="text-gray-600 text-xl mt-1" />
                             <div>
                                 <p className="text-gray-500 text-sm">Send Message</p>
