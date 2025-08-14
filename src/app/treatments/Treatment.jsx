@@ -36,7 +36,7 @@ const Treatment = () => {
             </div>
 
             <div className='max-w-7xl mx-auto px-5'>
-                <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10'>
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10 pr-0 md:pr-[55px]'>
                     {data.map((item, index) => (
                         <motion.div
                             key={item.id}

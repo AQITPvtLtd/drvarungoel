@@ -62,12 +62,12 @@ const Footer = () => {
                     <div className="flex flex-col items-start">
                         <p className="font-semibold text-xl mb-3 text-black">Services</p>
                         <ul className="space-y-2">
-                            <li><Link href="/" className="hover:text-[#129246]">Cancer Diagnosis & Staging</Link></li>
-                            <li><Link href="/" className="hover:text-[#129246]">Systemic Anti-Cancer Therapy</Link></li>
-                            <li><Link href="/" className="hover:text-[#129246]">Personalized & Precision Medicine</Link></li>
-                            <li><Link href="/" className="hover:text-[#129246]">Prognostication & Risk Assessment</Link></li>
-                            <li><Link href="/" className="hover:text-[#129246]">Supportive & Palliative Care</Link></li>
-                            <li><Link href="/" className="hover:text-[#129246]">Clinical Trials & Research</Link></li>
+                            <li><Link href="/treatments/cancer-diagnosis-staging" className="hover:text-[#129246]">Cancer Diagnosis & Staging</Link></li>
+                            <li><Link href="/treatments/systemic-anti-cancer-therapy" className="hover:text-[#129246]">Systemic Anti-Cancer Therapy</Link></li>
+                            <li><Link href="/treatments/personalized-precision-medicine" className="hover:text-[#129246]">Personalized & Precision Medicine</Link></li>
+                            <li><Link href="/treatments/prognostication-risk-assessment" className="hover:text-[#129246]">Prognostication & Risk Assessment</Link></li>
+                            <li><Link href="/treatments/supportive-palliative-care" className="hover:text-[#129246]">Supportive & Palliative Care</Link></li>
+                            <li><Link href="/treatments/clinical-trials-research" className="hover:text-[#129246]">Clinical Trials & Research</Link></li>
                         </ul>
                     </div>
 
@@ -82,7 +82,7 @@ const Footer = () => {
                     </div>
 
                     {/* Location */}
-                    <div className="flex flex-col items-start space-y-2">
+                    <div className="flex flex-col items-start space-y-2 pr-15">
                         <p className="font-semibold text-xl mb-3 text-black">Location</p>
 
                         {/* <p className="text-base leading-relaxed flex gap-1">

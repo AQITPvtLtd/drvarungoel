@@ -15,7 +15,6 @@ const faqData = [
     {
         question: "How long does cancer treatment take?",
         answer: "The duration of treatment depends on the type and stage of cancer. Some treatments are short-term, while others may require ongoing follow-up over months or even years.",
-        // list: ["Surgery", "Chemotherapy", "Radiation therapy", "Immunotherapy", "Targeted therapy"]
     },
     {
         question: "How can I know if I have cancer?",
@@ -45,10 +44,10 @@ const Faq = () => {
                 <motion.h2
                     className="text-center font-semibold text-4xl mb-6 dark:text-black"
                     style={{ fontFamily: 'Oswald, sans-serif' }}
-                    initial={{ opacity: 0, y: -40 }}
+                    initial={{ opacity: 0, y: 40 }} // only from top to bottom
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    viewport={{ once: false, amount: 0.3 }} // amount: how much of the element must be in view
+                    viewport={{ once: false, amount: 0.3 }}
                 >
                     Frequently Asked Questions
                 </motion.h2>
@@ -57,10 +56,10 @@ const Faq = () => {
                     {faqData.map((item, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 40 }}
+                            initial={{ opacity: 0, y: 40 }} // only top-to-bottom
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
-                            viewport={{ once: false, amount: 0 }} // 
+                            viewport={{ once: false, amount: 0 }}
                             className="shadow-slate-400 shadow-md mb-4 rounded-lg overflow-hidden"
                         >
                             <button
