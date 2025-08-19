@@ -5,14 +5,18 @@ import { FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
 import Image from 'next/image';
 
 // Gallery Data
+// Gallery Data
 export const galleryData = [
     { id: 1, path: "img1.jpeg" },
     { id: 2, path: "img2.jpeg" },
     { id: 3, path: "img3.jpeg" },
     { id: 4, path: "img4.jpeg" },
     { id: 5, path: "img5.jpeg" },
-    { id: 6, path: "img6.jpeg" }
-];
+    { id: 6, path: "img6.jpeg" },
+    { id: 7, path: "img7.jpeg" },
+    { id: 8, path: "img8.jpeg" },
+    { id: 9, path: "img9.jpeg" }
+].sort((a, b) => a.id - b.id);  // <-- sort by id
 
 
 const Gallery = () => {
@@ -33,37 +37,15 @@ const Gallery = () => {
 
     return (
         <div className='lg:pt-32 pt-24 bg-[#ebfff4]'>
-            {/* <div className="w-full max-w-8xl relative">
-                <div className="relative">
-                    <Image
-                        src="/images/bg.jpg"
-                        width={1000}
-                        height={1000}
-                        className="w-full h-[250px] object-cover"
-                        alt="Contact Image"
-                    />
-                    <div className="absolute inset-0 bg-[#21bee5b4] opacity-70 z-10"></div>
-                    <motion.h1
-                        initial={{ y: -50, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="text-white font-serif text-center text-6xl font-bold my-4 absolute inset-0 z-20 flex items-center justify-center"
-                        style={{ fontFamily: 'Oswald, sans-serif' }}
-                    >
-
-                    </motion.h1>
-                </div>
-            </div> */}
-
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-10 text-center">
                 Photo Gallery
             </h2>
 
-            <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:px-0 px-5'>
+            <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:px-24 px-5'>
                 {galleryData.map((photo, index) => (
                     <motion.div
                         key={photo.id}
-                        className='rounded overflow-hidden shadow-lg cursor-pointer'
+                        className='overflow-hidden cursor-pointer rounded-2xl'
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.2, duration: 0.6 }}
@@ -72,7 +54,7 @@ const Gallery = () => {
                         <Image
                             src={`/images/${photo.path}`}
                             alt={`Photo ${photo.id}`}
-                            className='w-full h-80 object-contain'
+                            className='w-full h-80 object-cover'
                             height={350}
                             width={350}
                         />

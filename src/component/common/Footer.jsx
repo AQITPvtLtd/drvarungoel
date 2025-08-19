@@ -85,25 +85,11 @@ const Footer = () => {
                     <div className="flex flex-col items-start space-y-2 pr-15">
                         <p className="font-semibold text-xl mb-3 text-black">Location</p>
 
-                        {/* <p className="text-base leading-relaxed flex gap-1">
-                            <IoIosCall className='mt-1' />
-                            <Link href="tel:+91 95605 38081">
-                                +91 95605 38081
-                            </Link>
-                        </p>
-
-                        <p className="text-base leading-relaxed flex gap-1">
-                            <MdEmail className='mt-1.5' />
-                            <Link href="mailto:docvarungoel@gmail.com">
-                                docvarungoel@gmail.com
-                            </Link>
-                        </p> */}
-
                         <p className="text-base leading-relaxed flex gap-1">
                             <FaLocationDot className='mt-1.5' />
                             <Link href={`https://g.co/kgs/bQRmREn`}>
                                 Rajiv Gandhi Cancer Institute,<br />
-                                Sector - 5, Rohini, Delhi - 110085
+                                Sector - 5, Rohini, <br /> Delhi - 110085
                             </Link>
                         </p>
                     </div>
