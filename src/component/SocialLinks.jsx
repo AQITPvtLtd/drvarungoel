@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaTimes, FaBars } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
