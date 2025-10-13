@@ -1,7 +1,7 @@
 export const data = [
     {
         id: 1,
-        img: "/treatments/img1.jpg",
+        img: "/treatments/img1.png",
         title: "Cancer Diagnosis & Staging",
         url: "cancer-diagnosis-staging",
         meta_title: "Precise Cancer Diagnosis & Staging | Dr. Varun Goel, New Delhi",
@@ -52,7 +52,7 @@ export const data = [
     {
         id: 2,
         title: "Systemic Anti-Cancer Therapy",
-        img: "/treatments/img2.jpeg",
+        img: "/treatments/img2.png",
         url: "systemic-anti-cancer-therapy",
         meta_title: "Effective Systemic Anti-Cancer Therapy | Dr. Varun Goel, New Delhi",
         meta_desc: "Dr. Varun Goel offers advanced systemic anti-cancer therapy in New Delhi, providing targeted treatments for comprehensive cancer care.",
@@ -139,7 +139,7 @@ export const data = [
     {
         id: 3,
         title: "Personalized & Precision Medicine",
-        img: "/treatments/img3.avif",
+        img: "/treatments/img3.png",
         url: "personalized-precision-medicine",
         meta_title: "Personalized & Precision Medicine in Oncology | Dr. Varun Goel, New Delhi",
         meta_desc: "Experience personalized and precision cancer care with Dr. Varun Goel in New Delhi, using advanced treatments tailored to your unique profile.",
@@ -200,7 +200,7 @@ export const data = [
     {
         id: 4,
         title: "Prognostication & Risk Assessment",
-        img: "/treatments/img4.jpg",
+        img: "/treatments/img4.png",
         url: "prognostication-risk-assessment",
         meta_title: "Understand Your Cancer Risk & Prognosis | Dr. Varun Goel, New Delhi",
         meta_desc: "Get clear insights into your cancer prognosis and risk assessment with Dr. Varun Goel, helping you make informed decisions for effective treatment.",
@@ -258,7 +258,7 @@ export const data = [
     {
         id: 5,
         title: "Supportive & Palliative Care",
-        img: "/treatments/img5.avif",
+        img: "/treatments/img5.png",
         url: "supportive-palliative-care",
         meta_title: "Compassionate Supportive & Palliative Care | Dr. Varun Goel, New Delhi",
         meta_desc: "Dr. Varun Goel provides compassionate supportive and palliative care in New Delhi, focusing on comfort and quality of life during cancer treatment.",
@@ -324,7 +324,7 @@ export const data = [
     {
         id: 6,
         title: "Bone Marrow Transplantation (BMT) & Cellular Therapy",
-        img: "/treatments/img66.jpg",
+        img: "/treatments/img6.png",
         url: "bone-marrow-transplantation-cellular-therapy",
         meta_title: "Bone Marrow Transplant & Cellular Therapy | Dr. Varun Goel, New Delhi",
         meta_desc: "Dr. Varun Goel offers advanced bone marrow transplant and cellular therapy in New Delhi, delivering expert care for complex blood and immune disorders.",
@@ -393,7 +393,7 @@ export const data = [
     {
         id: 7,
         title: "Management of Oncologic Emergencies",
-        img: "/treatments/img7.jpg",
+        img: "/treatments/img7.png",
         url: "management-of-oncologic-emergencies",
         meta_title: "Oncologic Emergency Management | Dr. Varun Goel, Medical Oncologist Delhi",
         meta_desc: "Dr. Varun Goel provides rapid, expert care for oncologic emergencies in New Delhi, ensuring timely intervention for life-threatening cancer complications.",
@@ -480,7 +480,7 @@ export const data = [
     {
         id: 8,
         title: "Multidisciplinary Tumor Board Participation",
-        img: "/treatments/img8.jpg",
+        img: "/treatments/img8.png",
         url: "multidisciplinary-tumor-board-participation",
         meta_title: "Multidisciplinary Tumor Board | Dr. Varun Goel, Oncologist in New Delhi",
         meta_desc: "Dr. Varun Goel actively participates in multidisciplinary tumor boards in New Delhi to ensure collaborative, evidence-based cancer treatment planning.",
@@ -579,7 +579,7 @@ export const data = [
     {
         id: 9,
         title: "Clinical Trials & Research",
-        img: "/treatments/img9.avif",
+        img: "/treatments/img9.png",
         url: "clinical-trials-research",
         meta_title: "Explore Cancer Clinical Trials in Delhi | Dr. Varun Goel",
         meta_desc: "Stay ahead with access to breakthrough cancer clinical trials in Delhi. Dr. Varun Goel connects patients to the latest research-driven treatments.",
@@ -679,7 +679,7 @@ export const data = [
         id: 10,
         title: "Survivorship & Long-Term Follow-up",
         url: "survivorship-long-term-follow-up",
-        img: "/treatments/img10.jpg",
+        img: "/treatments/img10.png",
         meta_title: "Cancer Survivorship & Follow-Up Care | Dr. Varun Goel, New Delhi",
         meta_desc: "Dr. Varun Goel provides long-term follow-up and survivorship care in New Delhi, supporting life after cancer with expert guidance and monitoring.",
         keyword: [
@@ -727,7 +727,7 @@ export const data = [
         id: 11,
         title: "Preventive Oncology & Screening Programs",
         url: "preventive-oncology-screening-programs",
-        img: "/treatments/img11.jpg",
+        img: "/treatments/img11.png",
         meta_title: "Cancer Prevention & Screening Programs | Dr. Varun Goel, New Delhi",
         meta_desc: "Dr. Varun Goel offers preventive oncology and early cancer screening in New Delhi to help detect risks early and improve long-term outcomes.",
         keyword: [
@@ -783,7 +783,7 @@ export const data = [
     {
         id: 12,
         title: "Integration of AI & Digital Oncology",
-        img: "/treatments/img12.jpg",
+        img: "/treatments/img12.png",
         url: "integration-of-ai-digital-oncology",
         meta_title: "AI in Cancer Care & Digital Oncology | Dr. Varun Goel, New Delhi",
         meta_desc: "Dr. Varun Goel leverages AI and digital tools in oncology to deliver smarter, faster, and more personalized cancer care in New Delhi.",
