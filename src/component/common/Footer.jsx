@@ -28,7 +28,7 @@ const Footer = () => {
                             <FaPhoneAlt className="text-gray-600 text-lg mt-1" />
                             <div>
                                 <p className="text-gray-500 text-sm">Give us a call</p>
-                                <Link href="tel:+919560538081" className="text-black font-medium">
+                                <Link href="tel:+919560538081" target='_blank' className="text-black font-medium">
                                     +91 95605 38081
                                 </Link>
                             </div>
@@ -37,7 +37,7 @@ const Footer = () => {
                             <MdEmail className="text-gray-600 text-xl mt-1" />
                             <div>
                                 <p className="text-gray-500 text-sm">Send Message</p>
-                                <Link href="mailto:docvarungoel@gmail.com" className="text-black font-medium">
+                                <Link href="mailto:docvarungoel@gmail.com" target='_blank' className="text-black font-medium">
                                     docvarungoel@gmail.com
                                 </Link>
                             </div>
@@ -87,7 +87,7 @@ const Footer = () => {
 
                         <p className="text-base leading-relaxed flex gap-1">
                             <FaLocationDot className='mt-1.5' />
-                            <Link href={`https://g.co/kgs/bQRmREn`}>
+                            <Link href={`https://maps.app.goo.gl/mhD9GHmM1mcr4L5f7`} target='_blank'>
                                 Rajiv Gandhi Cancer Institute,<br />
                                 Sector - 5, Rohini, <br /> Delhi - 110085
                             </Link>

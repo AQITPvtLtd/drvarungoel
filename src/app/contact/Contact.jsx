@@ -72,7 +72,7 @@ const Contact = () => {
                                 transition={{ duration: 0.5 }}
                                 className="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center justify-center text-center w-full max-w-md"
                             >
-                                <Link href="tel:+91 95605 38081" aria-label="Call Now" className="flex flex-col items-center">
+                                <Link href="tel:+91 95605 38081" target='_blank' aria-label="Call Now" className="flex flex-col items-center">
                                     <IoCall className="text-4xl text-white bg-[#0f8f41] p-2 rounded-full" />
                                     <h3 className="text-lg font-semibold text-black mt-2" style={{ fontFamily: 'Oswald, sans-serif' }}>Phone Number</h3>
                                     <p className="text-gray-700">+91 95605 38081</p>
@@ -85,7 +85,7 @@ const Contact = () => {
                                 transition={{ duration: 0.5 }}
                                 className="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center justify-center text-center w-full max-w-md"
                             >
-                                <Link href="mailto:docvarungoel@gmail.com" className="flex flex-col items-center">
+                                <Link href="mailto:docvarungoel@gmail.com" target='_blank' className="flex flex-col items-center">
                                     <MdEmail className="text-4xl text-white bg-[#0f8f41] p-2 rounded-full cursor-pointer" />
                                     <h3 className="text-lg font-semibold text-black mt-2" style={{ fontFamily: 'Oswald, sans-serif' }}>Email Address</h3>
                                     <p className="text-gray-700">docvarungoel@gmail.com</p>
@@ -102,7 +102,7 @@ const Contact = () => {
                             transition={{ duration: 0.5, delay: 0.4 }}
                             className='bg-white p-4 rounded-lg shadow-lg flex flex-col items-center justify-center text-center w-full max-w-md'
                         >
-                            <Link href="https://maps.app.goo.gl/PqUsp3QC2rFygoEHA" className="flex flex-col items-center">
+                            <Link href="https://maps.app.goo.gl/2kTe3TuuW4wuiuY68" target='_blank' className="flex flex-col items-center">
                                 <IoLocationSharp className="text-white text-4xl p-2 bg-[#0f8f41] rounded-full cursor-pointer" />
                                 <h3 className="text-lg font-semibold text-black mt-2" style={{ fontFamily: 'Oswald, sans-serif' }}>Our Address</h3>
                                 <p className="text-gray-700 text-sm md:text-base">
