@@ -5,6 +5,7 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { FaLocationDot } from "react-icons/fa6";
+import { FcGoogle } from "react-icons/fc";
 // import { IoIosCall } from "react-icons/io";
 
 const Footer = () => {
@@ -101,6 +102,7 @@ const Footer = () => {
                     <Link href="https://www.facebook.com/goelvarundoc/" target='__blank' className="text-blue-600 text-2xl hover:opacity-80"><FaFacebookF /></Link>
                     <Link href="https://www.linkedin.com/in/varun-goel-829a0b46/" target='__blank' className="text-blue-700 text-2xl hover:opacity-80"><FaLinkedinIn /></Link>
                     <Link href="https://www.youtube.com/@drvarungoel" target='__blank' className="text-red-600 text-2xl hover:opacity-80"><FaYoutube /></Link>
+                    <Link href="https://maps.app.goo.gl/2kTe3TuuW4wuiuY68" target='__blank' className="text-2xl hover:opacity-80"><FcGoogle /></Link>
                 </div>
             </div>
             <p className='text-center py-2 font-semibold'>Design & Developed By <Link href='https://tekbooster.com/' target='__blank'> Tek Booster <br className='lg:hidden block' /> (Digital Marketing Company) </Link></p>
