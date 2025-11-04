@@ -88,7 +88,7 @@ const Footer = () => {
 
                         <p className="text-base leading-relaxed flex gap-1">
                             <FaLocationDot className='mt-1.5' />
-                            <Link href={`https://maps.app.goo.gl/mhD9GHmM1mcr4L5f7`} target='_blank'>
+                            <Link href={`https://maps.app.goo.gl/JPEWWRi4kvJ8pMQZ6`} target='_blank'>
                                 Rajiv Gandhi Cancer Institute,<br />
                                 Sector - 5, Rohini, <br /> Delhi - 110085
                             </Link>
