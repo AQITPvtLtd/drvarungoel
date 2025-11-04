@@ -97,15 +97,51 @@ const Footer = () => {
                 </div>
 
                 {/* Social Icons */}
-                <div className="flex justify-start space-x-6 mt-6">
-                    <Link href="https://www.instagram.com/goelvarundoc/" target='__blank' className="text-pink-500 text-2xl hover:opacity-80"><FaInstagram /></Link>
-                    <Link href="https://www.facebook.com/goelvarundoc/" target='__blank' className="text-blue-600 text-2xl hover:opacity-80"><FaFacebookF /></Link>
-                    <Link href="https://www.linkedin.com/in/varun-goel-829a0b46/" target='__blank' className="text-blue-700 text-2xl hover:opacity-80"><FaLinkedinIn /></Link>
-                    <Link href="https://www.youtube.com/@drvarungoel" target='__blank' className="text-red-600 text-2xl hover:opacity-80"><FaYoutube /></Link>
-                    <Link href="https://maps.app.goo.gl/2kTe3TuuW4wuiuY68" target='__blank' className="text-2xl hover:opacity-80"><FcGoogle /></Link>
-                </div>
+<div className="flex justify-start space-x-6 mt-6">
+  <Link
+    href="https://www.instagram.com/goelvarundoc/"
+    target="__blank"
+    className="bg-white p-3 rounded-full shadow-md text-pink-500 text-xl hover:shadow-lg hover:scale-110 transition-transform duration-300"
+  >
+    <FaInstagram />
+  </Link>
+
+  <Link
+    href="https://www.facebook.com/goelvarundoc/"
+    target="__blank"
+    className="bg-white p-3 rounded-full shadow-md text-blue-600 text-xl hover:shadow-lg hover:scale-110 transition-transform duration-300"
+  >
+    <FaFacebookF />
+  </Link>
+
+  <Link
+    href="https://www.linkedin.com/in/varun-goel-829a0b46/"
+    target="__blank"
+    className="bg-white p-3 rounded-full shadow-md text-blue-700 text-xl hover:shadow-lg hover:scale-110 transition-transform duration-300"
+  >
+    <FaLinkedinIn />
+  </Link>
+
+  <Link
+    href="https://www.youtube.com/@drvarungoel"
+    target="__blank"
+    className="bg-white p-3 rounded-full shadow-md text-red-600 text-xl hover:shadow-lg hover:scale-110 transition-transform duration-300"
+  >
+    <FaYoutube />
+  </Link>
+
+  <Link
+    href="https://maps.app.goo.gl/2kTe3TuuW4wuiuY68"
+    target="__blank"
+    className="bg-white p-3 rounded-full shadow-md text-xl hover:shadow-lg hover:scale-110 transition-transform duration-300"
+  >
+    <FcGoogle />
+  </Link>
+</div>
+
+
             </div>
-            <p className='text-center py-2 font-semibold'>Design & Developed By <Link href='https://tekbooster.com/' target='__blank'> Tek Booster <br className='lg:hidden block' /> (Digital Marketing Company) </Link></p>
+            <p className='text-center py-2 font-semibold text-black'>Design & Developed By <Link href='https://tekbooster.com/' target='__blank'> Tek Booster <br className='lg:hidden block' /> (Digital Marketing Company) </Link></p>
         </div>
     );
 };
