@@ -11,8 +11,14 @@ const videos = [
     { id: 5, url: "https://youtube.com/shorts/CzWOJ53cD20?si=VU2bEHMXKK2nYCoi" },
     { id: 6, url: "https://youtube.com/shorts/XMACUdZ36x0?si=4YIChEy1sIwyhSUh" },
     { id: 7, url: "https://www.youtube.com/shorts/YtrNwkO0_jI" },
-    { id: 8, url: "https://youtu.be/WQBqHfACzig?si=EzXGVUspyRknO1Gl" },
-    { id: 9, url: "https://youtu.be/SeerULYJ2Bs?si=N1IBISjq1zv5iCEF" },
+    { id: 8, url: "https://youtube.com/shorts/3bIXEFVm58w?si=eT_avcJgfzqKC3WD" },
+    { id: 9, url: "https://youtube.com/shorts/8Q49V1xXk48?si=ZY2XUzk8j6w4Xeab" },
+    { id: 10, url: "https://youtube.com/shorts/A8kaIqs32qY?si=Vxcs0THrrAqYuZl8" },
+    { id: 11, url: "https://youtube.com/shorts/53Dw16OB8NU?si=pGwIhCQeCud5dFW6" },
+    { id: 12, url: "https://youtube.com/shorts/z2yUYjmBiU4?si=f39rWqIvt1z5uVIS" },
+    { id: 13, url: "https://youtu.be/WQBqHfACzig?si=EzXGVUspyRknO1Gl" },
+    { id: 14, url: "https://youtu.be/SeerULYJ2Bs?si=N1IBISjq1zv5iCEF" },
+    { id: 15, url: "https://youtu.be/BE0mFeKFNas?si=ux8DLSTYt2LCR82e" },
 ];
 
 // Animation wrapper for individual video
