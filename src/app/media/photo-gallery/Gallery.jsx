@@ -10,12 +10,15 @@ export const galleryData = [
     { id: 1, path: "img1.jpeg" },
     { id: 2, path: "img2.jpeg" },
     { id: 3, path: "img3.jpeg" },
-    { id: 4, path: "img4.jpeg" },
+    // { id: 4, path: "img4.jpeg" },
     { id: 5, path: "img5.jpeg" },
     { id: 6, path: "img6.jpeg" },
     { id: 7, path: "img7.jpeg" },
     { id: 8, path: "img8.jpeg" },
-    { id: 9, path: "img9.jpeg" }
+    { id: 9, path: "img9.jpeg" },
+    { id: 10, path: "img10.jpeg" },
+    { id: 11, path: "img11.jpeg" },
+    { id: 12, path: "img12.jpeg" },
 ].sort((a, b) => a.id - b.id);  // <-- sort by id
 
 
@@ -73,7 +76,7 @@ const Gallery = () => {
                     {/* Left Arrow */}
                     <button
                         onClick={handlePrev}
-                        className='absolute left-4 text-white bg-black/50 hover:bg-black/70 p-2 rounded-full text-xl'
+                        className='absolute left-40 text-white bg-black/50 hover:bg-black/70 p-2 rounded-full text-xl'
                     >
                         <FaChevronLeft />
                     </button>
@@ -91,7 +94,7 @@ const Gallery = () => {
                     {/* Right Arrow */}
                     <button
                         onClick={handleNext}
-                        className='absolute right-4 text-white bg-black/50 hover:bg-black/70 p-2 rounded-full text-xl'
+                        className='absolute right-40 cursor-pointer text-white p-2 rounded-full text-xl'
                     >
                         <FaChevronRight />
                     </button>
